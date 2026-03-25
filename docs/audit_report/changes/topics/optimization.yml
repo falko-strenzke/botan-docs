@@ -1,0 +1,41 @@
+title: Optimization 
+
+description: |
+  Changes or additions to implementation for the purpose of running time of memory optimization.
+
+
+patches:
+# Unroll SEED encrypt and decrypt by two blocks
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5147  # https://github.com/randombit/botan/pull/5147
+  merge_commit: 3b9b6b582504dab7ad23002bded68bb6528cb341
+  classification: relevant
+
+# Modernize BLAKE2s and improve performance by removing per-byte loops
+#   Author:    @KaganCanSit
+#   Approvals: @reneme, (@randombit), (@huven)
+- pr: 5117  # https://github.com/randombit/botan/pull/5117
+  merge_commit: 6bdfee8fe90f8b3d6c6328ed8f9c14005b18126f
+  classification: relevant
+
+# Force the inlining of the Keccak permutation round function
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5133  # https://github.com/randombit/botan/pull/5133
+  merge_commit: 9d930f663fbc7925b040b89867fdb4dd44a44c86
+  classification: info
+
+  # Streebog FIXME fix
+#   Author:    @huven
+#   Approvals: (@randombit)
+- pr: 5111  # https://github.com/randombit/botan/pull/5111
+  merge_commit: a3ed3b00b7d1ca84609d1f25040534d3aa1a183e
+  classification: relevant
+
+  # Add explicit algorithm for variable-time division of 2^k / x
+#   Author:    @randombit
+- pr: 5068  # https://github.com/randombit/botan/pull/5068
+  merge_commit: c03cc54dce240a20d5559931741f84f4fd521359
+  classification: critical
+

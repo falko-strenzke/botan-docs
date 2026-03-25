@@ -1,0 +1,63 @@
+title: Fixes
+
+description: |
+  This contains various fixes to the library itself or auxiliary infrastructure.
+
+
+patches:
+# Change FFI SRP6 to use fixed length outputs for integer values
+#   Author:    @randombit
+#   Approvals: @reneme
+#   Falko: comment: fixed error lead to random/rare protocol failures
+- pr: 5141  # https://github.com/randombit/botan/pull/5141
+  merge_commit: e64a325f779f5b0c5fe901748b00cfb6ceb4796f
+  classification: relevant
+
+# FIX: SRP6 step1 fails after FFI reported insufficient buffer space
+#   Author:    @reneme
+#   Approvals: (@randombit)
+#   Falko: Only cursory review. Buffer length handling could be checked in more depth.
+- pr: 5135  # https://github.com/randombit/botan/pull/5135
+  merge_commit: 72715a0cf3630233415e812188e8d66a03be3ed3
+  classification: relevant
+
+# Add FFI view functions for mp type
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5131  # https://github.com/randombit/botan/pull/5131
+  merge_commit: 8a1fbdb78fd24fa54f6c68580041dde52ac53eb9
+  classification: info
+
+# Skip certain tests if RSA signature paddings are disabled
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5122  # https://github.com/randombit/botan/pull/5122
+  merge_commit: 4497006050743eae43a15047e4575c51702fa5f8
+  classification: info
+
+# FIX: `BigInt::zero() << 0` causes a segfault
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5130  # https://github.com/randombit/botan/pull/5130
+  merge_commit: 2bd94f6caac1595b2044e50d89dcf21d3d78199c
+  classification: relevant
+
+# Avoid the Serpent AVX512 code under MSVC
+#   Author:    @randombit
+- pr: 5132  # https://github.com/randombit/botan/pull/5132
+  merge_commit: 1fbc54fc5af520c073bf897288a11099695c0085
+  classification: info
+
+# FIX: passing raw bytes into PKSign in botan3.py
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5082  # https://github.com/randombit/botan/pull/5082
+  merge_commit: 00d442452b1f4bf48790f5bd34ba6f9adb4816bf
+  classification: info
+
+# Correct bugs handling division by small negative numbers
+#   Author:    @randombit
+- pr: 5067  # https://github.com/randombit/botan/pull/5067
+  merge_commit: ddbd8dc5a7fbe71d7a0d3b09c34965270c86d092
+  classification: critical
+

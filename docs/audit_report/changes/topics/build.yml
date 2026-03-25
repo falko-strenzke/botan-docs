@@ -1,0 +1,40 @@
+title: Build System
+
+description: |
+  This bundles changes to the build system. No relevant changes to the implementation
+  of the library are contained here.
+
+
+patches:
+# Preserve file metadata when installing
+#   Author:    @bkmgit
+#   Approvals: (@randombit)
+- pr: 5140  # https://github.com/randombit/botan/pull/5140
+  merge_commit: afebb96a0c5e3a4be220463ece6bcf0748f75659
+  classification: info 
+
+# Fix error compiling the Aarch64 cpuid code without os_utils
+#   Author:    @randombit
+- pr: 5145  # https://github.com/randombit/botan/pull/5145
+  merge_commit: 733b29cab37095c9813f69cdcb930efea5db4009
+  classification: info
+# Installed python bindings file is named botan3.py
+#   Author:    @bkmgit
+#   Approvals: (@randombit)
+- pr: 5139  # https://github.com/randombit/botan/pull/5139
+  merge_commit: f656d0ef9fb00ed12f4ae3025a34f5f3efe88211
+  classification: info
+
+# FIX: Don't declare backward compatibility ALIAS for CMake < 3.18
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5099  # https://github.com/randombit/botan/pull/5099
+  merge_commit: 0d4cd13de1a5977da0df3911fb93cfd443732b69
+  classification: info
+
+# Partially Revert #4927
+#   Author:    @randombit
+- pr: 5064  # https://github.com/randombit/botan/pull/5064
+  merge_commit: ec6b7b97725e920c3954de4f472d2f0f1d8736cb
+  classification: info
+

@@ -1,0 +1,28 @@
+title: PKI-related Functionality
+
+description: |
+  This section describes changes to the PKI functionality of Botan, i.e., that has to do with X.509 certificates, CRLs, and OCSP as well as their use in security protocols.
+patches:
+# Add another `Certificate_Store_In_Memory` convenience constructor
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5143  # https://github.com/randombit/botan/pull/5143
+  merge_commit: 77ff62992a4862ff821ef200e1630c17e4b9c418
+  classification: info
+
+# find x509 cert by issuer dn and serial number
+#   Author:    @Brassinolide
+#   Approvals: (@randombit)
+- pr: 5072  # https://github.com/randombit/botan/pull/5072
+  merge_commit: 9857b91cba6214ef43cbe1d58ca78eaeaebdae1d
+  classification: info
+
+  # Allow Empty Issuer in Certificate_Extension::validate
+#   Author:    @FAlbertDev
+#   Approvals: @reneme, (@randombit)
+- pr: 5081  # https://github.com/randombit/botan/pull/5081
+  merge_commit: 73ef154818a0b23c2251969ecb64ab08fb3e32b9
+  classification: info
+
+
+

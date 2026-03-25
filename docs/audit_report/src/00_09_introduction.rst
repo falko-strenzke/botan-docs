@@ -259,19 +259,19 @@ The table contains the pull request IDs on GitHub or individual commit hashes of
 For reference, a brief description or title of the patch is provided. Note that
 this description is usually just a summary and might not cover all patch changes in detail. Most
 pull requests and commits feature a sufficient description on GitHub that is not repeated in this document.
-Also, each patch within the table is assigned a security category, and information about the approvers
+Also, each patch within the table is assigned a security classification, and information about the approvers
 and auditors is given.
 
 
-Security Categories
+Security Classification
 ~~~~~~~~~~~~~~~~~~~
 
-For this audit, four security categories are distinguished. The category *critical* labels patches
+For this audit, four security classifications are distinguished. The classification *critical* labels patches
 that apply substantial changes to cryptographic functionality, e.g., implementing a new algorithm
 or updating an old one to a new standard. Patches labeled as *relevant* are changes to cryptographic
-algorithms without altering the algorithm's observable behavior. Mostly, this category contains
+algorithms without altering the algorithm's observable behavior. Mostly, this class contains
 optimizations or refactoring of cryptographic modules. All changes with no direct effect on
-cryptographic operations are categorized as *info*. The *out of scope* category identifies patches
+cryptographic operations are classified as *info*. The *out of scope* class identifies patches
 that only affect modules not in this review's scope. Patches of the last type are not reviewed
 in detail.
 

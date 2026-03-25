@@ -1,0 +1,22 @@
+title: Code Chores and Cleanups
+
+description: |
+  Generic maintenance of the library without changing its features or security
+  properties significantly. This ensures future-proofness or facilitates future
+  extensions or adaptations of the API.
+
+patches:
+# Update Limbo test suite
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5134  # https://github.com/randombit/botan/pull/5134
+  merge_commit: b12d0bfa62d3c96bcdec0328c4577a74e8d8dd98
+  classification: info
+
+# Chore: Update Android NDK to r29
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5125  # https://github.com/randombit/botan/pull/5125
+  merge_commit: 46f6fc3b265f21a1b348630eb9a3090167ce0da8
+  classification: out of scope 
+

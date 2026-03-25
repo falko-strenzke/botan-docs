@@ -1,0 +1,59 @@
+title: Continuous Integration and IDE / Editor Support
+
+description: |
+  Maintenance work on the library's continuous integration setup as well as the underlying linting system and code editor support. None of these changes is directly relevant to the security properties of the library.
+
+patches:
+# Move the iOS cross CI build to using the macos-26 image
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5146  # https://github.com/randombit/botan/pull/5146
+  merge_commit: 4d38d9759fbe0d3a92a9dcb2e5df36abced19917
+  classification: unspecified
+
+# Enable the clang-tidy hicpp-no-assembler and portability-simd-intrinsics warnings
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5142  # https://github.com/randombit/botan/pull/5142
+  merge_commit: 24001eec45d022b3d06d50f78f6503d98ab90ac3
+  classification: info
+
+  # Set up a Dev Container
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5094  # https://github.com/randombit/botan/pull/5094
+  merge_commit: 3036154143d18b86209849f2d0812000b23361d1
+  classification: info
+
+# Update TPM2 session FIXME comments to document intentional implicit conversions
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5118  # https://github.com/randombit/botan/pull/5118
+  merge_commit: 3c6caa3930b5bcf18e0cc7800dccbb3c88b2c535
+  classification: info
+
+# Add running ruff linter to CI
+#   Author:    @randombit
+- pr: 5090  # https://github.com/randombit/botan/pull/5090
+  merge_commit: b1885dcc3b5322a8ff33078ff9dd3b9d3449d0f5
+  classification: out of scope
+
+# Disable the Emscripten build
+#   Author:    @randombit
+- pr: 5080  # https://github.com/randombit/botan/pull/5080
+  merge_commit: 1b82e522d730c3747650e34257b1ca45d7107866
+  classification: out of scope
+
+# Add a typos CI job
+#   Author:    @randombit
+- pr: 5075  # https://github.com/randombit/botan/pull/5075
+  merge_commit: 52eb916552cc6d8f38255e1ac3169a007a79fcf2
+  classification: info
+
+
+# Skip CodeQL runs on PRs
+#   Author:    @randombit
+- pr: 5059  # https://github.com/randombit/botan/pull/5059
+  merge_commit: c7afad93c3ef8b7348afcb076bfe6627778e1330
+  classification: out of scope
+

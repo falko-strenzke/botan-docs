@@ -1,0 +1,12 @@
+title: Side-Channel Security Relevant Changes 
+
+description: |
+  Here we collect changes that address or potentially affect side-channel security.
+
+patches:
+# Avoid problematic construction in some bit_ops.h functions
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5066  # https://github.com/randombit/botan/pull/5066
+  merge_commit: 42e6d29dfb4545566ca591fb1f67638a4bfc374b
+  classification: unspecified

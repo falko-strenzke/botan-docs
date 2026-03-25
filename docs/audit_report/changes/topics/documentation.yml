@@ -1,0 +1,26 @@
+title: Documentation
+
+description: |
+  This section lists patches that update only the documentation of Botan.
+
+patches:
+# Update outdated/dead links and remove invalid ones
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5126  # https://github.com/randombit/botan/pull/5126
+  merge_commit: 4e91ea3e410829a1cd43a12fd6f69e651842e1e8
+  classification: info
+
+# Update BoringSSL TLS test suite link after branch rename
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5120  # https://github.com/randombit/botan/pull/5120
+  merge_commit: 3de96468e4ff3e1b339da3e62e92a1dac5412bc8
+  classification: info
+
+# Add option to generate documentation in texi format
+#   Author:    @bkmgit
+#   Approvals: (@randombit)
+- pr: 5105  # https://github.com/randombit/botan/pull/5105
+  merge_commit: 14e54e7a15ae2392fc4f010bb39830cc9d50365d
+  classification: info

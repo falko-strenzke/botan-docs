@@ -1,0 +1,110 @@
+title: Measures for Code Quality 
+
+description: |
+  Here we collect changes that mainly improve the code quality, such as refactoring code, introducing more modern programming language features or fixing linter warnings.
+
+patches:
+# Refactor: Sponge<> base class for Ascon-p and Keccak-p
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5101  # https://github.com/randombit/botan/pull/5101
+  merge_commit: 8cb3c5e5529fbc91c01f5fa49743bdb844dee96a
+  classification: relevant
+
+# Remove various unused includes flagged by clang-tidy misc-include-cleaner
+#   Author:    @randombit
+- pr: 5137  # https://github.com/randombit/botan/pull/5137
+  merge_commit: bc7d5fb6d8cbb1b0c6882d64cad9f7cfaff1c054
+  classification: info
+
+# Reduce cppcheck warnings in test files
+#   Author:    @KaganCanSit
+#   Approvals: @reneme, (@randombit)
+- pr: 5109  # https://github.com/randombit/botan/pull/5109
+  merge_commit: 120d93b4072a3fbab2f262504ddfab43505638f0
+  classification: info
+
+# Resolve TODO comments in socket utilities
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5127  # https://github.com/randombit/botan/pull/5127
+  merge_commit: 19e477fdafda09e109b5b9ed325701160831bf19
+  classification: info
+
+# Modernize logging implementation with C++20 and solve FIXME message
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5115  # https://github.com/randombit/botan/pull/5115
+  merge_commit: 0487ba51f05e239909224ff940d25a55f3d9f81e
+  classification: info
+
+# Resolve FIXME: Enforce explicit conversion for Context to ESYS_CONTEXT*
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5119  # https://github.com/randombit/botan/pull/5119
+  merge_commit: b88037c82cf8ff4cd4b88f6b847e3830ea893b5d
+  classification: out of scope
+
+# Fix some typos flagged by the latest version of the typos tool
+#   Author:    @randombit
+- pr: 5114  # https://github.com/randombit/botan/pull/5114
+  merge_commit: ea34eb789b378c1de7e2b0c9da5caa6179b43fa6
+  classification: info
+
+# Refactor: Clarify Padding Specification in Keccak-based Functions
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5097  # https://github.com/randombit/botan/pull/5097
+  merge_commit: 8ef91eb772d0d46072d5558c6d4094a8b9e91635
+  classification: info
+
+# Fix some typing errors in botan3.py
+#   Author:    @randombit
+- pr: 5092  # https://github.com/randombit/botan/pull/5092
+  merge_commit: ce0eeaec538bbc51354fce48a0a01bcaf9ff4344
+  classification: info
+
+# Fix remaining warnings from the ruff linter
+#   Author:    @randombit
+- pr: 5089  # https://github.com/randombit/botan/pull/5089
+  merge_commit: 7c17e8f4753f4954f3612751d0a7336d3c04dcf5
+  classification: info
+
+# Type hints for botan3.py
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 5086  # https://github.com/randombit/botan/pull/5086
+  merge_commit: 5c84faf9c07480746b7df9ecc3dc920ec462bc2a
+  classification: info
+
+# Refactorings to support optimized word level division/modulus
+#   Author:    @randombit
+- pr: 5077  # https://github.com/randombit/botan/pull/5077
+  merge_commit: 936b8e9596f14694d606be94f8168704686213d2
+  classification: critical
+
+# Fix various typos
+#   Author:    @randombit
+- pr: 5071  # https://github.com/randombit/botan/pull/5071
+  merge_commit: a0e0c85bd143ea47196b2a3d3d0dd5a453f1f4db
+  classification: unspecified
+
+# Fix some warnings from the ruff linter
+#   Author:    @randombit
+- pr: 5069  # https://github.com/randombit/botan/pull/5069
+  merge_commit: 98e072bfef38343c5f99e094f17ab8885de1a1a7
+  classification: unspecified
+
+# Cleanup Aarch64 SHA-256 compression
+#   Author:    @randombit
+- pr: 5065  # https://github.com/randombit/botan/pull/5065
+  merge_commit: ae7e0c4ecc420845db77254dde166ee7320eafb2
+  classification: critical
+
+# Fix various clang-tidy warnings in aarch64 specific code
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5060  # https://github.com/randombit/botan/pull/5060
+  merge_commit: a2a0b43c3811f9f2a44d271fe590040c72119703
+  classification: info
+
