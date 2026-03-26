@@ -61,3 +61,37 @@ patches:
   merge_commit: ddbd8dc5a7fbe71d7a0d3b09c34965270c86d092
   classification: critical
 
+# small fixes for jitter_rng
+#   Author:    @thillux
+#   Approvals: @reneme, (@randombit)
+- pr: 5044  # https://github.com/randombit/botan/pull/5044
+  merge_commit: a30330a46fec3dafe33a7ae76a94e1fb2ec02861
+  classification: critical
+
+# Fix some bugprone-unchecked-optional-access warnings from clang-tidy
+#   Author:    @randombit
+- pr: 5035  # https://github.com/randombit/botan/pull/5035
+  merge_commit: e39c1e84c4d71f4d21a05ddbc96484335fac4eeb
+  classification: info
+
+# Fix implicit conversion issues caused by encode_if in der encoder
+#   Author:    @Brassinolide
+#   Approvals: (@randombit)
+- pr: 5013  # https://github.com/randombit/botan/pull/5013
+  merge_commit: 1ab1f909fc77d042db5ec711a137f604e6daa414
+  classification: relevant
+
+# Enable and fix clang-tidy warning cppcoreguidelines-owning-memory
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4983  # https://github.com/randombit/botan/pull/4983
+  merge_commit: 1999a97b1dc18b255d33345e3a16db64a1281f16
+  classification: relevant
+
+# Test: Improve AEAD and cipher mode error condition checks
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4970  # https://github.com/randombit/botan/pull/4970
+  merge_commit: a5656fff8d5a106f5989d5180bdba1f4db536d6a
+  classification: relevant
+

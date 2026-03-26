@@ -1,7 +1,9 @@
 title: Measures for Code Quality 
 
 description: |
-  Here we collect changes that mainly improve the code quality, such as refactoring code, introducing more modern programming language features or fixing linter warnings.
+  Here we collect changes that mainly improve the code quality, such as refactoring code, introducing more modern
+  programming language features or fixing linter warnings. The changes in this section may also affect API behaviour for
+  corner cases.
 
 patches:
 # Refactor: Sponge<> base class for Ascon-p and Keccak-p
@@ -87,13 +89,13 @@ patches:
 #   Author:    @randombit
 - pr: 5071  # https://github.com/randombit/botan/pull/5071
   merge_commit: a0e0c85bd143ea47196b2a3d3d0dd5a453f1f4db
-  classification: unspecified
+  classification: info
 
 # Fix some warnings from the ruff linter
 #   Author:    @randombit
 - pr: 5069  # https://github.com/randombit/botan/pull/5069
   merge_commit: 98e072bfef38343c5f99e094f17ab8885de1a1a7
-  classification: unspecified
+  classification: info
 
 # Cleanup Aarch64 SHA-256 compression
 #   Author:    @randombit
@@ -107,4 +109,135 @@ patches:
 - pr: 5060  # https://github.com/randombit/botan/pull/5060
   merge_commit: a2a0b43c3811f9f2a44d271fe590040c72119703
   classification: info
+
+# Remove various uses of IEEE 1363's EME terminology for encryption padding
+#   Author:    @randombit
+- pr: 5055  # https://github.com/randombit/botan/pull/5055
+  merge_commit: 7fe3a730aae9cd5a21f9710f65db4557afc9d46e
+  classification: info
+  comment: |
+    Renaming of symbols only.
+
+# Fix a warning in the sqlite3 wrapper when compiling on 32-bit systems
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5053  # https://github.com/randombit/botan/pull/5053
+  merge_commit: eaad5c54083b791bf5c998b3b0adc3374779f4ab
+  classification: info
+
+# Use span for MGF1
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5041  # https://github.com/randombit/botan/pull/5041
+  merge_commit: 1f99875554c5f268c2703ad92618f6f50e7e8491
+  classification: info
+
+# Reword a confusing error message in SP800-56C
+#   Author:    @randombit
+- pr: 5042  # https://github.com/randombit/botan/pull/5042
+  merge_commit: 7f2cb5b36908c75f8b4aa9e2bde652f748e7e231
+  classification: info
+
+# Enable clang-tidy warning readability-implict-bool-conversion
+#   Author:    @randombit
+- pr: 5036  # https://github.com/randombit/botan/pull/5036
+  merge_commit: feb9b3ff915198354c91d79e6b1aedbf38753b7f
+  classification: info
+  comment: |
+    Posted a comment in the PR: What happened to the check for flags != 0 in ffi_mac.cpp?
+
+# Fix some readability-convert-member-functions-to-static warnings from clang-tidy
+#   Author:    @randombit
+- pr: 5034  # https://github.com/randombit/botan/pull/5034
+  merge_commit: 8cfedc11c7a22e82d159acaaa067dd72481a3562
+  classification: info
+
+# Fix some readability-implict-bool-conversion warnings from clang-tidy
+#   Author:    @randombit
+- pr: 5032  # https://github.com/randombit/botan/pull/5032
+  merge_commit: 802931a9ef2aff559769bdc32ffe443bde939ca0
+  classification: info
+
+# Fix some clang-tidy readability-simplify-boolean-expr warnings
+#   Author:    @randombit
+- pr: 5031  # https://github.com/randombit/botan/pull/5031
+  merge_commit: a361efb2e4223627d1290fcba67f4dc0b0ffeb78
+  classification: info
+
+# Remove various references to EMSA in the code and docs
+#   Author:    @randombit
+- pr: 5024  # https://github.com/randombit/botan/pull/5024
+  merge_commit: e2a24d382f9e3c9d8a1371bdb4cd7b5f7d9dca7e
+  classification: info
+
+# Improve handling of optional types in ASN.1
+#   Author:    @randombit
+- pr: 5001  # https://github.com/randombit/botan/pull/5001
+  merge_commit: 1eacc5b05c894f6b66403a6a0549ab2b53752947
+  classification: info
+
+# Clean up low level mp interfaces
+#   Author:    @randombit
+- pr: 5017  # https://github.com/randombit/botan/pull/5017
+  merge_commit: e0f6d3fe3ae472af9a7d2e90766f31976af9c168
+  classification: critical
+
+# Fix a name collision that caused problems when building tpm2 in the amalgamation
+#   Author:    @randombit
+- pr: 5018  # https://github.com/randombit/botan/pull/5018
+  merge_commit: e3e0d35689ed4d675e4e222d5cdd5243b9abf243
+  classification: info
+
+# Small cleanups in Barrett reduction
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5014  # https://github.com/randombit/botan/pull/5014
+  merge_commit: 464e74c875c598fba76ecd5638206b1bd6874210
+  classification: info
+
+# Remove 'EMSA' terminology where possible
+#   Author:    @randombit
+- pr: 5008  # https://github.com/randombit/botan/pull/5008
+  merge_commit: a275e372dfa634882dc32c6385346b00fce70402
+  classification: info
+
+# Remove some unnecessary includes in TLS
+#   Author:    @randombit
+- pr: 5007  # https://github.com/randombit/botan/pull/5007
+  merge_commit: 68c48a5ca5d1ed48c507f3cdeb38bc6b2a0a03ec
+  classification: info
+
+# Enable and fix clang-tidy warning bugprone-branch-clone
+#   Author:    @randombit
+- pr: 5004  # https://github.com/randombit/botan/pull/5004
+  merge_commit: b89426d05eadb05feaab7a40a7ac68d621a931ea
+  classification: info
+  comment: |
+    Also refactors some test code.
+
+# Replace macros using BOTAN_TARGET_CPU_XXX with BOTAN_TARGET_ARCH_XXX
+#   Author:    @randombit
+- pr: 5003  # https://github.com/randombit/botan/pull/5003
+  merge_commit: c05a6c860badf8cf8877093033cdf74f39da2d07
+  classification: info
+
+# Replace std::array with std::span in roughtime hashNode function
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 4994  # https://github.com/randombit/botan/pull/4994
+  merge_commit: 70871ae2460eada89b251b8c63023edc8ee0e1a8
+  classification: info
+
+# Improve RFC 3779 extension api
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 4890  # https://github.com/randombit/botan/pull/4890
+  merge_commit: cf74a5db8145a33edb98ff6b3dcd016c07fb2c73
+  classification: relevant
+
+# Cleanup ISO-9796 padding implementation
+#   Author:    @randombit
+- pr: 4965  # https://github.com/randombit/botan/pull/4965
+  merge_commit: a5c4f9c1809cd70d59949d7f2903fbcfe7c07f30
+  classification: critical
 

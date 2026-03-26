@@ -1,4 +1,4 @@
-title: Side-Channel Security Relevant Changes 
+title: Side-Channel Security Relevant Changes
 
 description: |
   Here we collect changes that address or potentially affect side-channel security.
@@ -9,4 +9,23 @@ patches:
 #   Approvals: @reneme
 - pr: 5066  # https://github.com/randombit/botan/pull/5066
   merge_commit: 42e6d29dfb4545566ca591fb1f67638a4bfc374b
-  classification: unspecified
+  classification: critical
+
+# Improve RSA CRT recombination step
+#   Author:    @randombit
+- pr: 4944  # https://github.com/randombit/botan/pull/4944
+  merge_commit: c74e812c10c104cdcf3308068aca23d659c6b244
+  classification: critical
+
+# Add variable time scalar inversion to pcurves_generic
+#   Author:    @randombit
+- pr: 4953  # https://github.com/randombit/botan/pull/4953
+  merge_commit: 750c4cef700cb392c6390faf46e95a2832441263
+  classification: info
+
+# Add CT::Choice::from_mask
+#   Author:    @randombit
+- pr: 4949  # https://github.com/randombit/botan/pull/4949
+  merge_commit: 8d0ef6ce69dfa79c231bdbadc8d3caed3da74da5
+  classification: relevant
+

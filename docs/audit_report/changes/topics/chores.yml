@@ -1,9 +1,8 @@
 title: Code Chores and Cleanups
 
 description: |
-  Generic maintenance of the library without changing its features or security
-  properties significantly. This ensures future-proofness or facilitates future
-  extensions or adaptations of the API.
+  Generic maintenance of the library without changing its features or security properties significantly. This includes
+  removal of outdated code. This ensures future-proofness or facilitates future extensions or adaptations of the API.
 
 patches:
 # Update Limbo test suite
@@ -19,4 +18,22 @@ patches:
 - pr: 5125  # https://github.com/randombit/botan/pull/5125
   merge_commit: 46f6fc3b265f21a1b348630eb9a3090167ce0da8
   classification: out of scope 
+
+# Avoid using `and` keyword
+#   Author:    @randombit
+- pr: 5029  # https://github.com/randombit/botan/pull/5029
+  merge_commit: a593adab4cacc2dd0ffb748656c516d11c2e5544
+  classification: info
+
+# Remove some unused functions on Montgomery_Int and Montgomery_Params
+#   Author:    @randombit
+- pr: 5009  # https://github.com/randombit/botan/pull/5009
+  merge_commit: 9200a11107dd2910661431f27c3b715ea4795971
+  classification: info
+
+# Improve string<->span conversions
+#   Author:    @randombit
+- pr: 4990  # https://github.com/randombit/botan/pull/4990
+  merge_commit: 220e81fa51030c44e98d6956cf8c5cef58bf59ac
+  classification: relevant
 

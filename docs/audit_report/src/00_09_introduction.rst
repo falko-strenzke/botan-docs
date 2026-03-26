@@ -264,7 +264,7 @@ and auditors is given.
 
 
 Security Classification
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 For this audit, four security classifications are distinguished. The classification *critical* labels patches
 that apply substantial changes to cryptographic functionality, e.g., implementing a new algorithm

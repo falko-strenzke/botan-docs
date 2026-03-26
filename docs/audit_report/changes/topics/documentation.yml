@@ -24,3 +24,12 @@ patches:
 - pr: 5105  # https://github.com/randombit/botan/pull/5105
   merge_commit: 14e54e7a15ae2392fc4f010bb39830cc9d50365d
   classification: info
+
+# Document the specific threat model the library operates under
+#   Author:    @randombit
+#   Approvals: @atreiber94, @reneme
+- pr: 4955  # https://github.com/randombit/botan/pull/4955
+  merge_commit: e3b3452ec48335e4eaa80e6e1a99e9b16657f6a2
+  classification: relevant
+  comment: The new section implies that a threat model for a cryptographic library necessarily only addresses side channel security.
+

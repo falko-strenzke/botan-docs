@@ -39,3 +39,41 @@ patches:
   merge_commit: c03cc54dce240a20d5559931741f84f4fd521359
   classification: critical
 
+# New implementation of the Jacobi function
+#   Author:    @randombit
+- pr: 5057  # https://github.com/randombit/botan/pull/5057
+  merge_commit: d1ae5695b27a8a2811089f207d85c88feb887335
+  classification: critical
+
+# Base58 optimizations
+#   Author:    @randombit
+- pr: 5051  # https://github.com/randombit/botan/pull/5051
+  merge_commit: 06972557ae2af1a221f6276128b1b1b3e0f77128
+  classification: info
+
+# Use mp interfaces in X448/Ed448 field arithmetic
+#   Author:    @randombit
+- pr: 5037  # https://github.com/randombit/botan/pull/5037
+  merge_commit: 216547f2b062e609bfa3c86f895978cbdfd381fb
+  classification: relevant
+
+# Make Montgomery_Params an inner shared_ptr type
+#   Author:    @randombit
+- pr: 5012  # https://github.com/randombit/botan/pull/5012
+  merge_commit: d45d27fe57cec53ba66cc93cd0d536434be60617
+  classification: info
+
+# Modify Montygomery_Int to not store the value as a BigInt
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5010  # https://github.com/randombit/botan/pull/5010
+  merge_commit: b3fa1cbc6adb14bed33c54e6830a840f55d6dfc4
+  classification: critical
+
+# Add support for curve specific field element square roots
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4934  # https://github.com/randombit/botan/pull/4934
+  merge_commit: 2c5ea096aaeb8e8f3fec7ba7d9e74382cfff0955
+  classification: critical
+

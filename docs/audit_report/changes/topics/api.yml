@@ -1,0 +1,14 @@
+title: API Enhancements and Modifications
+
+description: |
+  This section lists changes to the API.
+
+patches:
+
+# Custom ECDH adapter in TLS 1.2 must no-longer derive from `ECDH_PublicKey`
+#   Author:    @reneme
+#   Approvals: (@jdoubleu), (@randombit)
+- pr: 5056  # https://github.com/randombit/botan/pull/5056
+  merge_commit: 63d9957034307dc4ed797187b6262bb013c4cc5e
+  classification: unspecified
+

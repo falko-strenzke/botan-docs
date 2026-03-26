@@ -26,3 +26,24 @@ patches:
   merge_commit: 0852a2a74a6823a103368db6a835d4a5f98d0c1a
   classification: critical
 
+# Add ASN1_Time::from_seconds_since_epoch
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4999  # https://github.com/randombit/botan/pull/4999
+  merge_commit: 97f08f6f597210d51932f8e36fc5df8bbb544404
+  classification: info
+
+# Scrub pcurves ECC private key values on destruction
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4991  # https://github.com/randombit/botan/pull/4991
+  merge_commit: 421b766f148fbe01b4cf20fb167042a64e663f8c
+  classification: info
+
+# Add EC_Scalar::hash using RFC 9380's hash_to_field
+#   Author:    @randombit
+- pr: 4950  # https://github.com/randombit/botan/pull/4950
+  merge_commit: 4e60e3c4eebcfc57dfc158e7c6443a031897e660
+  classification: relevant
+
+
