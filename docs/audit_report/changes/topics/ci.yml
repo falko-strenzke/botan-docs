@@ -288,3 +288,44 @@ patches:
   classification: unspecified
   comment: Huge PR with 220 affected files addressing linter warnings. Was not reviewed at all.
 
+# CI: install/simulate TPM2 simulation environment only when needed
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4929  # https://github.com/randombit/botan/pull/4929
+  merge_commit: 00a2a96c2624cf42ea240e9c06e0697e55ac0a90
+  classification: out of scope
+
+# Test: GCC's Stack Scrubbing
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4925  # https://github.com/randombit/botan/pull/4925
+  merge_commit: 0a7e9846ba5a1ad78258453ce017271cf1654d79
+  classification: relevant
+
+# CI: stop building the tests when we won't need them
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4926  # https://github.com/randombit/botan/pull/4926
+  merge_commit: ff5da147f64efb0a2716ca508267bba018e0cc1b
+  classification: out of scope
+
+# Take the clang-tidy cache size from an environment variable
+#   Author:    @randombit
+- pr: 4923  # https://github.com/randombit/botan/pull/4923
+  merge_commit: 1d5a2c48c53fe13ec2b2ddfd6f18c0380f5cff75
+  classification: out of scope
+
+# Run clang-tidy on master
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4924  # https://github.com/randombit/botan/pull/4924
+  merge_commit: e6ad9a4dc82c314f8dec6383737f1dc935c4009f
+  classification: out of scope
+
+# Add a cache for clang-tidy
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4920  # https://github.com/randombit/botan/pull/4920
+  merge_commit: cfc7bc1c63b4f86aeef4d470babd7a6e94f78ea1
+  classification: out of scope
+

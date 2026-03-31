@@ -37,3 +37,17 @@ patches:
   merge_commit: 220e81fa51030c44e98d6956cf8c5cef58bf59ac
   classification: relevant
 
+# [TODO] X509_DN Normalize function update to utilize structed bindings
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 4874  # https://github.com/randombit/botan/pull/4874
+  merge_commit: c80dbf800eae78409f356fbccf01aaa249236191
+  classification: info
+
+# Test: GCC's Stack Scrubbing on aarch64
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4941  # https://github.com/randombit/botan/pull/4941
+  merge_commit: c6c7423f6ca31b020c1be3e7ae3f5da6293a84bf
+  classification: out of scope
+

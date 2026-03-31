@@ -29,3 +29,10 @@ patches:
   merge_commit: 8d0ef6ce69dfa79c231bdbadc8d3caed3da74da5
   classification: relevant
 
+# Add safety comments to if and while statements in pcurves
+#   Author:    @randombit
+- pr: 4937  # https://github.com/randombit/botan/pull/4937
+  merge_commit: cc35cab9178a7aed4e2848d3f60247b227dab281
+  classification: critical
+
+

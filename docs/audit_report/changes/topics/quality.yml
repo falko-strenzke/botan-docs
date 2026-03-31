@@ -241,3 +241,45 @@ patches:
   merge_commit: a5c4f9c1809cd70d59949d7f2903fbcfe7c07f30
   classification: critical
 
+# Use concepts to constrain the allowed types of various integer-related templates
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4946  # https://github.com/randombit/botan/pull/4946
+  merge_commit: f406b8e2ac51ef1d1bdf852d53f75140221d713f
+  classification: info
+
+# Correct various functions in bit_ops.h to require unsigned integers
+#   Author:    @randombit
+- pr: 4945  # https://github.com/randombit/botan/pull/4945
+  merge_commit: f950d9e37a54b43d70900db0720250c6125877c4
+  classification: info
+  comment: |
+    Addresses findings regarding Botan published in <https://cr.yp.to/papers/cryptoint-20250424.pdf>
+
+# Fix/reduce Cppcheck warnings in test code
+#   Author:    @KaganCanSit
+#   Approvals: @reneme, (@randombit)
+- pr: 4942  # https://github.com/randombit/botan/pull/4942
+  merge_commit: 57448f64453d3796749038fb2e353566353b2173
+  classification: info
+
+# Range and span were used in line with TODO messages.
+#   Author:    @KaganCanSit
+#   Approvals: @reneme, (@randombit)
+- pr: 4940  # https://github.com/randombit/botan/pull/4940
+  merge_commit: 07a922b1db17236bc2f97d4a13ecc6bac37200b4
+  classification: info
+
+# In pcurves don't return early from an addition of identity + identity
+#   Author:    @randombit
+- pr: 4935  # https://github.com/randombit/botan/pull/4935
+  merge_commit: 1d8149c0879644af8f4c000834f50411844cca1e
+  classification: relevant
+
+# Clang-tidy headers in CI
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4919  # https://github.com/randombit/botan/pull/4919
+  merge_commit: cb10d62499ce61d65f887283357277562ff2fabc
+  classification: info
+
