@@ -159,3 +159,52 @@ patches:
   merge_commit: eea33d0b513066d55b70ad884363d1e1ade11aa6
   auditer: falko-strenzke
   classification:  info
+
+# Update Android NDK to r28 (January 2025)
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4812  # https://github.com/randombit/botan/pull/4812
+  merge_commit: 49974bed347a688054165d1ffa14cf47801b3663
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Update jitterentropy and work around a build issue in CI
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4813  # https://github.com/randombit/botan/pull/4813
+  merge_commit: 3f73d3c1be0a3800dede0cb73a399c1c0efd664d
+  auditer: falko-strenzke
+  classification:  info
+  comment: Increment version of jitterentropy to 3.6.2.
+
+
+# Avoid a single use of Python 3.8 walrus operator in configure.py
+#   Author:    @randombit
+- pr: 4808  # https://github.com/randombit/botan/pull/4808
+  merge_commit: 346317f134cca6ca908d929c42c5088147980348
+  auditer: falko-strenzke
+  classification:  info
+
+# Try re-enabling modules which MSVC in the past miscompiled
+#   Author:    @randombit
+- pr: 4805  # https://github.com/randombit/botan/pull/4805
+  merge_commit: e16b5f9dac073ee8fbc91cde14ad3120d81e21d6
+  auditer: falko-strenzke
+  classification:  info
+
+# FIX: dist.py can deal with UTF-8 within `git show`
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4801  # https://github.com/randombit/botan/pull/4801
+  merge_commit: 6e7dc060c56944256fada3f0943ece3e3e60d89d
+  auditer: falko-strenzke
+  classification:  info
+
+
+# FIX: cmake cannot handle version suffix
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4802  # https://github.com/randombit/botan/pull/4802
+  merge_commit: be539352bd38af4d6ca48fd1ff5042c83381cdac
+  auditer: falko-strenzke
+  classification:  info

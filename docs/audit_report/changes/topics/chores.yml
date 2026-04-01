@@ -87,3 +87,17 @@ patches:
   auditer: falko-strenzke
   classification:  info
 
+# Remove workaround for MSVC 32-bit miscompile in aes_vperm
+#   Author:    @randombit
+- pr: 4810  # https://github.com/randombit/botan/pull/4810
+  merge_commit: 9fb53473352e231d91d1565cc053d3e42f5d5c40
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove vestigial DHE_PSK branch
+#   Author:    @Chaosvex
+#   Approvals: @reneme, (@randombit)
+- pr: 4785  # https://github.com/randombit/botan/pull/4785
+  merge_commit: 3d55d5e37dd2f49289ee4669e4849eb9ab7f77ba
+  auditer: falko-strenzke
+  classification:  info

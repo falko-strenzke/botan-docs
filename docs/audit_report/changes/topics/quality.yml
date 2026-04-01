@@ -462,3 +462,18 @@ patches:
   merge_commit: 85661392060d2a0678d48aeb772f9a59270f96be
   auditer: falko-strenzke
   classification:  relevant
+
+# Guard use of sys/hwprobe.h for RISCV64 CPU feature detection
+#   Author:    @randombit
+- pr: 4815  # https://github.com/randombit/botan/pull/4815
+  merge_commit: 88bd49921ca3aabbe6cb8c24a4f9bd8b433ca9d2
+  auditer: falko-strenzke
+  classification:  info
+
+# Fixed the use of C++20 functions with updated Android NDK and XCode versions.
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 4811  # https://github.com/randombit/botan/pull/4811
+  merge_commit: 0379f57d987d04d3a52e62eb9013817f6a2348f8
+  auditer: falko-strenzke
+  classification:  info

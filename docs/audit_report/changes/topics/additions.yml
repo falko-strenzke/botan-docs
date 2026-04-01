@@ -93,3 +93,15 @@ patches:
   merge_commit: 72b1917b1b6d767578cfded76ce8d6adac737885
   auditer: falko-strenzke
   classification:  relevant
+
+
+# Add missing compliance checks in EC(DH)
+#   Author:    @reneme
+#   Approvals: @FAlbertDev, (@randombit)
+- pr: 4794  # https://github.com/randombit/botan/pull/4794
+  merge_commit: 397d0f9bf50d8a32107812115c873a6bec4dc57f
+  auditer: falko-strenzke
+  classification:  critical
+  comment: |
+    Adds checks for ECDH: Reject private key = zero, reject public key = point at infinity, reject ECDH peer's public point = point at infinity.
+    For all three checks tests are added. This is an important update for reaching BSI compliance.
