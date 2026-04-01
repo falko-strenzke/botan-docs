@@ -10,5 +10,14 @@ patches:
 #   Approvals: (@jdoubleu), (@randombit)
 - pr: 5056  # https://github.com/randombit/botan/pull/5056
   merge_commit: 63d9957034307dc4ed797187b6262bb013c4cc5e
-  classification: unspecified
+  auditer: falko-strenzke
+  classification:  unspecified
 
+# Update EC_Group::PEM_encode to handle upcoming removal of explicit curves
+#   Author:    @randombit
+- pr: 4840  # https://github.com/randombit/botan/pull/4840
+  merge_commit: 54b3ab9c712785987ef76f47e74dac33b0e4f390
+  auditer: falko-strenzke
+  classification:  unspecified
+  comment: |
+    Botan 4 will comletely remove explicit encoding of EC domain parameters and will only support names curves. This change introduces the for choice for encoding them as named curves and adds a warning to the API doc that the explicit encoding will be removed.

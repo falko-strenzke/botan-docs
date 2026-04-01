@@ -9,28 +9,32 @@ patches:
 #   Approvals: @reneme
 - pr: 5126  # https://github.com/randombit/botan/pull/5126
   merge_commit: 4e91ea3e410829a1cd43a12fd6f69e651842e1e8
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update BoringSSL TLS test suite link after branch rename
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5120  # https://github.com/randombit/botan/pull/5120
   merge_commit: 3de96468e4ff3e1b339da3e62e92a1dac5412bc8
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add option to generate documentation in texi format
 #   Author:    @bkmgit
 #   Approvals: (@randombit)
 - pr: 5105  # https://github.com/randombit/botan/pull/5105
   merge_commit: 14e54e7a15ae2392fc4f010bb39830cc9d50365d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Document the specific threat model the library operates under
 #   Author:    @randombit
 #   Approvals: @atreiber94, @reneme
 - pr: 4955  # https://github.com/randombit/botan/pull/4955
   merge_commit: e3b3452ec48335e4eaa80e6e1a99e9b16657f6a2
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
   comment: The new section implies that a threat model for a cryptographic library necessarily only addresses side channel security.
 
 # Improve docs regarding building universal binaries for macOS [ci skip]
@@ -38,5 +42,14 @@ patches:
 #   Approvals: @reneme
 - pr: 4936  # https://github.com/randombit/botan/pull/4936
   merge_commit: aefa54c0ddfe55a35457d9196b6dfbed29aef808
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix Broken and Inaccessible Links in Documentation
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 4867  # https://github.com/randombit/botan/pull/4867
+  merge_commit: 836cfd808727387bf20baf171668fb644c76fc1d
+  auditer: falko-strenzke
+  classification:  info
 

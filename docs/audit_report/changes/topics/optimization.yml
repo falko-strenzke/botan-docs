@@ -10,6 +10,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5147  # https://github.com/randombit/botan/pull/5147
   merge_commit: 3b9b6b582504dab7ad23002bded68bb6528cb341
+  auditer: falko-strenzke
   classification: relevant
 
 # Modernize BLAKE2s and improve performance by removing per-byte loops
@@ -17,6 +18,7 @@ patches:
 #   Approvals: @reneme, (@randombit), (@huven)
 - pr: 5117  # https://github.com/randombit/botan/pull/5117
   merge_commit: 6bdfee8fe90f8b3d6c6328ed8f9c14005b18126f
+  auditer: falko-strenzke
   classification: relevant
 
 # Force the inlining of the Keccak permutation round function
@@ -24,6 +26,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5133  # https://github.com/randombit/botan/pull/5133
   merge_commit: 9d930f663fbc7925b040b89867fdb4dd44a44c86
+  auditer: falko-strenzke
   classification: info
 
   # Streebog FIXME fix
@@ -31,36 +34,42 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5111  # https://github.com/randombit/botan/pull/5111
   merge_commit: a3ed3b00b7d1ca84609d1f25040534d3aa1a183e
+  auditer: falko-strenzke
   classification: relevant
 
   # Add explicit algorithm for variable-time division of 2^k / x
 #   Author:    @randombit
 - pr: 5068  # https://github.com/randombit/botan/pull/5068
   merge_commit: c03cc54dce240a20d5559931741f84f4fd521359
+  auditer: falko-strenzke
   classification: critical
 
 # New implementation of the Jacobi function
 #   Author:    @randombit
 - pr: 5057  # https://github.com/randombit/botan/pull/5057
   merge_commit: d1ae5695b27a8a2811089f207d85c88feb887335
+  auditer: falko-strenzke
   classification: critical
 
 # Base58 optimizations
 #   Author:    @randombit
 - pr: 5051  # https://github.com/randombit/botan/pull/5051
   merge_commit: 06972557ae2af1a221f6276128b1b1b3e0f77128
+  auditer: falko-strenzke
   classification: info
 
 # Use mp interfaces in X448/Ed448 field arithmetic
 #   Author:    @randombit
 - pr: 5037  # https://github.com/randombit/botan/pull/5037
   merge_commit: 216547f2b062e609bfa3c86f895978cbdfd381fb
+  auditer: falko-strenzke
   classification: relevant
 
 # Make Montgomery_Params an inner shared_ptr type
 #   Author:    @randombit
 - pr: 5012  # https://github.com/randombit/botan/pull/5012
   merge_commit: d45d27fe57cec53ba66cc93cd0d536434be60617
+  auditer: falko-strenzke
   classification: info
 
 # Modify Montygomery_Int to not store the value as a BigInt
@@ -68,6 +77,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5010  # https://github.com/randombit/botan/pull/5010
   merge_commit: b3fa1cbc6adb14bed33c54e6830a840f55d6dfc4
+  auditer: falko-strenzke
   classification: critical
 
 # Add support for curve specific field element square roots
@@ -75,5 +85,125 @@ patches:
 #   Approvals: @reneme
 - pr: 4934  # https://github.com/randombit/botan/pull/4934
   merge_commit: 2c5ea096aaeb8e8f3fec7ba7d9e74382cfff0955
+  auditer: falko-strenzke
   classification: critical
 
+# Use compile time generated switch statements for OID lookups
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4896  # https://github.com/randombit/botan/pull/4896
+  merge_commit: b70e4ba97922d152f10ec1d5b132555f4ace7aa8
+  auditer: falko-strenzke
+  classification: info
+
+# Reduce overhead from X.509 RPKI tests
+#   Author:    @randombit
+- pr: 4884  # https://github.com/randombit/botan/pull/4884
+  merge_commit: a2e60d65ed0610624d0a6656813b0f3f5de12f95
+  auditer: falko-strenzke
+  classification: info
+  comment: |
+    Change the parameter combination for PKI tests.
+
+# Add SHACAL2 AVX-512
+#   Author:    @randombit
+- pr: 4878  # https://github.com/randombit/botan/pull/4878
+  merge_commit: a20a4ec20cc3641f1709440683f195fd82b99fc3
+  auditer: falko-strenzke
+  classification: relevant
+  comment: |
+    Optimization for the SHACAL-2 block cipher.
+
+# Generate ec_named.cpp and relevant pcurves files from gen_ec_groups.py
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4841  # https://github.com/randombit/botan/pull/4841
+  merge_commit: 4bee52b2bfbd300fc65d3d2b09450ba78298b788
+  auditer: falko-strenzke
+  classification: info
+  comment: |
+    Python scripts to generate C++ code for specific curves defined in a text file.
+
+# Always inline various low level bit operations
+#   Author:    @randombit
+- pr: 4863  # https://github.com/randombit/botan/pull/4863
+  merge_commit: f8b8a99f3b9818d13d14fe439c81f81795a9fc65
+  auditer: falko-strenzke
+  classification: info
+
+# Add SHA-1 using AVX2 for message expansion plus BMI2
+#   Author:    @randombit
+- pr: 4852  # https://github.com/randombit/botan/pull/4852
+  merge_commit: 52be9b846e38502f28c3c50230b420cb51c9e65d
+  auditer: falko-strenzke
+  classification: relevant
+
+# Tone done unrolling in the AVX-512 SHA-512 code
+#   Author:    @randombit
+- pr: 4849  # https://github.com/randombit/botan/pull/4849
+  merge_commit: e7b06964e16e87c91cb75a2213cfbaaadb268a98
+  auditer: falko-strenzke
+  classification: relevant
+
+# Prefer AES/GCM over ChaCha20Poly1305 in TLS
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4843  # https://github.com/randombit/botan/pull/4843
+  merge_commit: dbe524bf59d376432abb11d2126578a831f16074
+  auditer: falko-strenzke
+  classification: info
+
+# In GHASH skip the slow key schedule if we have CPU instruction support
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4844  # https://github.com/randombit/botan/pull/4844
+  merge_commit: 9a50aedc5ee7530b44bcee1bc39aec2e2a961cd0
+  auditer: falko-strenzke
+  classification: info
+
+# Add SHA-512 using AVX-512 for message expansion
+#   Author:    @randombit
+- pr: 4842  # https://github.com/randombit/botan/pull/4842
+  merge_commit: b8fda5447d5560bcf1c9e12f3b91d93068f5a0a0
+  auditer: falko-strenzke
+  classification: relevant
+
+# Consolidate oid_maps.cpp definitions to save space
+#   Author:    @randombit
+- pr: 4825  # https://github.com/randombit/botan/pull/4825
+  merge_commit: a3db9fa5ffb47f9108791171ec23f0796351828b
+  auditer: falko-strenzke
+  classification: info
+
+# Replace std::vector with std::array in codec_base to avoid allocations
+#   Author:    @Chaosvex
+#   Approvals: (@randombit)
+- pr: 4832  # https://github.com/randombit/botan/pull/4832
+  merge_commit: bd284c38ba83097c4bf17e60d268f5b6c4866ca6
+  auditer: falko-strenzke
+  classification: info
+  comment: Affects only base64 and base32 encoding operations.
+
+
+# Avoid some heap usage in GHASH/GMAC/GCM
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4826  # https://github.com/randombit/botan/pull/4826
+  merge_commit: 2d8b0e81daba53beed1b5b2e2e6bf7681c14172e
+  auditer: falko-strenzke
+  classification: relevant
+  comment: Causes the respective values on the stack to not being wiped.
+
+# SHA-256 implementation using generic SIMD for message expansion
+#   Author:    @randombit
+- pr: 4819  # https://github.com/randombit/botan/pull/4819
+  merge_commit: d2d0a0ddaaa545d45056475c1a084b9d4b9a0603
+  auditer: falko-strenzke
+  classification: relevant
+
+# New SHA-256 using AVX2 for message expansion
+#   Author:    @randombit
+- pr: 4818  # https://github.com/randombit/botan/pull/4818
+  merge_commit: 86df46c13f9627538b61b4dbb0da3eaf1325dc8b
+  auditer: falko-strenzke
+  classification: relevant

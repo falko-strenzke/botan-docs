@@ -8,21 +8,39 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5143  # https://github.com/randombit/botan/pull/5143
   merge_commit: 77ff62992a4862ff821ef200e1630c17e4b9c418
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # find x509 cert by issuer dn and serial number
 #   Author:    @Brassinolide
 #   Approvals: (@randombit)
 - pr: 5072  # https://github.com/randombit/botan/pull/5072
   merge_commit: 9857b91cba6214ef43cbe1d58ca78eaeaebdae1d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
   # Allow Empty Issuer in Certificate_Extension::validate
 #   Author:    @FAlbertDev
 #   Approvals: @reneme, (@randombit)
 - pr: 5081  # https://github.com/randombit/botan/pull/5081
   merge_commit: 73ef154818a0b23c2251969ecb64ab08fb3e32b9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
+# Add IPAddrBlock and ASIdentifiers extensions (RFC 3779)
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 4699  # https://github.com/randombit/botan/pull/4699
+  merge_commit: d7620b408a4783ffa1a2a72fec2a4137848a16c1
+  auditer: falko-strenzke
+  classification:  info
 
-
+# [TODO] Add RFC 1035 Compliant DNS Tag Length Check
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 4876  # https://github.com/randombit/botan/pull/4876
+  merge_commit: 5fbcc7daa2be40fc662e48343882f7abc8827a94
+  auditer: falko-strenzke
+  classification:  info
+  comment: |
+    Improvement of code and tests regarding DNS name parsing.

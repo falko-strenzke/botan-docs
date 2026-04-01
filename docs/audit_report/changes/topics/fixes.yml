@@ -11,7 +11,8 @@ patches:
 #   Falko: comment: fixed error lead to random/rare protocol failures
 - pr: 5141  # https://github.com/randombit/botan/pull/5141
   merge_commit: e64a325f779f5b0c5fe901748b00cfb6ceb4796f
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # FIX: SRP6 step1 fails after FFI reported insufficient buffer space
 #   Author:    @reneme
@@ -19,79 +20,146 @@ patches:
 #   Falko: Only cursory review. Buffer length handling could be checked in more depth.
 - pr: 5135  # https://github.com/randombit/botan/pull/5135
   merge_commit: 72715a0cf3630233415e812188e8d66a03be3ed3
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Add FFI view functions for mp type
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5131  # https://github.com/randombit/botan/pull/5131
   merge_commit: 8a1fbdb78fd24fa54f6c68580041dde52ac53eb9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Skip certain tests if RSA signature paddings are disabled
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5122  # https://github.com/randombit/botan/pull/5122
   merge_commit: 4497006050743eae43a15047e4575c51702fa5f8
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # FIX: `BigInt::zero() << 0` causes a segfault
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5130  # https://github.com/randombit/botan/pull/5130
   merge_commit: 2bd94f6caac1595b2044e50d89dcf21d3d78199c
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Avoid the Serpent AVX512 code under MSVC
 #   Author:    @randombit
 - pr: 5132  # https://github.com/randombit/botan/pull/5132
   merge_commit: 1fbc54fc5af520c073bf897288a11099695c0085
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # FIX: passing raw bytes into PKSign in botan3.py
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5082  # https://github.com/randombit/botan/pull/5082
   merge_commit: 00d442452b1f4bf48790f5bd34ba6f9adb4816bf
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Correct bugs handling division by small negative numbers
 #   Author:    @randombit
 - pr: 5067  # https://github.com/randombit/botan/pull/5067
   merge_commit: ddbd8dc5a7fbe71d7a0d3b09c34965270c86d092
-  classification: critical
+  auditer: falko-strenzke
+  classification:  critical
 
 # small fixes for jitter_rng
 #   Author:    @thillux
 #   Approvals: @reneme, (@randombit)
 - pr: 5044  # https://github.com/randombit/botan/pull/5044
   merge_commit: a30330a46fec3dafe33a7ae76a94e1fb2ec02861
-  classification: critical
+  auditer: falko-strenzke
+  classification:  critical
 
 # Fix some bugprone-unchecked-optional-access warnings from clang-tidy
 #   Author:    @randombit
 - pr: 5035  # https://github.com/randombit/botan/pull/5035
   merge_commit: e39c1e84c4d71f4d21a05ddbc96484335fac4eeb
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix implicit conversion issues caused by encode_if in der encoder
 #   Author:    @Brassinolide
 #   Approvals: (@randombit)
 - pr: 5013  # https://github.com/randombit/botan/pull/5013
   merge_commit: 1ab1f909fc77d042db5ec711a137f604e6daa414
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Enable and fix clang-tidy warning cppcoreguidelines-owning-memory
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4983  # https://github.com/randombit/botan/pull/4983
   merge_commit: 1999a97b1dc18b255d33345e3a16db64a1281f16
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Test: Improve AEAD and cipher mode error condition checks
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 4970  # https://github.com/randombit/botan/pull/4970
   merge_commit: a5656fff8d5a106f5989d5180bdba1f4db536d6a
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
+
+# FIX: CLI benchmark of Classic McEliece
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4917  # https://github.com/randombit/botan/pull/4917
+  merge_commit: 792481a9848846542f5565054398851b0192456f
+  auditer: falko-strenzke
+  classification:  info
+  comment: |
+    Affects only the Benchmarking code.
+
+
+# Fix OSS-Fuzz 422598833
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4904  # https://github.com/randombit/botan/pull/4904
+  merge_commit: 0da0ad3febeca17d61b13e929022eaea8c9fe4b0
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Fixes TLS test and library code.
+
+# FIX: re-assign eFrodoKEM code points to match OQS
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4900  # https://github.com/randombit/botan/pull/4900
+  merge_commit: 595e052677538ddf0084f30942f8bf888be8c271
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Affect code point allocation only.
+
+# FIX: Ambiguous c'tor overloads in X509_DN with initializer list
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4861  # https://github.com/randombit/botan/pull/4861
+  merge_commit: 02f7a7cae4fc0513ef1200c7eb4d5c86d9531e02
+  auditer: falko-strenzke
+  classification:  info
+
+
+# Add a test for check_and_canonicalize_dns_name
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4881  # https://github.com/randombit/botan/pull/4881
+  merge_commit: 2fb34a85142cde33ae5006db4df0d2c96ca40ccf
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Refactor in Kuznyechik to avoid constexpr limits in Clang 19
+#   Author:    @randombit
+- pr: 4850  # https://github.com/randombit/botan/pull/4850
+  merge_commit: 3d5e352e0e17b144a6190164c9255d93c4b9ea9f
+  auditer: falko-strenzke
+  classification:  info

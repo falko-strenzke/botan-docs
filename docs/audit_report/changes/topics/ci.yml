@@ -9,283 +9,328 @@ patches:
 #   Approvals: @reneme
 - pr: 5146  # https://github.com/randombit/botan/pull/5146
   merge_commit: 4d38d9759fbe0d3a92a9dcb2e5df36abced19917
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable the clang-tidy hicpp-no-assembler and portability-simd-intrinsics warnings
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5142  # https://github.com/randombit/botan/pull/5142
   merge_commit: 24001eec45d022b3d06d50f78f6503d98ab90ac3
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
   # Set up a Dev Container
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5094  # https://github.com/randombit/botan/pull/5094
   merge_commit: 3036154143d18b86209849f2d0812000b23361d1
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update TPM2 session FIXME comments to document intentional implicit conversions
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5118  # https://github.com/randombit/botan/pull/5118
   merge_commit: 3c6caa3930b5bcf18e0cc7800dccbb3c88b2c535
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add running ruff linter to CI
 #   Author:    @randombit
 - pr: 5090  # https://github.com/randombit/botan/pull/5090
   merge_commit: b1885dcc3b5322a8ff33078ff9dd3b9d3449d0f5
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Disable the Emscripten build
 #   Author:    @randombit
 - pr: 5080  # https://github.com/randombit/botan/pull/5080
   merge_commit: 1b82e522d730c3747650e34257b1ca45d7107866
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Add a typos CI job
 #   Author:    @randombit
 - pr: 5075  # https://github.com/randombit/botan/pull/5075
   merge_commit: 52eb916552cc6d8f38255e1ac3169a007a79fcf2
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Skip CodeQL runs on PRs
 #   Author:    @randombit
 - pr: 5059  # https://github.com/randombit/botan/pull/5059
   merge_commit: c7afad93c3ef8b7348afcb076bfe6627778e1330
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Remove the clang-tidy nightly run
 #   Author:    @randombit
 - pr: 5054  # https://github.com/randombit/botan/pull/5054
   merge_commit: ee093a635fbfdd9f699decd040a9a1c9634e676f
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Run a full clang-tidy scan on every PR
 #   Author:    @randombit
 - pr: 5050  # https://github.com/randombit/botan/pull/5050
   merge_commit: fb33dabab15d47be3ce2dc91d0d2101132d76bd3
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable clang-tidy warning misc-misplaced-const
 #   Author:    @randombit
 - pr: 5005  # https://github.com/randombit/botan/pull/5005
   merge_commit: e76868b720f22263cd96ef97c1b3759ae9bec30d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning readability-isolate-declaration
 #   Author:    @randombit
 - pr: 4998  # https://github.com/randombit/botan/pull/4998
   merge_commit: 5ce69e1e99652d5a843c2104526a04f25eeab5e6
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning readability-redundant-member-init
 #   Author:    @randombit
 - pr: 4992  # https://github.com/randombit/botan/pull/4992
   merge_commit: 6eea3cee46dec6e67178e19acebe66144a3bd443
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning bugprone-argument-comment
 #   Author:    @randombit
 - pr: 4993  # https://github.com/randombit/botan/pull/4993
   merge_commit: 16e090efa22edeabaabbbdaeb06fb02cce1f341b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix more readability-named-parameter warnings from clang-tidy
 #   Author:    @randombit
 - pr: 4989  # https://github.com/randombit/botan/pull/4989
   merge_commit: e18675f4596bf81c8b4212a7f95ecbc7a6b8bcc3
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Various clang-tidy runner script tweaks
 #   Author:    @randombit
 - pr: 4988  # https://github.com/randombit/botan/pull/4988
   merge_commit: b71fdb4a3e7b422a3148499d3f1800d0f7f70ab3
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning cert-err58-cpp
 #   Author:    @randombit
 - pr: 4982  # https://github.com/randombit/botan/pull/4982
   merge_commit: ef2a1bab275b9b086d243dd018d690996511cc6d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable clang-tidy warning readability-qualified-auto
 #   Author:    @randombit
 - pr: 4987  # https://github.com/randombit/botan/pull/4987
   merge_commit: 12425814ccbdf0b4bad182becacb0c4591ce7ace
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix some readability-named-parameter warnings from clang-tidy
 #   Author:    @randombit
 - pr: 4986  # https://github.com/randombit/botan/pull/4986
   merge_commit: a900b914083178fb5a98f636f710d60adb99e11f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning cppcoreguidelines-prefer-member-initializer
 #   Author:    @randombit
 - pr: 4985  # https://github.com/randombit/botan/pull/4985
   merge_commit: 796ccaa31a249373a9f60a8cedfed59bd1f3420f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning misc-confusable-identifiers
 #   Author:    @randombit
 - pr: 4984  # https://github.com/randombit/botan/pull/4984
   merge_commit: 64a316a5d2d07039a1eb434ddec2fc4f2311358d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning readability-use-std-min-max
 #   Author:    @randombit
 - pr: 4979  # https://github.com/randombit/botan/pull/4979
   merge_commit: 5e308722839cf6cab6ca5a77d68801f10d0ef092
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning modernize-loop-convert
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4974  # https://github.com/randombit/botan/pull/4974
   merge_commit: 4c149df22905b9e8f14da8a7aa292b114c1f47fe
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning suspcious-call-argument
 #   Author:    @randombit
 - pr: 4981  # https://github.com/randombit/botan/pull/4981
   merge_commit: 2552b3c137a5ef828d8dd6118d340ff0976a2605
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning misc-redundant-expression
 #   Author:    @randombit
 - pr: 4978  # https://github.com/randombit/botan/pull/4978
   merge_commit: e87c8e33a3e40e0eb4dfe03d72bc893ef32f07ff
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning modernize-raw-string-literal
 #   Author:    @randombit
 - pr: 4980  # https://github.com/randombit/botan/pull/4980
   merge_commit: 7e4685079e83b154ecacb0916c9ad42df9f54abb
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # In clang-tidy config enable a warning already enabled under a different name
 #   Author:    @randombit
 - pr: 4976  # https://github.com/randombit/botan/pull/4976
   merge_commit: e53ca841ee331f26580fcd112c2947ee827b0d85
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix silencing of vararg clang-tidy warning
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4975  # https://github.com/randombit/botan/pull/4975
   merge_commit: b0731ce9e1a961967dc6fc265dae61e8758c9655
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix some clang-tidy readability-implict-bool-conversion warnings
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4977  # https://github.com/randombit/botan/pull/4977
   merge_commit: 5cc87ce626109637dfe662e1c767458f4b16290f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning readability-container-data-pointer
 #   Author:    @randombit
 - pr: 4972  # https://github.com/randombit/botan/pull/4972
   merge_commit: 63764de6e32492a8ad46548be508f9a964ba713e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning cppcoreguidelines-avoid-do-while
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4973  # https://github.com/randombit/botan/pull/4973
   merge_commit: 93e9e1d365f52407821711da60a82e31e84345ce
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Run: `run_clang_tidy.py --regenerate-inline-config-file`
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 4971  # https://github.com/randombit/botan/pull/4971
   merge_commit: 6aa9702c75fd0761b1fcc51c3f20001856be327d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning hicpp-member-init
 #   Author:    @randombit
 - pr: 4968  # https://github.com/randombit/botan/pull/4968
   merge_commit: 8e9985cbac56dc365b4856065d025fd95eeaad22
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix (well, mostly silence) clang-tidy warning hicpp-vararg
 #   Author:    @randombit
 - pr: 4969  # https://github.com/randombit/botan/pull/4969
   merge_commit: 8cd70aa22f95dc664b9370c8e2630cdb23b42984
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix/reduce CppCheck warnings in 'tests' folder
 #   Author:    @KaganCanSit
 #   Approvals: (@randombit)
 - pr: 4967  # https://github.com/randombit/botan/pull/4967
   merge_commit: f3cad956a1cd44a3fb51f31538ad06b156a95d2e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix clang-tidy warning readability-qualified-auto
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4962  # https://github.com/randombit/botan/pull/4962
   merge_commit: 88e8dd91c31e6806dcb11ecde238e8cbf88e8ecd
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix some clang-tidy bugprone-narrowing-conversions warnings
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4964  # https://github.com/randombit/botan/pull/4964
   merge_commit: a13f9503618d2ee666b0ba0727970cf1fb2359fe
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix some clang-tidy readability-implicit-bool-conversion warnings
 #   Author:    @randombit
 - pr: 4961  # https://github.com/randombit/botan/pull/4961
   merge_commit: 8e84cba5c1ec7832c60cfc4bf278f1c35dcc30c5
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix various clang-tidy warnings in POWER specific code
 #   Author:    @randombit
 - pr: 4963  # https://github.com/randombit/botan/pull/4963
   merge_commit: 0747f4bc5f4a5a4420a69fecc658516b2e96aa4b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning bugprone-lambda-function-name
 #   Author:    @randombit
 - pr: 4960  # https://github.com/randombit/botan/pull/4960
   merge_commit: 0b26967f976213e7676a7d90974954af9dd71fbd
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning cppcoreguidelines-init-variables
 #   Author:    @randombit
 - pr: 4959  # https://github.com/randombit/botan/pull/4959
   merge_commit: ecd5815a4930a986a64086e8137af8ee801e7b58
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy hicpp-explicit-conversions warning
 #   Author:    @randombit
 - pr: 4957  # https://github.com/randombit/botan/pull/4957
   merge_commit: c4f937d19408f8539263fc844c646ad5b9181e90
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning modernize-avoid-bind
 #   Author:    @randombit
 - pr: 4958  # https://github.com/randombit/botan/pull/4958
   merge_commit: bdd158446c17e8480ea05fb2427a95a41eb3fbf3
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Enable and fix clang-tidy warning cppcoreguidelines-slicing
 #   Author:    @randombit
 - pr: 4956  # https://github.com/randombit/botan/pull/4956
   merge_commit: 3a327627dea5fb686aeb495728fbbbc58002c088
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Address various warnings from clang-tidy
 #   Author:    @randombit
 - pr: 4931  # https://github.com/randombit/botan/pull/4931
   merge_commit: 930d7f6adac226c517722ffb5744325a24debebf
-  classification: unspecified
+  auditer: falko-strenzke
+  classification:  unspecified
   comment: Huge PR with 220 affected files addressing linter warnings. Was not reviewed at all.
 
 # CI: install/simulate TPM2 simulation environment only when needed
@@ -293,39 +338,52 @@ patches:
 #   Approvals: (@randombit)
 - pr: 4929  # https://github.com/randombit/botan/pull/4929
   merge_commit: 00a2a96c2624cf42ea240e9c06e0697e55ac0a90
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Test: GCC's Stack Scrubbing
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 4925  # https://github.com/randombit/botan/pull/4925
   merge_commit: 0a7e9846ba5a1ad78258453ce017271cf1654d79
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # CI: stop building the tests when we won't need them
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 4926  # https://github.com/randombit/botan/pull/4926
   merge_commit: ff5da147f64efb0a2716ca508267bba018e0cc1b
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Take the clang-tidy cache size from an environment variable
 #   Author:    @randombit
 - pr: 4923  # https://github.com/randombit/botan/pull/4923
   merge_commit: 1d5a2c48c53fe13ec2b2ddfd6f18c0380f5cff75
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Run clang-tidy on master
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4924  # https://github.com/randombit/botan/pull/4924
   merge_commit: e6ad9a4dc82c314f8dec6383737f1dc935c4009f
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Add a cache for clang-tidy
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 4920  # https://github.com/randombit/botan/pull/4920
   merge_commit: cfc7bc1c63b4f86aeef4d470babd7a6e94f78ea1
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
+
+# Skip x509_rpki tests under valgrind with Clang -Os
+#   Author:    @randombit
+- pr: 4886  # https://github.com/randombit/botan/pull/4886
+  merge_commit: 41b950dc4b2ed1a59359ea4c0b5ec8305b622414
+  auditer: falko-strenzke
+  classification:  info

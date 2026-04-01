@@ -1,0 +1,25 @@
+title: Botan Configuration Policies 
+
+description: |
+  This section describes changes to the cryptographic policies in Botan, i.e., changes to the defined policies. 
+
+patches:
+
+# Update BSI policy for 2025's TR-02101-1
+#   Author:    @reneme
+#   Approvals: @FAlbertDev, (@randombit)
+- pr: 4879  # https://github.com/randombit/botan/pull/4879
+  merge_commit: cf78ad9c9fa5f7f8b5c189806f9a5e3196f14af2
+  auditer: falko-strenzke
+  classification:  critical
+  comment: |
+    Introduces ML-KEM and ML-DSA into BSI policy.
+
+
+# Fix building with fips140 and modern policy sets
+#   Author:    @randombit
+- pr: 4856  # https://github.com/randombit/botan/pull/4856
+  merge_commit: 7cbd1d6035e75e84ac4eb192600f9e98c875c547
+  auditer: falko-strenzke
+  classification:  unspecified
+  comment: Adds sha2_32_simd to BSI policy.
