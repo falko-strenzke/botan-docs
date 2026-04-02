@@ -12,7 +12,7 @@ patches:
 - pr: 5140  # https://github.com/randombit/botan/pull/5140
   merge_commit: afebb96a0c5e3a4be220463ece6bcf0748f75659
   auditer: falko-strenzke
-  classification:  info 
+  classification:  info
 
 # Fix error compiling the Aarch64 cpuid code without os_utils
 #   Author:    @randombit
@@ -208,3 +208,8 @@ patches:
   merge_commit: be539352bd38af4d6ca48fd1ff5042c83381cdac
   auditer: falko-strenzke
   classification:  info
+
+# Add support for GCC ThreadSanitizer [ci skip]
+#   Author: Jack Lloyd
+- commit: 2344f81004069fd1c8d42ce92d3f6f90734f1536  # https://github.com/randombit/botan/commit/2344f81004069fd1c8d42ce92d3f6f90734f1536
+  classification: info

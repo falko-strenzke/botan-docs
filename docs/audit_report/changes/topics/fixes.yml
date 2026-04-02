@@ -163,3 +163,33 @@ patches:
   merge_commit: 3d5e352e0e17b144a6190164c9255d93c4b9ea9f
   auditer: falko-strenzke
   classification:  info
+
+# Fix gen_prime --hex
+#   Author: Jack Lloyd
+- commit: f536862f010112f84261e8af9b3590e0cab1b979  # https://github.com/randombit/botan/commit/f536862f010112f84261e8af9b3590e0cab1b979
+  auditer: Johannes Roth
+  classification: info
+
+# Add missing include [ci skip]
+#   Author: Jack Lloyd
+- commit: 93b1ed5824b13fc48dc1d6437879e645141e3330  # https://github.com/randombit/botan/commit/93b1ed5824b13fc48dc1d6437879e645141e3330
+  auditer: Johannes Roth
+  classification: info
+
+# Add missing <algorithm> includes
+#   Author: Jack Lloyd
+- commit: 81da1de70d4bd6b22af6eb9f2938a0b546d5c708  # https://github.com/randombit/botan/commit/81da1de70d4bd6b22af6eb9f2938a0b546d5c708
+  auditer: Johannes Roth
+  classification: info
+
+# Add missing <string_view> include to tests.h [ci skip]
+#   Author: Jack Lloyd
+- commit: b4734c8a30ca983be0ac7fb975cf871fa51002ea  # https://github.com/randombit/botan/commit/b4734c8a30ca983be0ac7fb975cf871fa51002ea
+  auditer: Johannes Roth
+  classification: info
+
+# Correct pcurves.cpp template [ci skip]
+#   Author: Jack Lloyd
+- commit: caa9c483421dd718123158080c039c7ed53d634d  # https://github.com/randombit/botan/commit/caa9c483421dd718123158080c039c7ed53d634d
+  auditer: Johannes Roth
+  classification: info

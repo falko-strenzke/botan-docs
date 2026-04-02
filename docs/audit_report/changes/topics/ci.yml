@@ -380,10 +380,16 @@ patches:
   auditer: falko-strenzke
   classification:  out of scope
 
-
 # Skip x509_rpki tests under valgrind with Clang -Os
 #   Author:    @randombit
 - pr: 4886  # https://github.com/randombit/botan/pull/4886
   merge_commit: 41b950dc4b2ed1a59359ea4c0b5ec8305b622414
   auditer: falko-strenzke
   classification:  info
+
+# Use macOS 15 images for CI builds
+#   Author:    @randombit
+- pr: 5159  # https://github.com/randombit/botan/pull/5159
+  merge_commit: 258d0fe77049cbeeaf10560aa3d7b40638ca5b25
+  auditer: Johannes Roth
+  classification: info

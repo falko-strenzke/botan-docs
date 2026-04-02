@@ -62,4 +62,19 @@ patches:
   auditer: falko-strenzke
   classification:  relevant
   comment: |
-    Use of Intel GFNI for Camellia. Claimed to be constant-time by the author. "TECHNOLOGY GUIDE Intel Corporation Galois Field New Instructions (GFNI)" makes no such statement, however. 
+    Use of Intel GFNI for Camellia. Claimed to be constant-time by the author. "TECHNOLOGY GUIDE Intel Corporation Galois Field New Instructions (GFNI)" makes no such statement, however.
+
+# Avoid integer modulo operations when sieving for primes
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5180  # https://github.com/randombit/botan/pull/5180
+  merge_commit: 8152d65a8c62461971b27a9eb46caa81d2487a94
+  auditer: Johannes Roth
+  classification: relevant
+
+# Use gcc-14 for valgrind CT checks
+#   Author:    @randombit
+- pr: 5184  # https://github.com/randombit/botan/pull/5184
+  merge_commit: a4e346b47137dafdfcc1078a80e4d1e499c78656
+  auditer: Johannes Roth
+  classification: relevant

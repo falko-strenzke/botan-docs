@@ -1,4 +1,4 @@
-title: Optimization 
+title: Optimization
 
 description: |
   Changes or additions to implementation for the purpose of running time of memory optimization.
@@ -237,7 +237,6 @@ patches:
   auditer: falko-strenzke
   classification:  relevant
 
-
 # Add benchmark for public and private key parsing
 #   Author:    @randombit
 #   Approvals: @reneme
@@ -246,3 +245,47 @@ patches:
   auditer: falko-strenzke
   classification:  relevant
   comment: Also includes optimizations of the integer division routines.
+
+# Recognize Wasm SIMD128 and port `SIMD_4x32` to it
+#   Author:    @polarnis
+#   Approvals: (@randombit)
+- pr: 5155  # https://github.com/randombit/botan/pull/5155
+  merge_commit: b99c9efcffc0084d70ad5afefb3e585a22a41bff
+  auditer: Johannes Roth
+  classification: relevant
+
+# Unroll loops within the generic Montgomery reduction
+#   Author:    @randombit
+- pr: 5150  # https://github.com/randombit/botan/pull/5150
+  merge_commit: f8eb340027de2d81cdb35982ca55760e6d315c45
+  auditer: Johannes Roth
+  classification: relevant
+
+# Use a new strategy for blinding in ECDSA signing
+#   Author:    @randombit
+- pr: 5173  # https://github.com/randombit/botan/pull/5173
+  merge_commit: 67e8928b44291ce60795888a9f67b27b74c410df
+  classification: relevant
+  auditer: Johannes Roth
+  comment: improves the performance of blinding
+
+# Add some special cases for variable time division
+#   Author:    @randombit
+- pr: 5177  # https://github.com/randombit/botan/pull/5177
+  merge_commit: 94a72b7ec72793ca18d38ccd6923cc774ee35dca
+  auditer: Johannes Roth
+  classification: relevant
+
+# Use AVX2/AVX512 broadcast instructions instead of pre-duplicated constant tables
+#   Author:    @randombit
+- pr: 5179  # https://github.com/randombit/botan/pull/5179
+  merge_commit: 3d96b675e4c2042d37db370fb228772364b329a3
+  auditer: Johannes Roth
+  classification: relevant
+
+# Add SM3 AVX2/BMI2 compression function
+#   Author:    @randombit
+- pr: 5178  # https://github.com/randombit/botan/pull/5178
+  merge_commit: d51fd1a35c112389ea0fd0c46faa0aed25089c3f
+  auditer: Johannes Roth
+  classification: relevant

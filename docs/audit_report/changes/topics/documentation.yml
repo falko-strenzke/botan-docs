@@ -53,3 +53,166 @@ patches:
   auditer: falko-strenzke
   classification:  info
 
+# Update release notes
+#   Author: Jack Lloyd
+- commit: 2d2b533df44a1de0c0ffe1dd055d4cd324120325  # https://github.com/randombit/botan/commit/2d2b533df44a1de0c0ffe1dd055d4cd324120325
+  auditer: Johannes Roth
+  classification: info
+
+# Expand on goals a bit [ci skip]
+#   Author: Jack Lloyd
+- commit: 7f0f0b6e618120914058064cf1865922d6290eb0  # https://github.com/randombit/botan/commit/7f0f0b6e618120914058064cf1865922d6290eb0
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes
+#   Author: Jack Lloyd
+- commit: f78c9e9def7c5447d375ef50b06ae706780a7eed  # https://github.com/randombit/botan/commit/f78c9e9def7c5447d375ef50b06ae706780a7eed
+  auditer: Johannes Roth
+  classification: info
+
+# Add a note to remove zfec_sse2 in Botan4
+#   Author: Jack Lloyd
+- commit: ab5d5197f68b04ac88bf12d71baa4c6b4b964721  # https://github.com/randombit/botan/commit/ab5d5197f68b04ac88bf12d71baa4c6b4b964721
+  auditer: Johannes Roth
+  classification: info
+
+# Update hardware acceleration doc
+#   Author: Jack Lloyd
+- commit: e6e063e174ea566c84bbab58d21d2a836c022e7b  # https://github.com/randombit/botan/commit/e6e063e174ea566c84bbab58d21d2a836c022e7b
+  auditer: Johannes Roth
+  classification: info
+
+# Update version
+#   Author: Jack Lloyd
+- commit: 8bb0a997b6be3c47282e8c32aef9baf56a2ae102  # https://github.com/randombit/botan/commit/8bb0a997b6be3c47282e8c32aef9baf56a2ae102
+  auditer: Johannes Roth
+  classification: info
+
+# Update change notes [ci skip]
+#   Author: Jack Lloyd
+- commit: 1a497b9c87fa1341fff6810ebbcff62214150d2b  # https://github.com/randombit/botan/commit/1a497b9c87fa1341fff6810ebbcff62214150d2b
+  auditer: Johannes Roth
+  classification: info
+
+# Fix typo [ci skip]
+#   Author: Jack Lloyd
+- commit: 8c5656b5e5115e58a1ad9626c792e1cc1dd5759f  # https://github.com/randombit/botan/commit/8c5656b5e5115e58a1ad9626c792e1cc1dd5759f
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes
+#   Author: Jack Lloyd
+- commit: c1bf200671031a7aa100cb121f9c9786dd1a7786  # https://github.com/randombit/botan/commit/c1bf200671031a7aa100cb121f9c9786dd1a7786
+  auditer: Johannes Roth
+  classification: info
+
+# Update todos [ci skip]
+#   Author: Jack Lloyd
+- commit: ffdc1a098790518d704aa79d0016913459885fd9  # https://github.com/randombit/botan/commit/ffdc1a098790518d704aa79d0016913459885fd9
+  auditer: Johannes Roth
+  classification: info
+
+# Minor todo updates
+#   Author: Jack Lloyd
+- commit: cdd67b74f175e30697cecd24c89e06317cf45e9f  # https://github.com/randombit/botan/commit/cdd67b74f175e30697cecd24c89e06317cf45e9f
+  auditer: Johannes Roth
+  classification: info
+
+# Add a warning about possible miscompilations with the amalgamation [ci skip]
+#   Author: Jack Lloyd
+- commit: 5e9b85bc961e5e4a8ae098316d96a393b3babf1e  # https://github.com/randombit/botan/commit/5e9b85bc961e5e4a8ae098316d96a393b3babf1e
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: ab88122f8a55d78dd7ac13060e081a732053de96  # https://github.com/randombit/botan/commit/ab88122f8a55d78dd7ac13060e081a732053de96
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: 9bd1295ec56750cbf8a288db8f909846ea6cbb37  # https://github.com/randombit/botan/commit/9bd1295ec56750cbf8a288db8f909846ea6cbb37
+  auditer: Johannes Roth
+  classification: info
+
+# Update roadmap [ci skip]
+#   Author: Jack Lloyd
+- commit: 7cb527f16cbfb567192aece2564174463a2db13f  # https://github.com/randombit/botan/commit/7cb527f16cbfb567192aece2564174463a2db13f
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: a3fd414f21ccfb163472f9cd98bc4ba5dc79765e  # https://github.com/randombit/botan/commit/a3fd414f21ccfb163472f9cd98bc4ba5dc79765e
+  auditer: Johannes Roth
+  classification: info
+
+# Emphasize doc warning about the use of stateful signature schemes [ci skip]
+#   Author: Jack Lloyd
+- commit: b5c4afc0919ce5ded6fa34b9bacd48a73ce47c67  # https://github.com/randombit/botan/commit/b5c4afc0919ce5ded6fa34b9bacd48a73ce47c67
+  auditer: Johannes Roth
+  classification: info
+
+# Update news [ci skip]
+#   Author: Jack Lloyd
+- commit: 88e61f8c72b18be4fe70f13bed7e6539d953bb55  # https://github.com/randombit/botan/commit/88e61f8c72b18be4fe70f13bed7e6539d953bb55
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: b23c2f7a6da1d53755b5232f25f060f6f898c30f  # https://github.com/randombit/botan/commit/b23c2f7a6da1d53755b5232f25f060f6f898c30f
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: 09aed6eb2a526e576de593d476aebf44ed9fb8af  # https://github.com/randombit/botan/commit/09aed6eb2a526e576de593d476aebf44ed9fb8af
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: 02fe866ea342a2a011335d2bce1318568ed7da90  # https://github.com/randombit/botan/commit/02fe866ea342a2a011335d2bce1318568ed7da90
+  auditer: Johannes Roth
+  classification: info
+
+# Cleanup todos [ci skip]
+#   Author: Jack Lloyd
+- commit: 52a033211cff20342b4ff7d42f99a8cb19e3e48a  # https://github.com/randombit/botan/commit/52a033211cff20342b4ff7d42f99a8cb19e3e48a
+  auditer: Johannes Roth
+  classification: info
+
+# Update release notes [ci skip]
+#   Author: Jack Lloyd
+- commit: f98de3af4e7261adca5a97fe51a6058987403279  # https://github.com/randombit/botan/commit/f98de3af4e7261adca5a97fe51a6058987403279
+  auditer: Johannes Roth
+  classification: info
+
+# Update change notes [ci skip]
+#   Author: Jack Lloyd
+- commit: 625fd45da1292ab24a185259771cadf84a8f5099  # https://github.com/randombit/botan/commit/625fd45da1292ab24a185259771cadf84a8f5099
+  auditer: Johannes Roth
+  classification: info
+
+# Small readme tweak [ci skip]
+#   Author: Jack Lloyd
+- commit: d6b78f18a49216643d26536320c83774da167d64  # https://github.com/randombit/botan/commit/d6b78f18a49216643d26536320c83774da167d64
+  auditer: Johannes Roth
+  classification: info
+
+# Add advisory test [ci skip]
+#   Author: Jack Lloyd
+- commit: d851c24098bced366a032c36dcfbadf2c163d190  # https://github.com/randombit/botan/commit/d851c24098bced366a032c36dcfbadf2c163d190
+  auditer: Johannes Roth
+  classification: info
+
+# Update for 3.11.0 release
+#   Author: Jack Lloyd
+- commit: 4f6f5bbaf7263ca6062e6644950ae30625f06490  # https://github.com/randombit/botan/commit/4f6f5bbaf7263ca6062e6644950ae30625f06490
+  auditer: Johannes Roth
+  classification: info
+
+

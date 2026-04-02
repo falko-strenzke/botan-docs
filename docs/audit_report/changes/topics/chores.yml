@@ -19,7 +19,7 @@ patches:
 - pr: 5125  # https://github.com/randombit/botan/pull/5125
   merge_commit: 46f6fc3b265f21a1b348630eb9a3090167ce0da8
   auditer: falko-strenzke
-  classification:  out of scope 
+  classification:  out of scope
 
 # Avoid using `and` keyword
 #   Author:    @randombit
@@ -101,3 +101,79 @@ patches:
   merge_commit: 3d55d5e37dd2f49289ee4669e4849eb9ab7f77ba
   auditer: falko-strenzke
   classification:  info
+
+# Remove stray semicolon [ci skip]
+#   Author: Jack Lloyd
+- commit: 0eef75831158c59b9323c718f1489bb7b937ca0d  # https://github.com/randombit/botan/commit/0eef75831158c59b9323c718f1489bb7b937ca0d
+  auditer: Johannes Roth
+  classification: info
+
+# Add a line flush after writing output in speed cli [ci skip]
+#   Author: Jack Lloyd
+- commit: 24a2ef317a25091f69a966a17097c696dc71623c  # https://github.com/randombit/botan/commit/24a2ef317a25091f69a966a17097c696dc71623c
+  auditer: Johannes Roth
+  classification: info
+
+# Happy New Year
+#   Author: Jack Lloyd
+- commit: a09e8a12b50b97fe05142512856d634599b5b253  # https://github.com/randombit/botan/commit/a09e8a12b50b97fe05142512856d634599b5b253
+  auditer: Johannes Roth
+  classification: info
+
+# Remove configure.py logic disabling AVX2 on OpenBSD
+#   Author: Jack Lloyd
+- commit: 9770c2632f48c4ecc519f9461aefeffbf8523db6  # https://github.com/randombit/botan/commit/9770c2632f48c4ecc519f9461aefeffbf8523db6
+  auditer: Johannes Roth
+  classification: info
+
+# Fully disable SIMD pathways on ppc32 [ci skip]
+#   Author: Jack Lloyd
+- commit: 0f855d25c20517d962e6346d9e3f8503e4dd826d  # https://github.com/randombit/botan/commit/0f855d25c20517d962e6346d9e3f8503e4dd826d
+  auditer: Johannes Roth
+  classification: info
+
+# Modify gen_mp_monty script to directly rewrite the source file
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5149  # https://github.com/randombit/botan/pull/5149
+  merge_commit: e78c62c39cd051ed45d2bb2e502faf777f58c311
+  auditer: Johannes Roth
+  classification: info
+
+# Increased max HMAC key length to 8192
+#   Author:    @huven
+#   Approvals: (@randombit)
+- pr: 5156  # https://github.com/randombit/botan/pull/5156
+  merge_commit: 2d01ad0cedd1d5ae6c00ce372942df5c5a029e8a
+  auditer: Johannes Roth
+  classification: relevant
+
+# Change clang-tidy runner script to be verbose by default
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5174  # https://github.com/randombit/botan/pull/5174
+  merge_commit: e81a26a4ce29c0dc644f901b24666458e81ece92
+  auditer: Johannes Roth
+  classification: out-of-scope
+
+# Don't parameterize AffineCurvePoint over the curve constants
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5175  # https://github.com/randombit/botan/pull/5175
+  merge_commit: 780277008962e5e28280388421dca381866630e9
+  auditer: Johannes Roth
+  classification: relevant
+
+# Avoid deprecated strand call in Boost asio
+#   Author:    @randombit
+- pr: 5182  # https://github.com/randombit/botan/pull/5182
+  merge_commit: 1fd0d0cf51af84e3a25d28e0a180198b84a19c42
+  auditer: Johannes Roth
+  classification: info
+
+# Deprecate Threaded_Fork
+#   Author:    @randombit
+- pr: 5185  # https://github.com/randombit/botan/pull/5185
+  merge_commit: 39c4f3b00adc133c7d48ac848734788dbf4b1e28
+  auditer: Johannes Roth
+  classification: info
