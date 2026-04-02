@@ -193,3 +193,42 @@ patches:
 - commit: caa9c483421dd718123158080c039c7ed53d634d  # https://github.com/randombit/botan/commit/caa9c483421dd718123158080c039c7ed53d634d
   auditer: Johannes Roth
   classification: info
+
+# When benchmarking the XOF clear the state between buffer sizes
+#   Author:    @randombit
+- pr: 5190  # https://github.com/randombit/botan/pull/5190
+  merge_commit: 3b7c7e9943b87817a0867ba08c45c7dd260345ae
+  auditer: Johannes Roth
+  classification: info
+
+# Prevent using serpent_avx512 with GCC 11
+#   Author:    @randombit
+- pr: 5197  # https://github.com/randombit/botan/pull/5197
+  merge_commit: 0edca269452ae1dec3c7a9b146a15152cec9da0f
+  auditer: Johannes Roth
+  classification: info
+
+
+# FIX: `botan_x509_cert_is_ca()` should return "1" for true
+#   Author:    @reneme
+#   Approvals: @atreiber94
+- pr: 5236  # https://github.com/randombit/botan/pull/5236
+  merge_commit: 1e235e38d5007813d2debfd627afa90c453585b2
+  auditer: Johannes Roth
+  classification: info
+
+# FIX: sha2_32_armv8 silently depends on simd_4x32
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5255  # https://github.com/randombit/botan/pull/5255
+  merge_commit: f7819a871fb92cfd911046f5cebf7dc4b57eec10
+  auditer: Johannes Roth
+  classification: info
+
+# Fix test categories display in botan-test --help
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5272  # https://github.com/randombit/botan/pull/5272
+  merge_commit: 0226491aca01ed3be34be905b7e6b14b81e8022b
+  auditer: Johannes Roth
+  classification: info

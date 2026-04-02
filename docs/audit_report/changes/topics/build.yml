@@ -212,4 +212,89 @@ patches:
 # Add support for GCC ThreadSanitizer [ci skip]
 #   Author: Jack Lloyd
 - commit: 2344f81004069fd1c8d42ce92d3f6f90734f1536  # https://github.com/randombit/botan/commit/2344f81004069fd1c8d42ce92d3f6f90734f1536
+  auditer: Johannes Roth
   classification: info
+
+# Migrate to native WebAssembly exceptions
+#   Author:    @arekmula
+#   Approvals: (@randombit)
+- pr: 5202  # https://github.com/randombit/botan/pull/5202
+  merge_commit: f283c5d29d14f4cea6ac0f43a632f2eaf9b820c6
+  auditer: Johannes Roth
+  classification: info
+
+# Remove redundant empty option in emcc flags
+#   Author:    @polarnis
+#   Approvals: (@randombit)
+- pr: 5208  # https://github.com/randombit/botan/pull/5208
+  merge_commit: cf0e68e3429f5826b923f26a6b902de13b104870
+  auditer: Johannes Roth
+  classification: info
+
+# FIX: Amalgamation build on MSVC x86
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5216  # https://github.com/randombit/botan/pull/5216
+  merge_commit: b1ff92a4ed98a7fda2e31de3300bca5470f66fff
+  auditer: Johannes Roth
+  classification: info
+
+# In configure.py guard against invalid invalid OS/CPU/compiler names
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5215  # https://github.com/randombit/botan/pull/5215
+  merge_commit: 46ea9a2a3cf84cbc4a6c66ea3bbe0377a6eed03d
+  auditer: Johannes Roth
+  classification: info
+
+# Apply a workaround for GCC miscompilation of Serpent AVX512 in amalgamation mode
+#   Author:    @randombit
+- pr: 5238  # https://github.com/randombit/botan/pull/5238
+  merge_commit: 1ff468fa0508ee12e9cf8de7015da6790610801a
+  auditer: Johannes Roth
+  classification: info
+
+# Fix Shellcheck warnings in dev tools directory scripts
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5250  # https://github.com/randombit/botan/pull/5250
+  merge_commit: 87c26d8ba4daa721929551845b7dab645ae7c92e
+  auditer: Johannes Roth
+  classification: out-of-scope
+
+# Remove support for Sun Studio compilers
+#   Author:    @randombit
+- pr: 5262  # https://github.com/randombit/botan/pull/5262
+  merge_commit: 35bfb4c0752ebfc51787860f7ec08bb548b58f18
+  auditer: Johannes Roth
+  classification: info
+
+# Enable /Zc:inline with MSVC and clang-cl
+#   Author:    @randombit
+- pr: 5264  # https://github.com/randombit/botan/pull/5264
+  merge_commit: 75167c1a5fb4b1960cb6482c2645e8b0ff3a4bac
+  auditer: Johannes Roth
+  classification: info
+
+# Enable BMI2 and GFNI codepaths for MSVC
+#   Author:    @randombit
+- pr: 5263  # https://github.com/randombit/botan/pull/5263
+  merge_commit: 0d718b1467c893e168feaf4d29b61a9681578193
+  auditer: Johannes Roth
+  classification: info
+
+# Consistently use ISA target flags
+#   Author:    @randombit
+- pr: 5276  # https://github.com/randombit/botan/pull/5276
+  merge_commit: c6d1196d329963a0168c1e903d5c8ff81c2c4164
+  auditer: Johannes Roth
+  classification: info
+
+# Remove support for AltiVec on 32-bit PowerPC
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5266  # https://github.com/randombit/botan/pull/5266
+  merge_commit: 7f7dd6c3bbfc4dcb27274bcea637bf9e776ce47b
+  auditer: Johannes Roth
+  classification: info
+

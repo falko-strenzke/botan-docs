@@ -52,3 +52,68 @@ patches:
   merge_commit: 222c91120d8d5c5e70a0404872ef4fcbad6f2b9a
   auditer: Johannes Roth
   classification: info
+
+# Fix Inconsistency of X509 Name Constraint Matching
+#   Author:    @atreiber94
+#   Approvals: (@randombit)
+- pr: 5189  # https://github.com/randombit/botan/pull/5189
+  merge_commit: e7bca8cf30fd429c83e02eb1199fae5e7f29f3fb
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: Allow querying validity interval of X.509 CRLs
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5222  # https://github.com/randombit/botan/pull/5222
+  merge_commit: 9c30aa19821738d2496192c702e1226a3911c3ed
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: Enumeration of entries in an X.509 CRL
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5220  # https://github.com/randombit/botan/pull/5220
+  merge_commit: a4496f41708369c9bf1409162d4d1c8fafea2b30
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: Allow querying more X.509 Certificate Constraints
+#   Author:    @atreiber94
+#   Approvals: (@randombit)
+- pr: 5221  # https://github.com/randombit/botan/pull/5221
+  merge_commit: 38f8f4ca0449597f9a720286fe1c864a85e1c933
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: Query Certificate Subject/Issuer Alternative Names and Name Constraints
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5217  # https://github.com/randombit/botan/pull/5217
+  merge_commit: aabf6fb9d44ced5a0f72689e4143d308ae2379a0
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: add `*_count()` functions for DN enumerators
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5234  # https://github.com/randombit/botan/pull/5234
+  merge_commit: 8c072d7ea7112d66bd3a0ff99da552119e8581e3
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: Return serial numbers as `botan_mp_t` for X.509 certificates and CRL entries
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5230  # https://github.com/randombit/botan/pull/5230
+  merge_commit: 3672ecf2e235a99bc1620057e2461aeb4c831eca
+  auditer: Johannes Roth
+  classification: info
+
+# FFI: add `*_count()` functions for some FFI enumerators
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5232  # https://github.com/randombit/botan/pull/5232
+  merge_commit: cc836e3dfd171c4be1bb27a9c2f6280a5c3834e7
+  auditer: Johannes Roth
+  classification: info
+

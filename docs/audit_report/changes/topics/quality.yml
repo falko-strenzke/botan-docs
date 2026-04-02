@@ -512,3 +512,141 @@ patches:
   merge_commit: d04ef866041078b2e194971a820c6431774d1696
   auditer: Johannes Roth
   classification: info
+
+# CppCheck - Remove two unused variables
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 5204  # https://github.com/randombit/botan/pull/5204
+  merge_commit: a434dd1f87f138bbdd2eaf4b1edfdcec058a954f
+  auditer: Johannes Roth
+  classification: info
+
+# CppCheck - Make exception handlers const-correct in fuzzer code
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5205  # https://github.com/randombit/botan/pull/5205
+  merge_commit: b6d2e1d8339bc991772c8fc928d604d59d9afa7b
+  auditer: Johannes Roth
+  classification: info
+
+# CppCheck - iterateByValue - Use const references in range-based loops
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5207  # https://github.com/randombit/botan/pull/5207
+  merge_commit: 9e523da21eb1e4a032640b9e777d961393838c0d
+  auditer: Johannes Roth
+  classification: info
+
+# Extend AVX-512 target features enabled by BOTAN_FN_ISA_AVX512*
+#   Author:    @randombit
+- pr: 5226  # https://github.com/randombit/botan/pull/5226
+  merge_commit: 9224539ebb43280afd95077fdea32426ade3a9fb
+  auditer: Johannes Roth
+  classification: relevant
+
+# Replace deprecated boost/bind.hpp with boost/bind/bind.hpp
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 5241  # https://github.com/randombit/botan/pull/5241
+  merge_commit: 18cd21ea019c20b7aabf1cb443db1e7878db0a5c
+  auditer: Johannes Roth
+  classification: info
+
+# Avoid hard dependency on `pcurves_secp*` in the TLS module
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5254  # https://github.com/randombit/botan/pull/5254
+  merge_commit: c29d12355e311cc62ba5d071e049e66b910e1e42
+  auditer: Johannes Roth
+  classification: info
+
+# Replace index-based loop with range-based for in value_exists
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 5261  # https://github.com/randombit/botan/pull/5261
+  merge_commit: 67cb2827ce91dd57b7237e86cda60794ccf784c8
+  auditer: Johannes Roth
+  classification: info
+
+# Reformulate word3 carry chain
+#   Author:    @randombit
+- pr: 5275  # https://github.com/randombit/botan/pull/5275
+  merge_commit: 542b5e177f729d6b3f19cd0c8c2e7f4791626792
+  auditer: Johannes Roth
+  classification: info
+
+# Improve code readability in parsing utilities
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 5274  # https://github.com/randombit/botan/pull/5274
+  merge_commit: 9094ee3e46e5b737ba10806517d363bbcb84784c
+  auditer: Johannes Roth
+  classification: info
+
+# Fix some typos
+#   Author:    @randombit
+- pr: 5281  # https://github.com/randombit/botan/pull/5281
+  merge_commit: 6717440e6a83601771529f50645e47882632e8f8
+  auditer: Johannes Roth
+  classification: info
+
+# Reduce header pollution in TLS headers
+#   Author:    @randombit
+- pr: 5280  # https://github.com/randombit/botan/pull/5280
+  merge_commit: 00a65d6d1531a5d276a1fcb196a54be1cb000020
+  auditer: Johannes Roth
+  classification: info
+
+# Fixme - Explicit constructors and NOLINT comments in out_ptr/out_opt helpers
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5259  # https://github.com/randombit/botan/pull/5259
+  merge_commit: df18481c2b9ff6c6784b8dc00958935e5c790148
+  auditer: Johannes Roth
+  classification: info
+
+# Various header inclusion cleanups
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5285  # https://github.com/randombit/botan/pull/5285
+  merge_commit: 9fda7e83ce0544f0e976070d2c0b461db1e58b6c
+  auditer: Johannes Roth
+  classification: info
+
+# Split out scoped_cleanup to its own header
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5286  # https://github.com/randombit/botan/pull/5286
+  merge_commit: 8c9623340d563621a1551e0358b0c73b3d7d95e4
+  auditer: Johannes Roth
+  classification: info
+
+# Refactor: Organize most TLS handshake messages into TLS 1.2 and TLS 1.3 modules
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5288  # https://github.com/randombit/botan/pull/5288
+  merge_commit: a72f0b0a6658682f74106b215341d1dc610c306e
+  auditer: Johannes Roth
+  classification: info
+
+# Further misc header reductions, forward declarations, etc
+#   Author:    @randombit
+- pr: 5289  # https://github.com/randombit/botan/pull/5289
+  merge_commit: ebf8f0044665a9ebe4a9dba4aacd484fb83a5b4e
+  auditer: Johannes Roth
+  classification: info
+
+# Reduce header dependencies in tests and cli
+#   Author:    @randombit
+- pr: 5295  # https://github.com/randombit/botan/pull/5295
+  merge_commit: d4ddd3d048216df89f0a2834fb82173e76188e41
+  auditer: Johannes Roth
+  classification: info
+
+# IWYU - Remove unnecessary header includes to improve build performance
+#   Author:    @KaganCanSit
+#   Approvals: (@randombit)
+- pr: 5300  # https://github.com/randombit/botan/pull/5300
+  merge_commit: f708c3666ea4c81e9f6e6b81389d44b5f21cbe54
+  auditer: Johannes Roth
+  classification: info

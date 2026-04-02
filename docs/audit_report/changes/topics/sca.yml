@@ -78,3 +78,17 @@ patches:
   merge_commit: a4e346b47137dafdfcc1078a80e4d1e499c78656
   auditer: Johannes Roth
   classification: relevant
+
+# Add CT::Choice::into_bitmask
+#   Author:    @randombit
+- pr: 5195  # https://github.com/randombit/botan/pull/5195
+  merge_commit: 7cb4b054994ff208536c4d5c8ba75ac1303e8dbd
+  auditer: Johannes Roth
+  classification: info
+
+# Make CT::Choice's underlying type a word
+#   Author:    @randombit
+- pr: 5196  # https://github.com/randombit/botan/pull/5196
+  merge_commit: 68b8e0c54a3288ab90be3166c4edd6bcdd434e72
+  auditer: Johannes Roth
+  classification: info

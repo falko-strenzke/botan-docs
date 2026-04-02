@@ -177,3 +177,82 @@ patches:
   merge_commit: 39c4f3b00adc133c7d48ac848734788dbf4b1e28
   auditer: Johannes Roth
   classification: info
+
+# Some configuration updates for clang-tidy
+#   Author:    @randombit
+- pr: 5169  # https://github.com/randombit/botan/pull/5169
+  merge_commit: bd82ee34ee4f2e31862de2d01528857227763467
+  auditer: Johannes Roth
+  classification: info
+
+# Changes to reduce unnecessary inclusions
+#   Author:    @randombit
+- pr: 5167  # https://github.com/randombit/botan/pull/5167
+  merge_commit: 029993209c6f348227769a51ce949b646eb9f1a7
+  auditer: Johannes Roth
+  classification: info
+
+# cli: increase visibility of custom RNG options
+#   Author:    @thillux
+#   Approvals: (@randombit)
+- pr: 5045  # https://github.com/randombit/botan/pull/5045
+  merge_commit: dc14a4820b77f0f24d64658fc26fcb6b03bba371
+  auditer: Johannes Roth
+  classification: info
+
+# Add RSA PKCS#1 pubkey loader
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 5225  # https://github.com/randombit/botan/pull/5225
+  merge_commit: 9ac8efb6fceb07da05835a37b14a648cdf968472
+  auditer: Johannes Roth
+  classification: info
+
+# Bump the FFI version for 3.11
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5224  # https://github.com/randombit/botan/pull/5224
+  merge_commit: 2bea5a27300be17ff129e087c6ee309e0eee3b4c
+  auditer: Johannes Roth
+  classification: info
+
+# Add a BOTAN_FN_ISA flag for CPU RNG function
+#   Author:    @randombit
+#   Approvals: (@mikatammi)
+- pr: 5229  # https://github.com/randombit/botan/pull/5229
+  merge_commit: b941fcb563db1da96cc1ee7e86e49975ecda6d5f
+  auditer: Johannes Roth
+  classification: info
+
+# Move ASN1_Time to its own header to avoid <chrono> inclusions
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5279  # https://github.com/randombit/botan/pull/5279
+  merge_commit: eb1a54d7570a27b2cbcab371a2de2cd06d491824
+  auditer: Johannes Roth
+  classification: info
+
+# Avoid <chrono> in rng.h
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5284  # https://github.com/randombit/botan/pull/5284
+  merge_commit: 73c7bbe8216cf703eef5a1f247ec2f5162f1f933
+  auditer: Johannes Roth
+  classification: info
+
+# Split out BufferSlicer and BufferStuffer to their own headers
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5287  # https://github.com/randombit/botan/pull/5287
+  merge_commit: 8ea0ca2524fa947075659a37230f3494202eff43
+  auditer: Johannes Roth
+  classification: info
+
+# Refactor: Extract TLS 1.2 specific Certificate_Status constructor
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5291  # https://github.com/randombit/botan/pull/5291
+  merge_commit: 701e3d0938b21dfd50dca9ebefec9e45eabe1792
+  auditer: Johannes Roth
+  classification: info
+

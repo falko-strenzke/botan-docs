@@ -127,3 +127,35 @@ patches:
   merge_commit: d417b8c6dcd9e5e8f2884657c01818d6e0864990
   auditer: Johannes Roth
   classification: relevant
+
+# Add XOF API to FFI
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5148  # https://github.com/randombit/botan/pull/5148
+  merge_commit: 81beaa29d3fff53d5406beaced5b54c988f580cc
+  auditer: Johannes Roth
+  classification: info
+
+# Add XOF Wrapper to botan3.py
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5235  # https://github.com/randombit/botan/pull/5235
+  merge_commit: 13d256f4cb9381759dd60d553b8ca402ea3dff78
+  auditer: Johannes Roth
+  classification: info
+
+# `PublicKey.used_explicit_encoding()` in python wrapper
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5282  # https://github.com/randombit/botan/pull/5282
+  merge_commit: 413f230869609c2fe66751be4559a84074325360
+  auditer: Johannes Roth
+  classification: info
+
+# Allow implementing custom RNGs in Python Wrapper
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5271  # https://github.com/randombit/botan/pull/5271
+  merge_commit: 28378faea7497c2b17cdce77f6062069e32164e6
+  auditer: Johannes Roth
+  classification: info
