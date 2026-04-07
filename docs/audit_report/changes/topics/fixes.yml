@@ -232,3 +232,27 @@ patches:
   merge_commit: 0226491aca01ed3be34be905b7e6b14b81e8022b
   auditer: Johannes Roth
   classification: info
+
+# FIX: TLS 1.3 Server Hello MUST not contain `PSK_Key_Exchange_Mode`
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5316  # https://github.com/randombit/botan/pull/5316
+  merge_commit: e7443105fe58e165b9a0a147c923ea60b2a1fc02
+  auditer: Johannes Roth
+  classification: info
+
+# Include botan/assert.h in auto_rng
+#   Author:    @Chaosvex
+#   Approvals: (@randombit)
+- pr: 5325  # https://github.com/randombit/botan/pull/5325
+  merge_commit: 2640927f7789ae1a121678031755eeaf388070e4
+  auditer: Johannes Roth
+  classification: info
+
+# Remove buggy operator!= in bitvector, rely on C++20 rewrite rules
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5320  # https://github.com/randombit/botan/pull/5320
+  merge_commit: 23c3c19eb48b17ba6b4c7fffd1bfeb63450b3a1e
+  auditer: Johannes Roth
+  classification: info

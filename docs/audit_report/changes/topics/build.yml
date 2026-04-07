@@ -298,3 +298,18 @@ patches:
   auditer: Johannes Roth
   classification: info
 
+# Don't use ISA flags during compilation anymore
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5297  # https://github.com/randombit/botan/pull/5297
+  merge_commit: 8aed85c62d47ed826e2a580f44d46aff87f35d7d
+  auditer: Johannes Roth
+  classification: info
+
+# Fix some build dependency issues
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5310  # https://github.com/randombit/botan/pull/5310
+  merge_commit: 4bacf4e56ecddd8f97c9e08bd9cca33d7a4e8056
+  auditer: Johannes Roth
+  classification: info

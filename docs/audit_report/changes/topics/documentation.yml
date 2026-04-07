@@ -231,3 +231,10 @@ patches:
   auditer: Johannes Roth
   classification: info
 
+# FIX: indentation of some docstring comments
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5305  # https://github.com/randombit/botan/pull/5305
+  merge_commit: 45d38d10a931792f4a98409a83acc416cbb8ff51
+  auditer: Johannes Roth
+  classification: info

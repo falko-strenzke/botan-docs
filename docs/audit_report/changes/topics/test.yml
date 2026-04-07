@@ -71,3 +71,18 @@ patches:
   merge_commit: caf2c19963665f252d178e7845be495cd9da6ae1
   auditer: Johannes Roth
   classification: relevant
+
+# Add some debugging convenience for BoGo tests on VSCode
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5311  # https://github.com/randombit/botan/pull/5311
+  merge_commit: 0a9e23f5efcfe8a911b74f8756c1e7822455f56f
+  auditer: Johannes Roth
+  classification: info
+
+# Improve block cipher tests
+#   Author:    @randombit
+- pr: 5339  # https://github.com/randombit/botan/pull/5339
+  merge_commit: e82712caa011ab2c576255ff34c7b7d2f7057737
+  auditer: Johannes Roth
+  classification: info

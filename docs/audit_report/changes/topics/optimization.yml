@@ -375,4 +375,19 @@ patches:
 #   Approvals: @reneme
 - pr: 5278  # https://github.com/randombit/botan/pull/5278
   merge_commit: d9511753b4239c7f03ee87e536ff2365a5900889
+  auditer: Johannes Roth
+  classification: relevant
+
+# Avoid copying std::function objects needlessly in the test_throws infra
+#   Author:    @randombit
+- pr: 5329  # https://github.com/randombit/botan/pull/5329
+  merge_commit: fa5638d328c693d02c7ab0e9089a1d1d026c0b83
+  auditer: Johannes Roth
+  classification: info
+
+# Manually interleave 2x wide SM4 AVX512+GFNI encryption/decryption
+#   Author:    @randombit
+- pr: 5333  # https://github.com/randombit/botan/pull/5333
+  merge_commit: 07ae08ed0e34e427266cbf03470bc753b709d1c2
+  auditer: Johannes Roth
   classification: relevant

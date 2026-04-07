@@ -256,3 +256,103 @@ patches:
   auditer: Johannes Roth
   classification: info
 
+# Don't fully deprecate numthry.h
+#   Author:    @randombit
+- pr: 5324  # https://github.com/randombit/botan/pull/5324
+  merge_commit: 5f60b6bbe41893e0b22213c812faf6b3483a0093
+  auditer: Johannes Roth
+  classification: info
+
+# Change Test::Result integer and bool predicates to be specifically named
+#   Author:    @randombit
+- pr: 5328  # https://github.com/randombit/botan/pull/5328
+  merge_commit: 5f8c84d25f8b14a2fc21dd5e46c89d2766bbeced
+  auditer: Johannes Roth
+  classification: info
+
+# Avoid including assert.h into tests.h
+#   Author:    @randombit
+- pr: 5330  # https://github.com/randombit/botan/pull/5330
+  merge_commit: adf5dbc08284db8585bae9ebfd0716f3c8f92ac5
+  auditer: Johannes Roth
+  classification: info
+
+# Remove confirm test helper, use test_is_true or test_is_false instead
+#   Author:    @randombit
+- pr: 5334  # https://github.com/randombit/botan/pull/5334
+  merge_commit: bf04d2be97daa18d0e30f0955d329e6b8f5104ae
+  auditer: Johannes Roth
+  classification: info
+
+# Some more small cleanups to tests.h test predicates
+#   Author:    @randombit
+- pr: 5337  # https://github.com/randombit/botan/pull/5337
+  merge_commit: 2993205af79ff985d4c2d002988726b7bfeb2018
+  auditer: Johannes Roth
+  classification: info
+
+# Rename and cleanup tests.h comparators for strings
+#   Author:    @randombit
+- pr: 5338  # https://github.com/randombit/botan/pull/5338
+  merge_commit: 5391a25a8c624e7f8bc8a198a05c2fcee04362ec
+  auditer: Johannes Roth
+  classification: info
+
+# Further cleanups of test predicates
+#   Author:    @randombit
+- pr: 5340  # https://github.com/randombit/botan/pull/5340
+  merge_commit: 76dfe61e9365ee7ba20d10628fb79618e775dfd7
+  auditer: Johannes Roth
+  classification: info
+
+# Rename test_is_eq to test_arb_eq and require the type be printable
+#   Author:    @randombit
+- pr: 5342  # https://github.com/randombit/botan/pull/5342
+  merge_commit: c5489e013d5a0507220127d5a886d345275e1430
+  auditer: Johannes Roth
+  classification: info
+
+# Cleanup test predicates on binary strings
+#   Author:    @randombit
+- pr: 5341  # https://github.com/randombit/botan/pull/5341
+  merge_commit: 6d81b0c0ab1958b15b07635248d7ea7d3a82d7ef
+  auditer: Johannes Roth
+  classification: info
+
+# Add PasswordHashFamily::tune_params
+#   Author:    @randombit
+- pr: 5315  # https://github.com/randombit/botan/pull/5315
+  merge_commit: fae2f88d3cd187a89dc2dae7262f464a53302dd1
+  auditer: Johannes Roth
+  classification: info
+
+# Use forward declarations in test_pubkey.h
+#   Author:    @randombit
+- pr: 5346  # https://github.com/randombit/botan/pull/5346
+  merge_commit: cff0123e783bfb530241dc0f611e220b271459a6
+  auditer: Johannes Roth
+  classification: info
+
+# Minimize includes into test_rng.h
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5345  # https://github.com/randombit/botan/pull/5345
+  merge_commit: 987c141d73fd06e1582eaabca0444a80178db993
+  auditer: Johannes Roth
+  classification: info
+
+# Avoid using secure_vector as storage for BER_Object
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5344  # https://github.com/randombit/botan/pull/5344
+  merge_commit: 35ce62624aed0bb079461dc6c5dbb78ca50cd371
+  auditer: Johannes Roth
+  classification: info
+
+# Remove unused test vector parameters in bitvector test
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5331  # https://github.com/randombit/botan/pull/5331
+  merge_commit: 5722005d9a768c1232e58820f39efee06fbf842c
+  auditer: Johannes Roth
+  classification: info

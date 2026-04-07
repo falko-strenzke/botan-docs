@@ -431,3 +431,19 @@ patches:
   merge_commit: b5e24de156f0901c65b691a0f9ca4bbb1304cd2a
   auditer: Johannes Roth
   classification: out-of-scope
+
+# CI/Test: Build and test with `--disable-modules=tls13`
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5309  # https://github.com/randombit/botan/pull/5309
+  merge_commit: c008b93ef6a1b739fa7c8fe1869d94acc0764826
+  auditer: Johannes Roth
+  classification: out-of-scope
+
+# Move the strubbing CI job to nightly
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5332  # https://github.com/randombit/botan/pull/5332
+  merge_commit: af5a61d20998e6eca03360ceabe70a87f812e6c2
+  auditer: Johannes Roth
+  classification: out-of-scope
