@@ -167,45 +167,45 @@ patches:
 # Fix gen_prime --hex
 #   Author: Jack Lloyd
 - commit: f536862f010112f84261e8af9b3590e0cab1b979  # https://github.com/randombit/botan/commit/f536862f010112f84261e8af9b3590e0cab1b979
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add missing include [ci skip]
 #   Author: Jack Lloyd
 - commit: 93b1ed5824b13fc48dc1d6437879e645141e3330  # https://github.com/randombit/botan/commit/93b1ed5824b13fc48dc1d6437879e645141e3330
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add missing <algorithm> includes
 #   Author: Jack Lloyd
 - commit: 81da1de70d4bd6b22af6eb9f2938a0b546d5c708  # https://github.com/randombit/botan/commit/81da1de70d4bd6b22af6eb9f2938a0b546d5c708
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add missing <string_view> include to tests.h [ci skip]
 #   Author: Jack Lloyd
 - commit: b4734c8a30ca983be0ac7fb975cf871fa51002ea  # https://github.com/randombit/botan/commit/b4734c8a30ca983be0ac7fb975cf871fa51002ea
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Correct pcurves.cpp template [ci skip]
 #   Author: Jack Lloyd
 - commit: caa9c483421dd718123158080c039c7ed53d634d  # https://github.com/randombit/botan/commit/caa9c483421dd718123158080c039c7ed53d634d
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # When benchmarking the XOF clear the state between buffer sizes
 #   Author:    @randombit
 - pr: 5190  # https://github.com/randombit/botan/pull/5190
   merge_commit: 3b7c7e9943b87817a0867ba08c45c7dd260345ae
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Prevent using serpent_avx512 with GCC 11
 #   Author:    @randombit
 - pr: 5197  # https://github.com/randombit/botan/pull/5197
   merge_commit: 0edca269452ae1dec3c7a9b146a15152cec9da0f
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 
@@ -214,7 +214,7 @@ patches:
 #   Approvals: @atreiber94
 - pr: 5236  # https://github.com/randombit/botan/pull/5236
   merge_commit: 1e235e38d5007813d2debfd627afa90c453585b2
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # FIX: sha2_32_armv8 silently depends on simd_4x32
@@ -222,7 +222,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5255  # https://github.com/randombit/botan/pull/5255
   merge_commit: f7819a871fb92cfd911046f5cebf7dc4b57eec10
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fix test categories display in botan-test --help
@@ -230,7 +230,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5272  # https://github.com/randombit/botan/pull/5272
   merge_commit: 0226491aca01ed3be34be905b7e6b14b81e8022b
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # FIX: TLS 1.3 Server Hello MUST not contain `PSK_Key_Exchange_Mode`
@@ -238,7 +238,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5316  # https://github.com/randombit/botan/pull/5316
   merge_commit: e7443105fe58e165b9a0a147c923ea60b2a1fc02
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Include botan/assert.h in auto_rng
@@ -246,7 +246,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5325  # https://github.com/randombit/botan/pull/5325
   merge_commit: 2640927f7789ae1a121678031755eeaf388070e4
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Remove buggy operator!= in bitvector, rely on C++20 rewrite rules
@@ -254,5 +254,5 @@ patches:
 #   Approvals: @reneme
 - pr: 5320  # https://github.com/randombit/botan/pull/5320
   merge_commit: 23c3c19eb48b17ba6b4c7fffd1bfeb63450b3a1e
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info

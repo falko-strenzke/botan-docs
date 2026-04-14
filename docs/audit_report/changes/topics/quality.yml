@@ -481,13 +481,13 @@ patches:
 # Fix a couple of misleading permutation constants in Keccak AVX512
 #   Author: Jack Lloyd
 - commit: 4513e62d76898d32a211442abffcede688d674be  # https://github.com/randombit/botan/commit/4513e62d76898d32a211442abffcede688d674be
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fix misnamed function in the perf cli
 #   Author: Jack Lloyd
 - commit: 30950b5b8a7ad87ed65fcf04acb177a959840c77  # https://github.com/randombit/botan/commit/30950b5b8a7ad87ed65fcf04acb177a959840c77
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Shebang not needed when used as a library wrapper
@@ -495,7 +495,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5152  # https://github.com/randombit/botan/pull/5152
   merge_commit: a5e0410a5686b37a05ca6ce32185d40d9aa8eab5
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fix and enable clang-tidy warning misc-const-correctness
@@ -503,14 +503,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5172  # https://github.com/randombit/botan/pull/5172
   merge_commit: e40d37f18a445ed340dd5866c9c143394c438097
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Move CT::value_barrier into a new header
 #   Author:    @randombit
 - pr: 5181  # https://github.com/randombit/botan/pull/5181
   merge_commit: d04ef866041078b2e194971a820c6431774d1696
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # CppCheck - Remove two unused variables
@@ -518,7 +518,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5204  # https://github.com/randombit/botan/pull/5204
   merge_commit: a434dd1f87f138bbdd2eaf4b1edfdcec058a954f
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # CppCheck - Make exception handlers const-correct in fuzzer code
@@ -526,7 +526,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5205  # https://github.com/randombit/botan/pull/5205
   merge_commit: b6d2e1d8339bc991772c8fc928d604d59d9afa7b
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # CppCheck - iterateByValue - Use const references in range-based loops
@@ -534,14 +534,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5207  # https://github.com/randombit/botan/pull/5207
   merge_commit: 9e523da21eb1e4a032640b9e777d961393838c0d
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Extend AVX-512 target features enabled by BOTAN_FN_ISA_AVX512*
 #   Author:    @randombit
 - pr: 5226  # https://github.com/randombit/botan/pull/5226
   merge_commit: 9224539ebb43280afd95077fdea32426ade3a9fb
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Replace deprecated boost/bind.hpp with boost/bind/bind.hpp
@@ -549,7 +549,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5241  # https://github.com/randombit/botan/pull/5241
   merge_commit: 18cd21ea019c20b7aabf1cb443db1e7878db0a5c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid hard dependency on `pcurves_secp*` in the TLS module
@@ -557,7 +557,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5254  # https://github.com/randombit/botan/pull/5254
   merge_commit: c29d12355e311cc62ba5d071e049e66b910e1e42
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Replace index-based loop with range-based for in value_exists
@@ -565,14 +565,14 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5261  # https://github.com/randombit/botan/pull/5261
   merge_commit: 67cb2827ce91dd57b7237e86cda60794ccf784c8
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Reformulate word3 carry chain
 #   Author:    @randombit
 - pr: 5275  # https://github.com/randombit/botan/pull/5275
   merge_commit: 542b5e177f729d6b3f19cd0c8c2e7f4791626792
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Improve code readability in parsing utilities
@@ -580,21 +580,21 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5274  # https://github.com/randombit/botan/pull/5274
   merge_commit: 9094ee3e46e5b737ba10806517d363bbcb84784c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fix some typos
 #   Author:    @randombit
 - pr: 5281  # https://github.com/randombit/botan/pull/5281
   merge_commit: 6717440e6a83601771529f50645e47882632e8f8
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Reduce header pollution in TLS headers
 #   Author:    @randombit
 - pr: 5280  # https://github.com/randombit/botan/pull/5280
   merge_commit: 00a65d6d1531a5d276a1fcb196a54be1cb000020
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fixme - Explicit constructors and NOLINT comments in out_ptr/out_opt helpers
@@ -602,7 +602,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5259  # https://github.com/randombit/botan/pull/5259
   merge_commit: df18481c2b9ff6c6784b8dc00958935e5c790148
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Various header inclusion cleanups
@@ -610,7 +610,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5285  # https://github.com/randombit/botan/pull/5285
   merge_commit: 9fda7e83ce0544f0e976070d2c0b461db1e58b6c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Split out scoped_cleanup to its own header
@@ -618,7 +618,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5286  # https://github.com/randombit/botan/pull/5286
   merge_commit: 8c9623340d563621a1551e0358b0c73b3d7d95e4
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Refactor: Organize most TLS handshake messages into TLS 1.2 and TLS 1.3 modules
@@ -626,21 +626,21 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5288  # https://github.com/randombit/botan/pull/5288
   merge_commit: a72f0b0a6658682f74106b215341d1dc610c306e
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Further misc header reductions, forward declarations, etc
 #   Author:    @randombit
 - pr: 5289  # https://github.com/randombit/botan/pull/5289
   merge_commit: ebf8f0044665a9ebe4a9dba4aacd484fb83a5b4e
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Reduce header dependencies in tests and cli
 #   Author:    @randombit
 - pr: 5295  # https://github.com/randombit/botan/pull/5295
   merge_commit: d4ddd3d048216df89f0a2834fb82173e76188e41
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # IWYU - Remove unnecessary header includes to improve build performance
@@ -648,7 +648,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5300  # https://github.com/randombit/botan/pull/5300
   merge_commit: f708c3666ea4c81e9f6e6b81389d44b5f21cbe54
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Split part of concepts.h into range_concepts.h
@@ -656,14 +656,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5294  # https://github.com/randombit/botan/pull/5294
   merge_commit: 6689463a0a581e778d4b393ced84de0323aa81c4
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Cleanup various header inclusions
 #   Author:    @randombit
 - pr: 5302  # https://github.com/randombit/botan/pull/5302
   merge_commit: 05f82c9bd32d122c108aa6ca1f5fbad723e2a1f2
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Various changes to reduce header dependencies in TLS
@@ -671,7 +671,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5296  # https://github.com/randombit/botan/pull/5296
   merge_commit: 1d119e57a0e4f0105b44d0e9acfe30174bbeda15
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Remove unused chrono include from cli speed file
@@ -679,7 +679,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5304  # https://github.com/randombit/botan/pull/5304
   merge_commit: 1db03ba0ac04730bd9cf1e0609ef9fda6b4e4a13
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Refactor: Disentangle Server_Hello implementations
@@ -687,21 +687,21 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5292  # https://github.com/randombit/botan/pull/5292
   merge_commit: f97d7db3f789a8640561c3f4d3bad13fed2f43f7
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid various unneeded include files
 #   Author:    @randombit
 - pr: 5321  # https://github.com/randombit/botan/pull/5321
   merge_commit: 031e882fb1dfb3cd7f8c3afe6a9d13cf148db961
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Reduce header dependencies in STL utility headers
 #   Author:    @randombit
 - pr: 5314  # https://github.com/randombit/botan/pull/5314
   merge_commit: 963f57521e26f6b37be6a395d530744de2a40839
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid including hash.h into tls_transcript_hash_13.h
@@ -709,14 +709,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5326  # https://github.com/randombit/botan/pull/5326
   merge_commit: bb74c40eb3cfdc5481e1e161caafd79926915443
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Various cleanups for tests.h
 #   Author:    @randombit
 - pr: 5327  # https://github.com/randombit/botan/pull/5327
   merge_commit: 2c0d780f540133d2d5fb08142bc374e5de29c45c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Refactor: Disentangle Client_Hello implementations
@@ -724,28 +724,28 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5293  # https://github.com/randombit/botan/pull/5293
   merge_commit: a985be79873ea955356afb9f7f14fd76f9a4de66
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid including hash implementation headers into pubkey code
 #   Author:    @randombit
 - pr: 5323  # https://github.com/randombit/botan/pull/5323
   merge_commit: b1cb8a9bf9283bdd8edf79ec4019caf649b67324
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid using <algorithm> in tls_session_id.h
 #   Author:    @randombit
 - pr: 5343  # https://github.com/randombit/botan/pull/5343
   merge_commit: ea6ce6d7c1118bb26bcc05c1f85611114dd87cd6
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Improve use of test predicates
 #   Author:    @randombit
 - pr: 5348  # https://github.com/randombit/botan/pull/5348
   merge_commit: 16f9d0e2190d2ded6e747c239aaba1554504160e
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Refactor: Organize TLS Extensions into TLS 1.2 and 1.3 Modules
@@ -753,6 +753,6 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5303  # https://github.com/randombit/botan/pull/5303
   merge_commit: 6f2151a864e8f1d2a9abbbfc71853f452a9f2ab5
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 

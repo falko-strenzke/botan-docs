@@ -110,7 +110,7 @@ patches:
 #   Author:    @randombit
 - pr: 5176  # https://github.com/randombit/botan/pull/5176
   merge_commit: 0b66845218af561e3fae39c920f615fd8804ec71
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # PKCS #11 Version 3.2 Support
@@ -118,14 +118,14 @@ patches:
 #   Approvals: (@randombit), (@boricm)
 - pr: 4540  # https://github.com/randombit/botan/pull/4540
   merge_commit: df91b27d3e866caa414f11871e7170da2501e67a
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add support for SM3 instructions added in upcoming Intel processors
 #   Author:    @randombit
 - pr: 5183  # https://github.com/randombit/botan/pull/5183
   merge_commit: d417b8c6dcd9e5e8f2884657c01818d6e0864990
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add XOF API to FFI
@@ -133,7 +133,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5148  # https://github.com/randombit/botan/pull/5148
   merge_commit: 81beaa29d3fff53d5406beaced5b54c988f580cc
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add XOF Wrapper to botan3.py
@@ -141,7 +141,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5235  # https://github.com/randombit/botan/pull/5235
   merge_commit: 13d256f4cb9381759dd60d553b8ca402ea3dff78
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # `PublicKey.used_explicit_encoding()` in python wrapper
@@ -149,7 +149,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5282  # https://github.com/randombit/botan/pull/5282
   merge_commit: 413f230869609c2fe66751be4559a84074325360
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Allow implementing custom RNGs in Python Wrapper
@@ -157,5 +157,5 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5271  # https://github.com/randombit/botan/pull/5271
   merge_commit: 28378faea7497c2b17cdce77f6062069e32164e6
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info

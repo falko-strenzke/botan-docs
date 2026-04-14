@@ -251,14 +251,14 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5155  # https://github.com/randombit/botan/pull/5155
   merge_commit: b99c9efcffc0084d70ad5afefb3e585a22a41bff
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Unroll loops within the generic Montgomery reduction
 #   Author:    @randombit
 - pr: 5150  # https://github.com/randombit/botan/pull/5150
   merge_commit: f8eb340027de2d81cdb35982ca55760e6d315c45
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use a new strategy for blinding in ECDSA signing
@@ -266,56 +266,56 @@ patches:
 - pr: 5173  # https://github.com/randombit/botan/pull/5173
   merge_commit: 67e8928b44291ce60795888a9f67b27b74c410df
   classification: relevant
-  auditer: Johannes Roth
+  auditer: TJ-91
   comment: improves the performance of blinding
 
 # Add some special cases for variable time division
 #   Author:    @randombit
 - pr: 5177  # https://github.com/randombit/botan/pull/5177
   merge_commit: 94a72b7ec72793ca18d38ccd6923cc774ee35dca
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use AVX2/AVX512 broadcast instructions instead of pre-duplicated constant tables
 #   Author:    @randombit
 - pr: 5179  # https://github.com/randombit/botan/pull/5179
   merge_commit: 3d96b675e4c2042d37db370fb228772364b329a3
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add SM3 AVX2/BMI2 compression function
 #   Author:    @randombit
 - pr: 5178  # https://github.com/randombit/botan/pull/5178
   merge_commit: d51fd1a35c112389ea0fd0c46faa0aed25089c3f
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add faster P-192 reduction when native 128 bit integers are available
 #   Author:    @randombit
 - pr: 5186  # https://github.com/randombit/botan/pull/5186
   merge_commit: de2f51c8e70e6f5109727f102870f8e32bf19487
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add AVX-512 implementation of the Keccak permutation
 #   Author:    @randombit
 - pr: 5191  # https://github.com/randombit/botan/pull/5191
   merge_commit: 1772b36fb9926c7dc0b602fd2e524d8b12afab79
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add AVX-512/GFNI implementation of SM4
 #   Author:    @randombit
 - pr: 5192  # https://github.com/randombit/botan/pull/5192
   merge_commit: 41b5eb5dc5a4676ddce9e14610e25441c2447b68
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use a faster method for setting up a mask during Solinas correction step
 #   Author:    @randombit
 - pr: 5194  # https://github.com/randombit/botan/pull/5194
   merge_commit: 7fa999784e7e80a27e159a50ff7372f01f9428ac
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Port `simd_2x64` to SIMD128 and make use of it in `ghash_vperm`
@@ -323,14 +323,14 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5163  # https://github.com/randombit/botan/pull/5163
   merge_commit: aedddcca69ec9fb6af670e0633de588de4eb1ae2
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use Newton's method for computing monty_inverse
 #   Author:    @randombit
 - pr: 5200  # https://github.com/randombit/botan/pull/5200
   merge_commit: 8115c4ef51488dec4bc7101b48f741b75da5ad8c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use `SIMD_2x64` in Argon2 on all available architectures
@@ -338,21 +338,21 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5201  # https://github.com/randombit/botan/pull/5201
   merge_commit: f2257be0a6c01418431263ebc88b8270bf37159b
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Poly1305 optimizations
 #   Author:    @randombit
 - pr: 5227  # https://github.com/randombit/botan/pull/5227
   merge_commit: fb514a07c1347609c1740696fd72c1f02511240c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add AVX512+CLMUL optimized XTS tweak computation
 #   Author:    @randombit
 - pr: 5251  # https://github.com/randombit/botan/pull/5251
   merge_commit: 165290eb3ca4f92a9732cf82d7259bc4966823b4
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Avoid validation of known EC groups when decoding an explicit curve block
@@ -360,14 +360,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5268  # https://github.com/randombit/botan/pull/5268
   merge_commit: f859c228b2ccd97acda2634b17fae372da6dca8c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Implement GHASH/GMAC in terms of Polyval multiplication
 #   Author:    @randombit
 - pr: 5273  # https://github.com/randombit/botan/pull/5273
   merge_commit: f044195a2fcd104df075995a21d9942c0b76dc6e
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add helper to GHASH to reduce GMAC overhead
@@ -375,19 +375,19 @@ patches:
 #   Approvals: @reneme
 - pr: 5278  # https://github.com/randombit/botan/pull/5278
   merge_commit: d9511753b4239c7f03ee87e536ff2365a5900889
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Avoid copying std::function objects needlessly in the test_throws infra
 #   Author:    @randombit
 - pr: 5329  # https://github.com/randombit/botan/pull/5329
   merge_commit: fa5638d328c693d02c7ab0e9089a1d1d026c0b83
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Manually interleave 2x wide SM4 AVX512+GFNI encryption/decryption
 #   Author:    @randombit
 - pr: 5333  # https://github.com/randombit/botan/pull/5333
   merge_commit: 07ae08ed0e34e427266cbf03470bc753b709d1c2
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant

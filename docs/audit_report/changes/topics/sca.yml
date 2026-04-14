@@ -69,26 +69,26 @@ patches:
 #   Approvals: @reneme
 - pr: 5180  # https://github.com/randombit/botan/pull/5180
   merge_commit: 8152d65a8c62461971b27a9eb46caa81d2487a94
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use gcc-14 for valgrind CT checks
 #   Author:    @randombit
 - pr: 5184  # https://github.com/randombit/botan/pull/5184
   merge_commit: a4e346b47137dafdfcc1078a80e4d1e499c78656
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add CT::Choice::into_bitmask
 #   Author:    @randombit
 - pr: 5195  # https://github.com/randombit/botan/pull/5195
   merge_commit: 7cb4b054994ff208536c4d5c8ba75ac1303e8dbd
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Make CT::Choice's underlying type a word
 #   Author:    @randombit
 - pr: 5196  # https://github.com/randombit/botan/pull/5196
   merge_commit: 68b8e0c54a3288ab90be3166c4edd6bcdd434e72
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info

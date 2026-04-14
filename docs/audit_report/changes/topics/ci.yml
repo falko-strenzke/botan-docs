@@ -391,59 +391,59 @@ patches:
 #   Author:    @randombit
 - pr: 5159  # https://github.com/randombit/botan/pull/5159
   merge_commit: 258d0fe77049cbeeaf10560aa3d7b40638ca5b25
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Enable emscripten build
 #   Author:    @randombit
 - pr: 5203  # https://github.com/randombit/botan/pull/5203
   merge_commit: a8e3d66296350c992ec04a9f02f5e47be5684b4b
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Address some warnings from the zizmor GHA audit tool
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5237  # https://github.com/randombit/botan/pull/5237
   merge_commit: 32478179dcdfd651680b33fb1674bbd5457d2ad6
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # CI: Remove unused SCRIPT_LOCATION variable in `setup_gh_actions_after_ccache.sh`
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5247  # https://github.com/randombit/botan/pull/5247
   merge_commit: 0dce43f1f638c9c2525c41438cbfc38aa827e156
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Shellcheck - Resolve warnings in start_tpm2_simulator.sh script file
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5248  # https://github.com/randombit/botan/pull/5248
   merge_commit: 522565111b0e20a74fbc9d47c78f8e6189f70ae7
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Some changes to reduce time taken by the coverage build
 #   Author:    @randombit
 - pr: 5240  # https://github.com/randombit/botan/pull/5240
   merge_commit: b5e24de156f0901c65b691a0f9ca4bbb1304cd2a
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # CI/Test: Build and test with `--disable-modules=tls13`
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5309  # https://github.com/randombit/botan/pull/5309
   merge_commit: c008b93ef6a1b739fa7c8fe1869d94acc0764826
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Move the strubbing CI job to nightly
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5332  # https://github.com/randombit/botan/pull/5332
   merge_commit: af5a61d20998e6eca03360ceabe70a87f812e6c2
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope

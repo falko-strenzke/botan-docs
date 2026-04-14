@@ -23,14 +23,14 @@ patches:
 #   Author:    @randombit
 - pr: 5198  # https://github.com/randombit/botan/pull/5198
   merge_commit: 95cb00dea894b978a1365300288eedeeb55be8f6
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add a test for encoding of P-521 keys with a leading zero byte.
 #   Author:    @randombit
 - pr: 5199  # https://github.com/randombit/botan/pull/5199
   merge_commit: 6ae4538ea3e88313f202065a000c42a189542828
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Improve support for running tests on Emscripten
@@ -38,7 +38,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5209  # https://github.com/randombit/botan/pull/5209
   merge_commit: 20cb67533c7f4536f5d7e03c20a07ef7234ed2c4
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add the Poly1305 edge case tests from Wycheproof
@@ -46,7 +46,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5223  # https://github.com/randombit/botan/pull/5223
   merge_commit: 1295fc35ce8e8fb676287dd955b68512da55cc41
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Use SHA-256 instead of SHA-512 for XMSS cli key update test
@@ -54,7 +54,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5245  # https://github.com/randombit/botan/pull/5245
   merge_commit: c1a826cb0227d3975adcab833763331d61ef1cf1
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Update Limbo test suite
@@ -62,14 +62,14 @@ patches:
 #   Approvals: @reneme
 - pr: 5244  # https://github.com/randombit/botan/pull/5244
   merge_commit: 34efb008883aaff23511a9c06b0b5d079db2aa55
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add more test vectors for GMAC
 #   Author:    @randombit
 - pr: 5257  # https://github.com/randombit/botan/pull/5257
   merge_commit: caf2c19963665f252d178e7845be495cd9da6ae1
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Add some debugging convenience for BoGo tests on VSCode
@@ -77,12 +77,12 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5311  # https://github.com/randombit/botan/pull/5311
   merge_commit: 0a9e23f5efcfe8a911b74f8756c1e7822455f56f
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Improve block cipher tests
 #   Author:    @randombit
 - pr: 5339  # https://github.com/randombit/botan/pull/5339
   merge_commit: e82712caa011ab2c576255ff34c7b7d2f7057737
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info

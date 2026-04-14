@@ -105,31 +105,31 @@ patches:
 # Remove stray semicolon [ci skip]
 #   Author: Jack Lloyd
 - commit: 0eef75831158c59b9323c718f1489bb7b937ca0d  # https://github.com/randombit/botan/commit/0eef75831158c59b9323c718f1489bb7b937ca0d
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add a line flush after writing output in speed cli [ci skip]
 #   Author: Jack Lloyd
 - commit: 24a2ef317a25091f69a966a17097c696dc71623c  # https://github.com/randombit/botan/commit/24a2ef317a25091f69a966a17097c696dc71623c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Happy New Year
 #   Author: Jack Lloyd
 - commit: a09e8a12b50b97fe05142512856d634599b5b253  # https://github.com/randombit/botan/commit/a09e8a12b50b97fe05142512856d634599b5b253
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Remove configure.py logic disabling AVX2 on OpenBSD
 #   Author: Jack Lloyd
 - commit: 9770c2632f48c4ecc519f9461aefeffbf8523db6  # https://github.com/randombit/botan/commit/9770c2632f48c4ecc519f9461aefeffbf8523db6
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Fully disable SIMD pathways on ppc32 [ci skip]
 #   Author: Jack Lloyd
 - commit: 0f855d25c20517d962e6346d9e3f8503e4dd826d  # https://github.com/randombit/botan/commit/0f855d25c20517d962e6346d9e3f8503e4dd826d
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Modify gen_mp_monty script to directly rewrite the source file
@@ -137,7 +137,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5149  # https://github.com/randombit/botan/pull/5149
   merge_commit: e78c62c39cd051ed45d2bb2e502faf777f58c311
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Increased max HMAC key length to 8192
@@ -145,7 +145,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5156  # https://github.com/randombit/botan/pull/5156
   merge_commit: 2d01ad0cedd1d5ae6c00ce372942df5c5a029e8a
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Change clang-tidy runner script to be verbose by default
@@ -153,43 +153,43 @@ patches:
 #   Approvals: @reneme
 - pr: 5174  # https://github.com/randombit/botan/pull/5174
   merge_commit: e81a26a4ce29c0dc644f901b24666458e81ece92
-  auditer: Johannes Roth
-  classification: out-of-scope
+  auditer: TJ-91
+  classification: out of scope
 
 # Don't parameterize AffineCurvePoint over the curve constants
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5175  # https://github.com/randombit/botan/pull/5175
   merge_commit: 780277008962e5e28280388421dca381866630e9
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: relevant
 
 # Avoid deprecated strand call in Boost asio
 #   Author:    @randombit
 - pr: 5182  # https://github.com/randombit/botan/pull/5182
   merge_commit: 1fd0d0cf51af84e3a25d28e0a180198b84a19c42
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Deprecate Threaded_Fork
 #   Author:    @randombit
 - pr: 5185  # https://github.com/randombit/botan/pull/5185
   merge_commit: 39c4f3b00adc133c7d48ac848734788dbf4b1e28
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Some configuration updates for clang-tidy
 #   Author:    @randombit
 - pr: 5169  # https://github.com/randombit/botan/pull/5169
   merge_commit: bd82ee34ee4f2e31862de2d01528857227763467
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Changes to reduce unnecessary inclusions
 #   Author:    @randombit
 - pr: 5167  # https://github.com/randombit/botan/pull/5167
   merge_commit: 029993209c6f348227769a51ce949b646eb9f1a7
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # cli: increase visibility of custom RNG options
@@ -197,7 +197,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5045  # https://github.com/randombit/botan/pull/5045
   merge_commit: dc14a4820b77f0f24d64658fc26fcb6b03bba371
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add RSA PKCS#1 pubkey loader
@@ -205,7 +205,7 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5225  # https://github.com/randombit/botan/pull/5225
   merge_commit: 9ac8efb6fceb07da05835a37b14a648cdf968472
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Bump the FFI version for 3.11
@@ -213,7 +213,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5224  # https://github.com/randombit/botan/pull/5224
   merge_commit: 2bea5a27300be17ff129e087c6ee309e0eee3b4c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add a BOTAN_FN_ISA flag for CPU RNG function
@@ -221,7 +221,7 @@ patches:
 #   Approvals: (@mikatammi)
 - pr: 5229  # https://github.com/randombit/botan/pull/5229
   merge_commit: b941fcb563db1da96cc1ee7e86e49975ecda6d5f
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Move ASN1_Time to its own header to avoid <chrono> inclusions
@@ -229,7 +229,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5279  # https://github.com/randombit/botan/pull/5279
   merge_commit: eb1a54d7570a27b2cbcab371a2de2cd06d491824
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid <chrono> in rng.h
@@ -237,7 +237,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5284  # https://github.com/randombit/botan/pull/5284
   merge_commit: 73c7bbe8216cf703eef5a1f247ec2f5162f1f933
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Split out BufferSlicer and BufferStuffer to their own headers
@@ -245,7 +245,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5287  # https://github.com/randombit/botan/pull/5287
   merge_commit: 8ea0ca2524fa947075659a37230f3494202eff43
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Refactor: Extract TLS 1.2 specific Certificate_Status constructor
@@ -253,84 +253,84 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5291  # https://github.com/randombit/botan/pull/5291
   merge_commit: 701e3d0938b21dfd50dca9ebefec9e45eabe1792
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Don't fully deprecate numthry.h
 #   Author:    @randombit
 - pr: 5324  # https://github.com/randombit/botan/pull/5324
   merge_commit: 5f60b6bbe41893e0b22213c812faf6b3483a0093
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Change Test::Result integer and bool predicates to be specifically named
 #   Author:    @randombit
 - pr: 5328  # https://github.com/randombit/botan/pull/5328
   merge_commit: 5f8c84d25f8b14a2fc21dd5e46c89d2766bbeced
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid including assert.h into tests.h
 #   Author:    @randombit
 - pr: 5330  # https://github.com/randombit/botan/pull/5330
   merge_commit: adf5dbc08284db8585bae9ebfd0716f3c8f92ac5
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Remove confirm test helper, use test_is_true or test_is_false instead
 #   Author:    @randombit
 - pr: 5334  # https://github.com/randombit/botan/pull/5334
   merge_commit: bf04d2be97daa18d0e30f0955d329e6b8f5104ae
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Some more small cleanups to tests.h test predicates
 #   Author:    @randombit
 - pr: 5337  # https://github.com/randombit/botan/pull/5337
   merge_commit: 2993205af79ff985d4c2d002988726b7bfeb2018
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Rename and cleanup tests.h comparators for strings
 #   Author:    @randombit
 - pr: 5338  # https://github.com/randombit/botan/pull/5338
   merge_commit: 5391a25a8c624e7f8bc8a198a05c2fcee04362ec
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Further cleanups of test predicates
 #   Author:    @randombit
 - pr: 5340  # https://github.com/randombit/botan/pull/5340
   merge_commit: 76dfe61e9365ee7ba20d10628fb79618e775dfd7
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Rename test_is_eq to test_arb_eq and require the type be printable
 #   Author:    @randombit
 - pr: 5342  # https://github.com/randombit/botan/pull/5342
   merge_commit: c5489e013d5a0507220127d5a886d345275e1430
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Cleanup test predicates on binary strings
 #   Author:    @randombit
 - pr: 5341  # https://github.com/randombit/botan/pull/5341
   merge_commit: 6d81b0c0ab1958b15b07635248d7ea7d3a82d7ef
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Add PasswordHashFamily::tune_params
 #   Author:    @randombit
 - pr: 5315  # https://github.com/randombit/botan/pull/5315
   merge_commit: fae2f88d3cd187a89dc2dae7262f464a53302dd1
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Use forward declarations in test_pubkey.h
 #   Author:    @randombit
 - pr: 5346  # https://github.com/randombit/botan/pull/5346
   merge_commit: cff0123e783bfb530241dc0f611e220b271459a6
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Minimize includes into test_rng.h
@@ -338,7 +338,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5345  # https://github.com/randombit/botan/pull/5345
   merge_commit: 987c141d73fd06e1582eaabca0444a80178db993
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Avoid using secure_vector as storage for BER_Object
@@ -346,7 +346,7 @@ patches:
 #   Approvals: @reneme
 - pr: 5344  # https://github.com/randombit/botan/pull/5344
   merge_commit: 35ce62624aed0bb079461dc6c5dbb78ca50cd371
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
 
 # Remove unused test vector parameters in bitvector test
@@ -354,5 +354,5 @@ patches:
 #   Approvals: @reneme
 - pr: 5331  # https://github.com/randombit/botan/pull/5331
   merge_commit: 5722005d9a768c1232e58820f39efee06fbf842c
-  auditer: Johannes Roth
+  auditer: TJ-91
   classification: info
