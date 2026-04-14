@@ -159,3 +159,40 @@ patches:
   merge_commit: 28378faea7497c2b17cdce77f6062069e32164e6
   auditer: TJ-91
   classification: info
+
+# When converting a point to affine, check that it is valid
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4746  # https://github.com/randombit/botan/pull/4746
+  merge_commit: c8175a35b12be41d73d79733515ffc06751b0548
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    A mere hardware-fault attack countermeasure.
+
+
+# Add generic pcurves for application specific curves
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4554  # https://github.com/randombit/botan/pull/4554
+  merge_commit: 24cffec2b64a8c611ad95c5c3ca16253facd9f39
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Adds support for Elliptic Curves defined at runtime. Prevents some curves for security reasons, for instance those with cofactor > 1. Only supports curves with p = 3 mod 4 for efficiency reasons.
+
+# Add stateful privkey operations to FFI
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 4700  # https://github.com/randombit/botan/pull/4700
+  merge_commit: a2981b3c6c429b5047b8e97afc9d756387ea1e17
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Abstraction Layer for Hybrid KEMs
+#   Author:    @FAlbertDev
+#   Approvals: (@randombit)
+- pr: 4067  # https://github.com/randombit/botan/pull/4067
+  merge_commit: 882d1b77cc4b6332f7cc3794872d8d4e3a35459f
+  auditer: falko-strenzke
+  classification:  info

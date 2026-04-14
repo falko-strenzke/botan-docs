@@ -756,3 +756,147 @@ patches:
   auditer: TJ-91
   classification: info
 
+
+# Move most architecture-specific logic out of CPUID and into a submodule
+#   Author:    @randombit
+- pr: 4798  # https://github.com/randombit/botan/pull/4798
+  merge_commit: f4e1e75214693dc919ae6222feb32fd587ca4d71
+  auditer: falko-strenzke
+  classification:  info
+
+# Split up CPUID implementation into submodules
+#   Author:    @randombit
+- pr: 4797  # https://github.com/randombit/botan/pull/4797
+  merge_commit: eb0d2b759fbfd28a86001b3f1bd19d75f09c0aca
+  auditer: falko-strenzke
+  classification:  info
+
+# Cleanup SHA-1 using SHA-NI instructions
+#   Author:    @randombit
+- pr: 4774  # https://github.com/randombit/botan/pull/4774
+  merge_commit: 5ce7d162331e85b519195887518ea60c5a7dec54
+  auditer: falko-strenzke
+  classification:  info
+
+# Cleanup the SHA-256 code using SHA-NI instructions
+#   Author:    @randombit
+- pr: 4773  # https://github.com/randombit/botan/pull/4773
+  merge_commit: e6f86080ac3c287867a022fc05c7d18f4b108a77
+  auditer: falko-strenzke
+  classification:  info
+
+# Use std::endian in loadstor.h
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4735  # https://github.com/randombit/botan/pull/4735
+  merge_commit: e62ad005073d9f43fa4c9590bfcac3bd14f0f8eb
+  auditer: falko-strenzke
+  classification:  info
+
+# Various FFI cleanups and documentation fixes
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4726  # https://github.com/randombit/botan/pull/4726
+  merge_commit: 5a530ee321212db932e0434a6971243174f1ed50
+  auditer: falko-strenzke
+  classification:  info
+
+# Use std::endian more, remove endian checks in `CPUID`
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4728  # https://github.com/randombit/botan/pull/4728
+  merge_commit: c94214759b6b2bc2744bfe685fe2f9eafeaa75bb
+  auditer: falko-strenzke
+  classification:  info
+
+# Make single-element FieldElement conditional_assignment a member function
+#   Author:    @randombit
+- pr: 4711  # https://github.com/randombit/botan/pull/4711
+  merge_commit: 3db6e2f0107a06a095060376a972515bed96e1dd
+  auditer: falko-strenzke
+  classification:  info
+
+# FFI cleanups
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4704  # https://github.com/randombit/botan/pull/4704
+  merge_commit: da4a0e62ff4238a997ef35cfb7a11f6fc28cef9c
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove the workspace argument to various ECC interfaces
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4555  # https://github.com/randombit/botan/pull/4555
+  merge_commit: 9a0659397a3a6c804a2dff52ebcf48966613686b
+  auditer: falko-strenzke
+  classification:  info
+
+# Refactor EC_Group_Data_Map::lookup_or_create
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4687  # https://github.com/randombit/botan/pull/4687
+  merge_commit: 7295027f5b17c748ba1c93a078574ff7280d9100
+  auditer: falko-strenzke
+  classification:  info
+
+# ECIES flags cleanup
+#   Author:    @randombit
+- pr: 4691  # https://github.com/randombit/botan/pull/4691
+  merge_commit: 808027b27cd380cfa6abad7d48850d8f1b3c98c2
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove PrimeOrderCurveId
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4706  # https://github.com/randombit/botan/pull/4706
+  merge_commit: b874c87cdb8579e25031a03be758ab3bce323a5b
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix some warnings from latest pylint
+#   Author:    @randombit
+- pr: 4705  # https://github.com/randombit/botan/pull/4705
+  merge_commit: 75c6466feb12081165718e6600e41480f5de2c75
+  auditer: falko-strenzke
+  classification:  info
+
+# Simplify generator choice when creating a strong prime DL group
+#   Author:    @randombit
+- pr: 4681  # https://github.com/randombit/botan/pull/4681
+  merge_commit: 7660968dab24981c509d253d85969685ba0d9db6
+  auditer: falko-strenzke
+  classification:  info
+
+# FIX: Move TPM2 RSA pubkey loading into tpm2 base module
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4676  # https://github.com/randombit/botan/pull/4676
+  merge_commit: 52eacf5c39cff63abf534c54959d906c5ed3c46b
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove fe typedef in ed25519
+#   Author:    @randombit
+- pr: 4674  # https://github.com/randombit/botan/pull/4674
+  merge_commit: 72f8993d68613ac89778e72096cb9b35c857bd80
+  auditer: falko-strenzke
+  classification:  info
+
+# Avoid using mem_ops.h or assert.h in public headers
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4647  # https://github.com/randombit/botan/pull/4647
+  merge_commit: f0c80419359418e9b6f3ab7d6dd79891ea7de534
+  auditer: falko-strenzke
+  classification:  info
+
+# Refactor hash2curve expand_message
+#   Author:    @randombit
+#   Approvals: @reneme, @FAlbertDev
+- pr: 4648  # https://github.com/randombit/botan/pull/4648
+  merge_commit: bd3ee44d523789e8dd7149f7a4821af347882f13
+  auditer: falko-strenzke
+  classification:  info
+

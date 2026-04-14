@@ -356,3 +356,109 @@ patches:
   merge_commit: 5722005d9a768c1232e58820f39efee06fbf842c
   auditer: TJ-91
   classification: info
+
+# FIX: Allow including `x509_ca.h` without `pubkey.h`
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4786  # https://github.com/randombit/botan/pull/4786
+  merge_commit: 83d248aa8cb52bc1593384dbf830180b1b5150a7
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove support for OpenBSD pledge in the cli sandbox
+#   Author:    @randombit
+- pr: 4779  # https://github.com/randombit/botan/pull/4779
+  merge_commit: 0402aa640e12541f7b50626878c077b0d465d032
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix vperm AES for big-endian systems
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4738  # https://github.com/randombit/botan/pull/4738
+  merge_commit: 583501358263b7b8a1caf6290fe361efe5c2e90c
+  auditer: falko-strenzke
+  classification:  info
+
+# Move include for explicit_bzero
+#   Author:    @randombit
+- pr: 4737  # https://github.com/randombit/botan/pull/4737
+  merge_commit: 0a070f7e80135c9bbb5077a5bfc8e1551de08ec7
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove support for calling NetBSD _dlauxinfo
+#   Author:    @randombit
+- pr: 4736  # https://github.com/randombit/botan/pull/4736
+  merge_commit: fb2df3e2539f2e352c9962ed2f46480137e3b5cc
+  auditer: falko-strenzke
+  classification:  info
+
+# Omit trailerField in RSA-PSS encoding
+#   Author:    @neusdan
+#   Approvals: (@randombit)
+- pr: 4731  # https://github.com/randombit/botan/pull/4731
+  merge_commit: 21876d8af6b87668b50d20075b853ddb4b986c5b
+  auditer: falko-strenzke
+  classification:  info
+
+# Cleanups and deprecations for key agreement
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4724  # https://github.com/randombit/botan/pull/4724
+  merge_commit: 3b1c833a589f16588d814c8868950aec1e23c29f
+  auditer: falko-strenzke
+  classification:  info
+
+# Version gate the GCC miscompilation workaround in Serpent
+#   Author:    @randombit
+- pr: 4717  # https://github.com/randombit/botan/pull/4717
+  merge_commit: 19348ff0ee21f404191609c4eab0a5ef249f5746
+  auditer: falko-strenzke
+  classification:  info
+
+# In FFI deprecate some algorithm specific getter functions
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4713  # https://github.com/randombit/botan/pull/4713
+  merge_commit: ba60477e1cbb82074239388d9160eed608a6865d
+  auditer: falko-strenzke
+  classification:  info
+
+# Deprecate SipHash
+#   Author:    @randombit
+- pr: 4709  # https://github.com/randombit/botan/pull/4709
+  merge_commit: 10ddb4916b5446d1408db06033a30e230a2b53ea
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove some unused pcurve API functions
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4708  # https://github.com/randombit/botan/pull/4708
+  merge_commit: 5ce84fc1a5fedfc393ac0f837c18fc3bf4344a85
+  auditer: falko-strenzke
+  classification:  info
+
+# Move word3 helpers into the implementation of word3 type
+#   Author:    @randombit
+- pr: 4695  # https://github.com/randombit/botan/pull/4695
+  merge_commit: dc7fc4f5cc44c491bc47984fc66d9faf539baac2
+  auditer: falko-strenzke
+  classification:  info
+
+# Undeprecate ECIES KA Operation
+#   Author:    @FAlbertDev
+#   Approvals: (@randombit)
+- pr: 4685  # https://github.com/randombit/botan/pull/4685
+  merge_commit: 3d3fb393178561549332b160035814ba92a4964f
+  auditer: falko-strenzke
+  classification:  info
+
+# std::ignore in test_tpm2.cpp
+#   Author:    @FAlbertDev
+#   Approvals: (@randombit)
+- pr: 4662  # https://github.com/randombit/botan/pull/4662
+  merge_commit: a3b648d264b6028c0778bf8ed917e38b7174187b
+  auditer: falko-strenzke
+  classification:  info

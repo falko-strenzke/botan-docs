@@ -313,3 +313,70 @@ patches:
   merge_commit: 4bacf4e56ecddd8f97c9e08bd9cca33d7a4e8056
   auditer: TJ-91
   classification: info
+
+# Don't error if a module policy prohibits something which doesn't exist
+#   Author:    @randombit
+- pr: 4769  # https://github.com/randombit/botan/pull/4769
+  merge_commit: b28bdde0a0e974f2efbe9a4f40aa2f0c26075f31
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove support for configure-time endian checks
+#   Author:    @randombit
+- pr: 4747  # https://github.com/randombit/botan/pull/4747
+  merge_commit: 5a4d7bf6427e07fd95a09ddd447d3a50d88df2b7
+  auditer: falko-strenzke
+  classification:  info
+
+# Avoid accidentally quadratic code during template processing in configure.py
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4744  # https://github.com/randombit/botan/pull/4744
+  merge_commit: dbe3aab1803e8405915304918ac34f600ae8696e
+  auditer: falko-strenzke
+  classification:  info
+
+# Small build.h cleanups/removals
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4740  # https://github.com/randombit/botan/pull/4740
+  merge_commit: 988c634cee6e680e69eebd29e465cef8e0032b0b
+  auditer: falko-strenzke
+  classification:  info
+
+# Split up versioning info
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4739  # https://github.com/randombit/botan/pull/4739
+  merge_commit: 6732b68683355370853b2062e4820646b12d866f
+  auditer: falko-strenzke
+  classification:  info
+
+# Emit -fPIC or equivalent even for the static library
+#   Author:    @randombit
+- pr: 4716  # https://github.com/randombit/botan/pull/4716
+  merge_commit: 72a870b0ddbd87e03a80f76319f802511c57496f
+  auditer: falko-strenzke
+  classification:  info
+
+# Make cpuid module optional
+#   Author:    @randombit
+- pr: 4718  # https://github.com/randombit/botan/pull/4718
+  merge_commit: 904d634c2425dc9c645d4af580ab0b634f57aa14
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix ec_named.cpp generation
+#   Author:    @randombit
+- pr: 4688  # https://github.com/randombit/botan/pull/4688
+  merge_commit: 1f7ae2d6d5990ffb408397e71491e45b18e0ac19
+  auditer: falko-strenzke
+  classification:  info
+
+# Fixes for LLVM
+#   Author:    @randombit
+- pr: 4673  # https://github.com/randombit/botan/pull/4673
+  merge_commit: 1cce93244f59b3df8f9ea0e0357469b19d52c00d
+  auditer: falko-strenzke
+  classification:  info
+

@@ -265,8 +265,8 @@ patches:
 #   Author:    @randombit
 - pr: 5173  # https://github.com/randombit/botan/pull/5173
   merge_commit: 67e8928b44291ce60795888a9f67b27b74c410df
-  classification: relevant
   auditer: TJ-91
+  classification:  relevant
   comment: improves the performance of blinding
 
 # Add some special cases for variable time division
@@ -391,3 +391,109 @@ patches:
   merge_commit: 07ae08ed0e34e427266cbf03470bc753b709d1c2
   auditer: TJ-91
   classification: relevant
+
+# Don't create throwaway strings in bcrypt_base64_encode
+#   Author:    @Chaosvex
+#   Approvals: (@randombit)
+- pr: 4796  # https://github.com/randombit/botan/pull/4796
+  merge_commit: 4f7537c95a0ed5e92873a54cd43429c5e1370b00
+  auditer: falko-strenzke
+  classification:  info
+
+
+# Faster X.509 extension lookup
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4788  # https://github.com/randombit/botan/pull/4788
+  merge_commit: 64addbb98dcbecac14bd7eb8bf355a164df7fa4e
+  auditer: falko-strenzke
+  classification:  info
+
+# Use initializer-list OID c'tor to avoid string parsing
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4789  # https://github.com/randombit/botan/pull/4789
+  merge_commit: 4c63abab8f0c8ab1407c1f0d15813341deab2f0f
+  auditer: falko-strenzke
+  classification:  info
+
+# Inline thunk calls in FFI
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4777  # https://github.com/randombit/botan/pull/4777
+  merge_commit: 8a93715410b4e999bf0e620d7bdb77778c4681a0
+  auditer: falko-strenzke
+  classification:  info
+
+# Refactor oid_maps.cpp to save space
+#   Author:    @randombit
+- pr: 4775  # https://github.com/randombit/botan/pull/4775
+  merge_commit: 0bdb5ecba138552df6c9756c62f2a99d3249c2b7
+  auditer: falko-strenzke
+  classification:  info
+
+# Add support for SM4 instructions added in upcoming Intel processors
+#   Author:    @randombit
+- pr: 4768  # https://github.com/randombit/botan/pull/4768
+  merge_commit: 2169d1243e865267030df9d4a9c9f3fd63bef954
+  auditer: falko-strenzke
+  classification:  info
+
+# Add support for SHA-512 Intel instructions
+#   Author:    @randombit
+- pr: 4766  # https://github.com/randombit/botan/pull/4766
+  merge_commit: d3a5a52cd1e0f698e48ec637733744b35aa019c7
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Implement SWAR based base32 encoding
+#   Author:    @randombit
+- pr: 4765  # https://github.com/randombit/botan/pull/4765
+  merge_commit: 727b173c20b6df83e4942d8b6bc5046d132f4cf0
+  auditer: falko-strenzke
+  classification:  info
+
+# Add AffinePointTable helper type
+#   Author:    @randombit
+- pr: 4710  # https://github.com/randombit/botan/pull/4710
+  merge_commit: 0e7c063847198ba561b4f13517f845ca783ad2da
+  auditer: falko-strenzke
+  classification:  info
+
+# Improve reduction step for secp521r1
+#   Author:    @randombit
+- pr: 4703  # https://github.com/randombit/botan/pull/4703
+  merge_commit: daded99e5305bf9648a391625ce6e612ddf4d9d5
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Don't bother with loop blocking for carry chains with constant lengths
+#   Author:    @randombit
+- pr: 4692  # https://github.com/randombit/botan/pull/4692
+  merge_commit: c78c8e257d462426214238eb05417f4105d30193
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: Optimization of low level MP arithmetic.
+
+# Small improvements to pcurves multiplications
+#   Author:    @randombit
+- pr: 4689  # https://github.com/randombit/botan/pull/4689
+  merge_commit: 0668049ad2f62a353f7e93c8f74b1ff6af6c83e5
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: Retains constant-time properties where relevant.
+
+# Avoid using power_mod inside the library
+#   Author:    @randombit
+- pr: 4682  # https://github.com/randombit/botan/pull/4682
+  merge_commit: 75e06722b93efaf01e58d9a53a916fb756ffc977
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: Better performance through var-time operation where it is not a security concern.
+
+# Add fe_invert2 for P-192
+#   Author:    @randombit
+- pr: 4667  # https://github.com/randombit/botan/pull/4667
+  merge_commit: f372b5a9e9681b1d32314aae972b3adf17fc4635
+  auditer: falko-strenzke
+  classification:  info

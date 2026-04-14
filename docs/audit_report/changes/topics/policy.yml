@@ -1,7 +1,7 @@
-title: Botan Configuration Policies 
+title: Botan Configuration Policies and related Cryptographic Aspects
 
 description: |
-  This section describes changes to the cryptographic policies in Botan, i.e., changes to the defined policies. 
+  This section describes changes to the cryptographic policies in Botan, i.e., changes to the defined policies. Furthermore, it also encompasses changes to cryptographic parameters that are realized anywhere in the code base.
 
 patches:
 
@@ -21,5 +21,21 @@ patches:
 - pr: 4856  # https://github.com/randombit/botan/pull/4856
   merge_commit: 7cbd1d6035e75e84ac4eb192600f9e98c875c547
   auditer: falko-strenzke
-  classification:  unspecified
+  classification:  info
   comment: Adds sha2_32_simd to BSI policy.
+
+# FIX: explicitly enable SHAKE in modern policy
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4707  # https://github.com/randombit/botan/pull/4707
+  merge_commit: b482550592a7a41d168641b90f7923ac8e486d64
+  auditer: falko-strenzke
+  classification:  info
+
+# Increase CMCE Rejection Sampling Attempts Limit
+#   Author:    @FAlbertDev
+#   Approvals: (@randombit)
+- pr: 4675  # https://github.com/randombit/botan/pull/4675
+  merge_commit: da9ca2ca26aaee0f955e70d5c53b7ed94352736d
+  auditer: falko-strenzke
+  classification:  relevant

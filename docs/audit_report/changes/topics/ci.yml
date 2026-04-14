@@ -447,3 +447,110 @@ patches:
   merge_commit: af5a61d20998e6eca03360ceabe70a87f812e6c2
   auditer: TJ-91
   classification: out of scope
+
+# Add a Loongarch64 qemu CI build
+#   Author:    @randombit
+- pr: 4795  # https://github.com/randombit/botan/pull/4795
+  merge_commit: 70cd1604605cead2f4335ba2d17f37ff1476e316
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Remove the m68k nightly build
+#   Author:    @randombit
+- pr: 4791  # https://github.com/randombit/botan/pull/4791
+  merge_commit: 399720d82b17feb5cf9a2a017343bf29eb3d7a88
+  auditer: falko-strenzke
+  classification:  out of scope
+
+
+# Use Python to decide which Ubuntu packages to install
+#   Author:    @randombit
+- pr: 4780  # https://github.com/randombit/botan/pull/4780
+  merge_commit: aa3c19853abe3bec508d66e70d66b2b6db4dc81a
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Report size of binary artifacts in CI
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4781  # https://github.com/randombit/botan/pull/4781
+  merge_commit: 8c4bb8044ded2a1297594cf4f72f8f31870586a6
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Disable man db processing in CI images
+#   Author:    @randombit
+- pr: 4770  # https://github.com/randombit/botan/pull/4770
+  merge_commit: 328dbf70776b02dca5ea6a0a0b21d4695eb80f24
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Use GCC 14 for SDE build
+#   Author:    @randombit
+- pr: 4767  # https://github.com/randombit/botan/pull/4767
+  merge_commit: 2566793e22677b65a0b2fd5ceec0b1c997f6a8d7
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Move aarch64 amalgamation build from qemu to native
+#   Author:    @randombit
+- pr: 4761  # https://github.com/randombit/botan/pull/4761
+  merge_commit: 27f40efb5f51e80dca2cef8cabb9d15dede16230
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Use Github Actions native aarch64 CI runners
+#   Author:    @randombit
+- pr: 4756  # https://github.com/randombit/botan/pull/4756
+  merge_commit: be6ece56c2a882cdc044092c9f896cc20ded1d5e
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Extend compare_perf script to properly handle byte oriented operations
+#   Author:    @randombit
+- pr: 4754  # https://github.com/randombit/botan/pull/4754
+  merge_commit: 7ddff0618e6af3d16a1bf009547ad6f0f5b7c804
+  auditer: falko-strenzke
+  classification:  info
+
+# Ignore failures to upload to coveralls
+#   Author:    @randombit
+- pr: 4683  # https://github.com/randombit/botan/pull/4683
+  merge_commit: 72d0783619a9deb50e287bee198a1a97a927e7e3
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# On Windows CI, skip installing Boost except for amalgamation target
+#   Author:    @randombit
+- pr: 4659  # https://github.com/randombit/botan/pull/4659
+  merge_commit: 7deaa69bb148c4b43deb96b71dea56a9fdf51371
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Remove hack for runner-images bug
+#   Author:    @randombit
+- pr: 4658  # https://github.com/randombit/botan/pull/4658
+  merge_commit: 9b2d61f1e3651c6ea49a9ee09b69267c798de0c5
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Bump the armv7 CI build to the nightly job
+#   Author:    @randombit
+- pr: 4656  # https://github.com/randombit/botan/pull/4656
+  merge_commit: 822d165b70f35ef7c50dacad96783e0ad29bc674
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# In CI log time taken outside of the GH grouping
+#   Author:    @randombit
+- pr: 4657  # https://github.com/randombit/botan/pull/4657
+  merge_commit: fac7d8145bd4e4be1f812a144c3374513e72d136
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Don't bother with ESDM for the shared lib builds
+#   Author:    @randombit
+- pr: 4655  # https://github.com/randombit/botan/pull/4655
+  merge_commit: eb3f9fad7e276ce97287ff14a9ab7e92eaad7d96
+  auditer: falko-strenzke
+  classification:  info

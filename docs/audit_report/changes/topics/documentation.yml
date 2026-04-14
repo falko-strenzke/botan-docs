@@ -238,3 +238,35 @@ patches:
   merge_commit: 45d38d10a931792f4a98409a83acc416cbb8ff51
   auditer: TJ-91
   classification: info
+
+
+# Add two FPE examples
+#   Author:    @randombit
+- pr: 4758  # https://github.com/randombit/botan/pull/4758
+  merge_commit: 87a6f97cc167e7bded8921795d8f76ff7642e1c3
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix typo in documentation
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4742  # https://github.com/randombit/botan/pull/4742
+  merge_commit: de9525e4447159c6f553f1dc4c6d70adfd833776
+  auditer: falko-strenzke
+  classification:  info
+
+# FIX: Outdated documentation re: module build policy
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4677  # https://github.com/randombit/botan/pull/4677
+  merge_commit: 18df6cc668151bc45dce429a1897ad9be435ebf2
+  auditer: falko-strenzke
+  classification:  info
+
+# Update BigInt documentation
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4661  # https://github.com/randombit/botan/pull/4661
+  merge_commit: ce2a7de9a911af9354e7f0584b7f8b7c98c45568
+  auditer: falko-strenzke
+  classification:  info
