@@ -554,3 +554,46 @@ patches:
   merge_commit: eb3f9fad7e276ce97287ff14a9ab7e92eaad7d96
   auditer: falko-strenzke
   classification:  info
+
+# CI: Tune the ccache size
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 4574  # https://github.com/randombit/botan/pull/4574
+  merge_commit: a01a3e5f84bded7cbcbc876be3564cd1137ec2e3
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Bump CodeQL action versions
+#   Author:    @randombit
+- pr: 4644  # https://github.com/randombit/botan/pull/4644
+  merge_commit: 63d09d92db5980e022af6b9a7957963778458c5f
+  auditer: falko-strenzke
+  classification:  info
+
+# In CI don't install the jitter RNG for so many targets
+#   Author:    @randombit
+- pr: 4641  # https://github.com/randombit/botan/pull/4641
+  merge_commit: 5fd59cab35714033ae97a88e9dda724a244c7792
+  auditer: falko-strenzke
+  classification:  out of scope
+
+# Silence a clang-tidy warning [ci skip]
+#   Author: Jack Lloyd
+- commit: 18526ddd34dfeab0724e396d8320d39d95ba8f24  # https://github.com/randombit/botan/commit/18526ddd34dfeab0724e396d8320d39d95ba8f24
+  classification: info
+
+# Regen src/.clang-tidy [ci skip]
+#   Author: Jack Lloyd
+- commit: 7dcd490423a8a43f1f18ca9b57bfe4247171615b  # https://github.com/randombit/botan/commit/7dcd490423a8a43f1f18ca9b57bfe4247171615b
+  classification: info
+
+
+# Ignore .json and .sh files in the top level dir [ci skip]
+#   Author: Jack Lloyd
+- commit: cd3e2b4da849638cad6a05ea3a38000929a73cee  # https://github.com/randombit/botan/commit/cd3e2b4da849638cad6a05ea3a38000929a73cee
+  classification: out of scope
+
+# Silence a new clang-tidy 20 warning in p11.h [ci skip]
+#   Author: Jack Lloyd
+- commit: c94c8e20d0e67307c920385746def1fa0ee2b0a6  # https://github.com/randombit/botan/commit/c94c8e20d0e67307c920385746def1fa0ee2b0a6
+  classification: info

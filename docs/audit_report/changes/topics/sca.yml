@@ -92,3 +92,11 @@ patches:
   merge_commit: 68b8e0c54a3288ab90be3166c4edd6bcdd434e72
   auditer: TJ-91
   classification: info
+
+# Implement DES using bitslicing
+#   Author:    @randombit
+- pr: 5433  # https://github.com/randombit/botan/pull/5433
+  merge_commit: 00c66dba324ab6b3da5991049a5294009096c751
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: Achieves unconditionally constant-time DES operations which was not the case previously.

@@ -1,7 +1,7 @@
 title: Tests
 
 description: |
-  This section describes changes that exclusively affect test code.
+  This section describes changes that exclusively affect test code. This encompasses the performance tests built into Botan's CLI tool.
 
 patches:
 
@@ -160,4 +160,48 @@ patches:
 - pr: 4670  # https://github.com/randombit/botan/pull/4670
   merge_commit: a416ab77896fe70fc4ad6b041d882554b70fcfe1
   auditer: falko-strenzke
-  classification:  unspecified
+  classification:  info
+
+# Avoid slicing Private_Key to Public_Key in the tests
+#   Author:    @randombit
+- pr: 4653  # https://github.com/randombit/botan/pull/4653
+  merge_commit: 89ba4ab2f35765723b80cfe2ec7b81fb9b6908ec
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix AES test
+#   Author:    @randombit
+- pr: 4649  # https://github.com/randombit/botan/pull/4649
+  merge_commit: b1c7c60a2239f2272bc54f64f0ba0b212d402eee
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix unused variable and redundant computation in test
+#   Author: Jack Lloyd
+- commit: 17e16fd4770a793047ef3f55f52fe48e85a2f27c  # https://github.com/randombit/botan/commit/17e16fd4770a793047ef3f55f52fe48e85a2f27c
+  classification: info
+
+# Add --ecc-groups=generic to speed cli
+#   Author: Jack Lloyd
+- commit: 3d00b152f6c8ce70bab6f80086efbe9d60cf5323  # https://github.com/randombit/botan/commit/3d00b152f6c8ce70bab6f80086efbe9d60cf5323
+  classification: info
+
+# Benchmark constant time EC p*x+q*y operation
+#   Author: Jack Lloyd
+- commit: c94c556d333b644935c5d5224e1829c58ffa7d25  # https://github.com/randombit/botan/commit/c94c556d333b644935c5d5224e1829c58ffa7d25
+  classification: info
+
+# Adjust how compare_perf shows slowdown percentages
+#   Author: Jack Lloyd
+- commit: 010ae3e31de2aed3f6bd59501ded6fd04e33237f  # https://github.com/randombit/botan/commit/010ae3e31de2aed3f6bd59501ded6fd04e33237f
+  classification: info
+
+# In compare_perf.py sort by the % improvement/regression
+#   Author: Jack Lloyd
+- commit: 10c28abfbfdf73521f82445995f13f52d145f251  # https://github.com/randombit/botan/commit/10c28abfbfdf73521f82445995f13f52d145f251
+  classification: info
+
+# Avoid duplicated git: prefix [ci skip]
+#   Author: Jack Lloyd
+- commit: 74e4d14986c91e883017412e7ff3c9ad1faa493d  # https://github.com/randombit/botan/commit/74e4d14986c91e883017412e7ff3c9ad1faa493d
+  classification: info

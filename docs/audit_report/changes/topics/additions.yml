@@ -196,3 +196,36 @@ patches:
   merge_commit: 882d1b77cc4b6332f7cc3794872d8d4e3a35459f
   auditer: falko-strenzke
   classification:  info
+
+# Add Booth encoding based variable point multiplication
+#   Author:    @randombit
+- pr: 4627  # https://github.com/randombit/botan/pull/4627
+  merge_commit: a4e62a0d4a321b0189e0495e5e6f5ff2b2246e0c
+  auditer: falko-strenzke
+  classification:  relevant
+
+
+# Add fast variable time modular inversion to pcurves
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4620  # https://github.com/randombit/botan/pull/4620
+  merge_commit: a7b81443d5138da6b0798a4cf69e138acf6fa8f5
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Affects only variable-time operations.
+
+# Add AVX2 implementation of IDEA
+#   Author:    @randombit
+- pr: 5443  # https://github.com/randombit/botan/pull/5443
+  merge_commit: cd829427e6f8498f90af64fc6cc388a0daa3af2b
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Add optional callback for user-defined TLS 1.2 key derivation function
+#   Author:    @lars-du
+#   Approvals: @reneme
+- pr: 5107  # https://github.com/randombit/botan/pull/5107
+  merge_commit: 65c848d3d9bd23c89727007593e99fa9603e0e36
+  auditer: falko-strenzke
+  classification:  relevant

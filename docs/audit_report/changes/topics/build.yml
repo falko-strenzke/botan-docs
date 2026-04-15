@@ -380,3 +380,52 @@ patches:
   auditer: falko-strenzke
   classification:  info
 
+# Sort the OS feature macros
+#   Author:    @randombit
+- pr: 4654  # https://github.com/randombit/botan/pull/4654
+  merge_commit: 15fdc9e3aaa809bc318d0cafaa5b66d9df616f20
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix a bug in template concat introduced in #4642
+#   Author:    @randombit
+- pr: 4652  # https://github.com/randombit/botan/pull/4652
+  merge_commit: bc555cd3c114497a50b49c4649d6606150881f5b
+  auditer: falko-strenzke
+  classification:  unspecified
+
+# Remove most toggles from build.h
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4639  # https://github.com/randombit/botan/pull/4639
+  merge_commit: 5dbdf91528665391f3fc7854b9b760b4c790eefb
+  auditer: falko-strenzke
+  classification:  info
+
+# Mark generated EC group defines as an internal define [ci skip]
+#   Author: Jack Lloyd
+- commit: 463b48f947bd41792135cd069d6c2c4def473be2  # https://github.com/randombit/botan/commit/463b48f947bd41792135cd069d6c2c4def473be2
+  classification: info
+
+
+# Set sha2_64_armv8 to require armv8crypto also
+#   Author: Jack Lloyd
+- commit: fa28fc6f4edc344490fab13916a1d6d3dfb7d44b  # https://github.com/randombit/botan/commit/fa28fc6f4edc344490fab13916a1d6d3dfb7d44b
+  classification: info
+
+
+# Mark cryptobox module as deprecated, previously missed
+#   Author: Jack Lloyd
+- commit: 3e40bb9ef2df024828a23e80ee18da4e7c621194  # https://github.com/randombit/botan/commit/3e40bb9ef2df024828a23e80ee18da4e7c621194
+  classification: info
+
+
+# Clarify tpm module is TPMv1 only
+#   Author: Jack Lloyd
+- commit: 6196f58fceada52866472870d87982848354e994  # https://github.com/randombit/botan/commit/6196f58fceada52866472870d87982848354e994
+  classification: info
+
+# Remove Android Docker build setup [ci skip]
+#   Author: Jack Lloyd
+- commit: 02415ac51c64c82feb7512a5136303c72cbd0dd2  # https://github.com/randombit/botan/commit/02415ac51c64c82feb7512a5136303c72cbd0dd2
+  classification: info

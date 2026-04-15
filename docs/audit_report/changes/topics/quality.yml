@@ -900,3 +900,75 @@ patches:
   auditer: falko-strenzke
   classification:  info
 
+# Reorganize code and reduce header dependencies
+#   Author:    @randombit
+- pr: 4650  # https://github.com/randombit/botan/pull/4650
+  merge_commit: 863380c7a922eb63cdb4ee80984095d038830ce3
+  auditer: falko-strenzke
+  classification:  info
+
+# Use std::endian
+#   Author:    @randombit
+- pr: 4645  # https://github.com/randombit/botan/pull/4645
+  merge_commit: 0a5939ecd1f9277aa6cb3397b4d7fbe50e1cc473
+  auditer: falko-strenzke
+  classification:  info
+
+# Use span instead of vector as arguments to EMSA
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4635  # https://github.com/randombit/botan/pull/4635
+  merge_commit: d1e98a5953a296fcf5fd832f6a8c4324da407308
+  auditer: falko-strenzke
+  classification:  info
+
+# Fix typo in comment [ci skip]
+#   Author: Jack Lloyd
+- commit: 8b1f7ef93ea5b2333e022012ec15766c2f779625  # https://github.com/randombit/botan/commit/8b1f7ef93ea5b2333e022012ec15766c2f779625
+  classification: info
+
+# Remove unncessary semicolon
+#   Author: Jack Lloyd
+- commit: b6f2325af657c5462cab894b68a7f269bd3f7fec  # https://github.com/randombit/botan/commit/b6f2325af657c5462cab894b68a7f269bd3f7fec
+  classification: info
+
+# Remove some SIMD_4x32 constructor calls in the SHA-1 SIMD impl
+#   Author: Jack Lloyd
+- commit: 62083468ebf9aa9b7f2953dde2b44982067d43d0  # https://github.com/randombit/botan/commit/62083468ebf9aa9b7f2953dde2b44982067d43d0
+  classification: info
+
+# Remove unnecessary trailing semicolons
+#   Author: Jack Lloyd
+- commit: 3bdfe654f7a771250c505c324f5001543e0cece5  # https://github.com/randombit/botan/commit/3bdfe654f7a771250c505c324f5001543e0cece5
+  classification: info
+
+# Avoid some data ending up in modifiable data section
+#   Author: Jack Lloyd
+- commit: baf88b16f76e679ad83f5150a3f17d613605af4e  # https://github.com/randombit/botan/commit/baf88b16f76e679ad83f5150a3f17d613605af4e
+  classification: info
+
+# Add constexpr for fe_invert2 functions that missed declaring as such
+#   Author: Jack Lloyd
+- commit: 69ecdf682dc6b61a7e9215baf77a46390000de8c  # https://github.com/randombit/botan/commit/69ecdf682dc6b61a7e9215baf77a46390000de8c
+  classification: info
+
+# Address (or silence) various new warnings from clang-tidy 22
+#   Author:    @randombit
+- pr: 5446  # https://github.com/randombit/botan/pull/5446
+  merge_commit: 2a04c163ce7c767f71b69a3e7f488cd0d699e332
+  auditer: falko-strenzke
+  classification:  info
+
+# Use the span-based variants of CT::is_equal where possible
+#   Author:    @randombit
+- pr: 5447  # https://github.com/randombit/botan/pull/5447
+  merge_commit: e3fc549ad3a231e23a03c64c88da31fbe2d82fae
+  auditer: falko-strenzke
+  classification:  info
+
+# BigInt encoding cleanups
+#   Author:    @randombit
+- pr: 5425  # https://github.com/randombit/botan/pull/5425
+  merge_commit: a69866781d9ffd6f8259768fe62a3eb1d68f3f7c
+  auditer: falko-strenzke
+  classification:  relevant

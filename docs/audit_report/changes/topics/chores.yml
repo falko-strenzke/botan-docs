@@ -2,7 +2,7 @@ title: Code Chores and Cleanups
 
 description: |
   Generic maintenance of the library without changing its features or security properties significantly. This includes
-  removal of outdated code. This ensures future-proofness or facilitates future extensions or adaptations of the API.
+  removal of outdated code and fixes of the code for specific tool chains or architectures. This ensures future-proofness or facilitates future extensions or adaptations of the API.
 
 patches:
 # Update Limbo test suite
@@ -462,3 +462,57 @@ patches:
   merge_commit: a3b648d264b6028c0778bf8ed917e38b7174187b
   auditer: falko-strenzke
   classification:  info
+
+# Add internal target_info.h header
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4642  # https://github.com/randombit/botan/pull/4642
+  merge_commit: 801a4b3ecd0160b91e25e2ed1a5d67d2bb8652ce
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove unused pcurves interfaces
+#   Author:    @randombit
+- pr: 4634  # https://github.com/randombit/botan/pull/4634
+  merge_commit: d4d48503e8a4707a8f5bca28700e510f6c2aba79
+  auditer: falko-strenzke
+  classification:  info
+
+# Remove pcurves "user interface" API
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 4632  # https://github.com/randombit/botan/pull/4632
+  merge_commit: 79f98ae311fb4d275a317434143011ba06b47d18
+  auditer: falko-strenzke
+  classification:  info
+
+
+# Add a Botan4 TODO [ci skip]
+#   Author: Jack Lloyd
+- commit: 4b559f55ea80e452653b1196c249edaef068f8f1  # https://github.com/randombit/botan/commit/4b559f55ea80e452653b1196c249edaef068f8f1
+  classification: info
+
+# Mark EC_Scalar and EC_AffinePoint with BOTAN_PUBLIC_API
+#   Author: Jack Lloyd
+- commit: c4bf10bfd3b0d5908c96dae245ecf879d36f9886  # https://github.com/randombit/botan/commit/c4bf10bfd3b0d5908c96dae245ecf879d36f9886
+  classification: info
+
+# Add missing include in jitter_rng.h
+#   Author: Jack Lloyd
+- commit: 6f6bcfc52cee99633ba2bfce9605940207781c20  # https://github.com/randombit/botan/commit/6f6bcfc52cee99633ba2bfce9605940207781c20
+  classification: info
+
+# Add missing include for BOTAN_UNUSED [ci skip]
+#   Author: Jack Lloyd
+- commit: 9fbffd0b38c4846d5bd06adf5a0354caa8b2c6b1  # https://github.com/randombit/botan/commit/9fbffd0b38c4846d5bd06adf5a0354caa8b2c6b1
+  classification: info
+
+# Add missing ISA annotations to the SM4 x86 decrypt functions [ci skip]
+#   Author: Jack Lloyd
+- commit: 2cdb64cd66a0de42468abf863580e48c2710cd76  # https://github.com/randombit/botan/commit/2cdb64cd66a0de42468abf863580e48c2710cd76
+  classification: info
+
+# Add missing include [ci skip]
+#   Author: Jack Lloyd
+- commit: c345e50bbb563135d44b10fa644e34f55c510260  # https://github.com/randombit/botan/commit/c345e50bbb563135d44b10fa644e34f55c510260
+  classification: info

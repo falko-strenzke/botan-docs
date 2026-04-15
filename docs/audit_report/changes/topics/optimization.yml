@@ -497,3 +497,76 @@ patches:
   merge_commit: f372b5a9e9681b1d32314aae972b3adf17fc4635
   auditer: falko-strenzke
   classification:  info
+
+# Change mp Montgomery reduction functions to be 3 operand
+#   Author:    @randombit
+- pr: 4623  # https://github.com/randombit/botan/pull/4623
+  merge_commit: b7d30acadf1a6a1c337a233fa58e7a09ea82b450
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Save one point addition in mul2 and mul2_vartime
+#   Author:    @randombit
+- pr: 4625  # https://github.com/randombit/botan/pull/4625
+  merge_commit: 3c7358c0aae1db1ec305d4abd4c49e735e2fe54d
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Add support for ARMv8 SM3 instructions
+#   Author:    @randombit
+- pr: 5444  # https://github.com/randombit/botan/pull/5444
+  merge_commit: e9952d62f60cd6c23e4a098ccca3f41b4eb339e2
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Camellia GFNI: new AVX-512 implementation and improved AVX2 implementation
+#   Author:    @randombit
+- pr: 5442  # https://github.com/randombit/botan/pull/5442
+  merge_commit: 6d28178fb9b3eb676e0fb8eac005893be93bb75c
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Fix inefficiency in IDEA SSE2 transpose step
+#   Author:    @randombit
+- pr: 5441  # https://github.com/randombit/botan/pull/5441
+  merge_commit: b2708500c87cf0c55d23561366d638e8d1f67b95
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Add ARIA implementation using AVX-512 GFNI
+#   Author:    @randombit
+- pr: 5440  # https://github.com/randombit/botan/pull/5440
+  merge_commit: 46fd95dbd46f95fe4e6545512d7227589c4e6fdc
+  auditer: falko-strenzke
+  classification:  relevant
+
+# Use SWAR during base58 decoding
+#   Author:    @randombit
+- pr: 5437  # https://github.com/randombit/botan/pull/5437
+  merge_commit: b866e0ee993b250e2adc64c47c89f03a5c021f12
+  auditer: falko-strenzke
+  classification:  info
+
+# Generalize support for consteval polynomial multiplication in GF(2^8)
+#   Author:    @randombit
+- pr: 5434  # https://github.com/randombit/botan/pull/5434
+  merge_commit: 15579a1e760e7fabd3b91b8863a436824f479a21
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Affects Kuznyechik, Streebog, and Whirlpool.
+
+# Rewrite Twofish key schedule to avoid using tables for GF(2^8) arithmetic
+#   Author:    @randombit
+- pr: 5432  # https://github.com/randombit/botan/pull/5432
+  merge_commit: 0cccd59e85811f9289987b09fc44240d6550cf6f
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: It is not clear to the reviewer what goal(s) is/are achieved by this change.
+
+# Generate Whirlpool tables and RCs at compile time from the miniboxes
+#   Author:    @randombit
+- pr: 5430  # https://github.com/randombit/botan/pull/5430
+  merge_commit: 7eea4b8b50614a19cd519e790da0d1100d9ed411
+  auditer: falko-strenzke
+  classification:  relevant

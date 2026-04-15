@@ -310,4 +310,41 @@ patches:
 - pr: 4669  # https://github.com/randombit/botan/pull/4669
   merge_commit: ffa7870500c4fb790e0e409ed37d8e6eb17da1c3
   auditer: falko-strenzke
-  classification:  unspecified
+  classification:  info
+
+
+# Fix provider reporting in GHASH
+#   Author: Jack Lloyd
+- commit: fbf64f94f6a1938705680f6a4ff2db8bd74da3fa  # https://github.com/randombit/botan/commit/fbf64f94f6a1938705680f6a4ff2db8bd74da3fa
+  classification: info
+
+# In SM2 verify the C3 field is of the required length
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5450  # https://github.com/randombit/botan/pull/5450
+  merge_commit: 798a332e11949afa8b004564bb9031e66c1a4d13
+  auditer: falko-strenzke
+  classification:  relevant
+  comment: |
+    Fixes memory over-read error / potential vulnerability.
+
+# Fix name constraint DNS check when falling back to CN
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5448  # https://github.com/randombit/botan/pull/5448
+  merge_commit: 134fdda1b0ce1c7239edf75ab34e7dc39117b66a
+  auditer: falko-strenzke
+  classification:  critical
+  comment: |
+    Fixes a vulnerability bypassing permitted subtrees matching for NameConstraints extension.
+
+# Fix OCSP response verification
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5449  # https://github.com/randombit/botan/pull/5449
+  merge_commit: 6ecc62a4e36937d036df8c8eda6a85708abb8c37
+  auditer: falko-strenzke
+  classification:  critical
+  comment: |
+    Fixes the vulnerability that OCSP response signature verification was silently skipped. 
+    A test was added to that would detect this error in the future.
