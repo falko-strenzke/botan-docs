@@ -5,3 +5,71 @@ Currently, we are not aware of any security issues that needed to be addressed
 between |botan_git_base_ref| and |botan_version|.
 
 .. todo:: Update this section with any security issues fixed recently.
+
+.. list-table::
+   :class: longtable
+   :widths: 10 20 10 50
+   :header-rows: 1
+
+   * - Security Issue 
+     - Affected versions 
+     - Fixed in Version
+     - Description
+   * - CVE-2026-35580
+     - Regarding general certification path validation only 3.11 is affected. Regarding certificate matching in a certificate store, the issue affects earlier versions as well. Earliest affected version is not known.
+     - 3.11.1
+     - The certificate store's function to search for a given certificate within the store returns any certificate whose SubjectDN matches that of the sought certificate.
+   * - CVE-2026-35582
+     - Earliest affected version is unknown
+     - 3.11.1
+     - TLS 1.3 client authentication can by trivially bypassed.
+   * - #5454, #5455
+     - Earliest affected version is unknown
+     - 3.11.1
+     - The verification operation class of EdDSA and ECDSA handles the case of a too short signatures in an erroneous manner. The leads to the verification object remaining in a state with an already non-empty hashed message after a failed
+       signature verification. While the
+       caller assumes that a new verification is started, the verification operation instance appends the new message for verification to the previous one. This allows attacks where the attacker first deliberately causes a failed
+       verification for some prefix A. In the second step he submits the message B together with a valid signature for the message A || B. The verification of B succeeds to to the pending message in the internal hash context, even though
+       the legitimate signer only signed A || B, and never signed B.
+   * - CVE-2026-32883
+     - Since 2022, the corresponding version has not been determined. 
+     - 3.11.0
+     - OCSP signature verification was skipped and thus OCSP responses could straightforwardly be forged.
+   * - CVE-2026-32884
+     - Earliest affected version is unknown
+     - 3.11.0
+     - A vulnerability that allows bypassing permitted subtrees matching for the Name Constraints X.509 certificate extension.
+   * - CVE-2026-32877
+     - Earliest affected version is unknown
+     - 3.11.0
+     - Heap over-read during SM2 decryption.
+
+
+
+
+
+Non-Security Critical Issues 
+============================
+
+The following known issues are present in Botan |botan_version|.
+
+.. list-table::
+   :class: longtable
+   :widths: 10 20 10 50
+   :header-rows: 1
+
+   * - Reference 
+     - Affected versions 
+     - Fixed in Version
+     - Description
+   * - #5002
+     - All earlier versions featuring ML-DSA
+     - Fix is pending. PR exists (#5307).
+     - RFC 9881 specifies three alternative encodings of the ML-DSA the private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9881.
+
+   * - Not tracked in GitHub 
+     - All earlier versions featuring ML-KEM
+     - Fix is pending.
+     - RFC 9935 specifies three alternative encodings of the ML-KEM the private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9935.
+
+
