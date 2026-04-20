@@ -535,3 +535,16 @@ patches:
 #   Author: Jack Lloyd
 - commit: 9c40b69fdb6787d711d7d658280456d4f740228b  # https://github.com/randombit/botan/commit/9c40b69fdb6787d711d7d658280456d4f740228b
   classification: info
+
+# Add missing XMSS Parameters to pubkey.rst and fix comment for XMSS_PrivateKey::raw_private_key()
+#   Author:    @TJ-91
+#   Approvals: (@randombit)
+- pr: 5391  # https://github.com/randombit/botan/pull/5391
+  merge_commit: 6eb7cfcc4f76765eccf73d65acb26391c922e8d9
+  classification: info
+
+# Update the documentation on the test framework
+#   Author:    @randombit
+- pr: 5354  # https://github.com/randombit/botan/pull/5354
+  merge_commit: 8bc12273b9be63b79bc3f7f8b5edf88d0d5a680e
+  classification: info

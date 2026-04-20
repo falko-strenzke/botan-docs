@@ -30,7 +30,7 @@ patches:
 - pr: 4707  # https://github.com/randombit/botan/pull/4707
   merge_commit: b482550592a7a41d168641b90f7923ac8e486d64
   auditer: falko-strenzke
-  classification:  info
+  classification: info
 
 # Increase CMCE Rejection Sampling Attempts Limit
 #   Author:    @FAlbertDev
@@ -38,19 +38,22 @@ patches:
 - pr: 4675  # https://github.com/randombit/botan/pull/4675
   merge_commit: da9ca2ca26aaee0f955e70d5c53b7ed94352736d
   auditer: falko-strenzke
-  classification:  relevant
+  classification: relevant
 
 # Update module policies with module rename [ci skip]
 #   Author: Jack Lloyd
 - commit: 724a79c14924399b042489ed1dd5efc555086913  # https://github.com/randombit/botan/commit/724a79c14924399b042489ed1dd5efc555086913
+  auditer: falko-strenzke
   classification: info
 
 # Update module names in policy files [ci skip]
 #   Author: Jack Lloyd
 - commit: 98f2e691fb0fff3db927fbef096bd662c0fc492f  # https://github.com/randombit/botan/commit/98f2e691fb0fff3db927fbef096bd662c0fc492f
+  auditer: falko-strenzke
   classification: info
 
 # Remove `sodium` from prohibited list in fips140 policy
 #   Author: Jack Lloyd
 - commit: 639524150533e2f8ee08a92f56e06cfa1b5e7003  # https://github.com/randombit/botan/commit/639524150533e2f8ee08a92f56e06cfa1b5e7003
+  auditer: falko-strenzke
   classification: info

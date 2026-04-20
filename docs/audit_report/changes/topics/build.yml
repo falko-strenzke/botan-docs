@@ -392,7 +392,7 @@ patches:
 - pr: 4652  # https://github.com/randombit/botan/pull/4652
   merge_commit: bc555cd3c114497a50b49c4649d6606150881f5b
   auditer: falko-strenzke
-  classification:  unspecified
+  classification: info
 
 # Remove most toggles from build.h
 #   Author:    @randombit
@@ -428,4 +428,23 @@ patches:
 # Remove Android Docker build setup [ci skip]
 #   Author: Jack Lloyd
 - commit: 02415ac51c64c82feb7512a5136303c72cbd0dd2  # https://github.com/randombit/botan/commit/02415ac51c64c82feb7512a5136303c72cbd0dd2
+  classification: info
+
+# Refactor: CMake Module now uses mostly hard-coded paths
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5402  # https://github.com/randombit/botan/pull/5402
+  merge_commit: fac269140ef72bff3bd648351bdd58315bf11b02
+  classification: info
+
+# Fix the FFI datecode for 3.11
+#   Author:    @randombit
+- pr: 5377  # https://github.com/randombit/botan/pull/5377
+  merge_commit: 4648c5020c8dcada728452597a2cc28976778ae4
+  classification: info
+
+# For MSVC debug info prefer embedding into the object file rather than using PDB
+#   Author:    @randombit
+- pr: 5349  # https://github.com/randombit/botan/pull/5349
+  merge_commit: e8d957052240e1777893df0061472203185677a9
   classification: info

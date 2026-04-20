@@ -348,3 +348,54 @@ patches:
   comment: |
     Fixes the vulnerability that OCSP response signature verification was silently skipped. 
     A test was added to that would detect this error in the future.
+
+# Avoid possible race conditions in Windows certificate store
+#   Author:    @randombit
+- pr: 5421  # https://github.com/randombit/botan/pull/5421
+  merge_commit: cdaa9c0ff3d49fd2833958b618acf37de98a27d4
+  classification: relevant
+
+# Fix ECDSA chosen-key verification forgery
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5412  # https://github.com/randombit/botan/pull/5412
+  merge_commit: 4c7779185a749a275f0300cf881c73b47f240083
+  classification: relevant
+  comment: |
+    Removes a potential attack vector where the attacker can choose their own key. The vulnerability has no general practical relevance.
+
+# FIX: `botan_x509_cert_allowed_extended_usage_*` should return "1" on true
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5252  # https://github.com/randombit/botan/pull/5252
+  merge_commit: b93d54845e8196dcf44842445d68c56b10165fbd
+  classification: relevant
+
+# Fix ML-DSA/Dilithium concurrency issues
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5380  # https://github.com/randombit/botan/pull/5380
+  merge_commit: af19f625f8b6478e1c030365c677e0b8a03dfc68
+  classification: relevant
+
+# Fix Kyber/ML-KEM concurrency issues
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5367  # https://github.com/randombit/botan/pull/5367
+  merge_commit: d4d3b42615498d745c4eb22dea7b981eed47e037
+  classification: relevant
+
+# Fix race in XMSS_Index_Registry
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5376  # https://github.com/randombit/botan/pull/5376
+  merge_commit: 53329c11e701944a3449a8c0ccc954943d8be78b
+  classification: relevant
+
+# Fix memory leak when creating MPIs for ECGroup
+#   Author:    @arckoor
+#   Approvals: (@randombit)
+- pr: 5381  # https://github.com/randombit/botan/pull/5381
+  merge_commit: 5166623272c0ee19b5fd04ad7cea71cf51906e0f
+  classification: relevant
+  comment: Affects Botan's Python interface only.

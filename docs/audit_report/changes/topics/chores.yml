@@ -1,8 +1,12 @@
 title: Code Chores and Cleanups
 
 description: |
-  Generic maintenance of the library without changing its features or security properties significantly. This includes
-  removal of outdated code and fixes of the code for specific tool chains or architectures. This ensures future-proofness or facilitates future extensions or adaptations of the API.
+  Generic maintenance of the library without changing its features or security
+  properties significantly. This includes removal of outdated code ensures
+  future-proofness or facilitates future extensions or adaptations of the API.
+  It further includes fixes of the code for specific tool chains or
+  architectures as well as other minor additions without a significant expected
+  effect on program execution.
 
 patches:
 # Update Limbo test suite
@@ -515,4 +519,39 @@ patches:
 # Add missing include [ci skip]
 #   Author: Jack Lloyd
 - commit: c345e50bbb563135d44b10fa644e34f55c510260  # https://github.com/randombit/botan/commit/c345e50bbb563135d44b10fa644e34f55c510260
+  classification: info
+
+# Add PKCS12 OIDs
+#   Author:    @dmazzella
+#   Approvals: (@randombit)
+- pr: 5411  # https://github.com/randombit/botan/pull/5411
+  merge_commit: b47e9d96d4ac3ab24936ab34883da5c4b1ad462d
+  classification: info
+
+# Ensure BOTAN_FFI_EXPORT is consistently at the start of the ffi.h decls
+#   Author:    @randombit
+- pr: 5406  # https://github.com/randombit/botan/pull/5406
+  merge_commit: 41015be85d90a951337b6ac8d6c257e43c9b03af
+  classification: info
+
+# For FFDH exponents follow the guidance of NIST SP 800-56A and 800-56B
+#   Author:    @randombit
+#   Approvals: (@falko-strenzke)
+- pr: 5384  # https://github.com/randombit/botan/pull/5384
+  merge_commit: ee07c593e8639961236179166953189ab495dc86
+  classification: critical
+  comment: This update of the exponent size choices has been found to be compliant with TR-02102.
+
+# Officially deprecate Round3 variants of Kyber and Dilithium
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5368  # https://github.com/randombit/botan/pull/5368
+  merge_commit: 369046383597143ded68d2513fadcb508a4527a9
+  classification: info
+
+# Remove misplaced FIXME annotations in bitvector.h
+#   Author:    @KaganCanSit
+#   Approvals: @reneme
+- pr: 5335  # https://github.com/randombit/botan/pull/5335
+  merge_commit: 90b10f4159fdf96338772c28deb099e497c92971
   classification: info

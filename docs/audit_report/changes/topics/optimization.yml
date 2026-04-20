@@ -570,3 +570,64 @@ patches:
   merge_commit: 7eea4b8b50614a19cd519e790da0d1100d9ed411
   auditer: falko-strenzke
   classification:  relevant
+
+# Generate Streebog's tables at compile time
+#   Author:    @randombit
+- pr: 5427  # https://github.com/randombit/botan/pull/5427
+  merge_commit: bff63e41a6bca75c5da8b722216f7ca73ccae968
+  classification: relevant
+
+# Add AVX-512 CLMUL GHASH
+#   Author:    @randombit
+- pr: 5418  # https://github.com/randombit/botan/pull/5418
+  merge_commit: 03d781347a5cc8fac55aa08e685e226d2700ad35
+  classification: relevant
+
+# Add inline aarch64 assembly for word3 and word_madd{2/3}
+#   Author:    @randombit
+- pr: 5407  # https://github.com/randombit/botan/pull/5407
+  merge_commit: 3a1a8f5cf31b2d1c1e28b68a0cd61ac958562d5e
+  classification: relevant
+
+# Small optimization for shift_left and shift_right
+#   Author:    @randombit
+- pr: 5403  # https://github.com/randombit/botan/pull/5403
+  merge_commit: a78272b61091ba1dfb1b4ebde8cb695d140760ef
+  classification: relevant
+
+# Inline more agressively in pcurves
+#   Author:    @randombit
+- pr: 5394  # https://github.com/randombit/botan/pull/5394
+  merge_commit: 584d785fea22e8e8cbbf626c5a8fd8bdcfa7ab0b
+  classification: relevant
+
+# Allow use of variable time inversion in batch affine conversion
+#   Author:    @randombit
+- pr: 5393  # https://github.com/randombit/botan/pull/5393
+  merge_commit: b6bf8dcd268d95124351a566ae48656dfdc00e57
+  classification: relevant
+ 
+# Ed448/X448 optimizations
+#   Author:    @randombit
+- pr: 5383  # https://github.com/randombit/botan/pull/5383
+  merge_commit: 9aec7a068f68ac101f28ad70296adcfad8c767c1
+  classification: critical
+  comment: Significant modification of Curve 448 arithmetics.
+
+# Use squarings when possible when computing Montgomery exponentiation table
+#   Author:    @randombit
+- pr: 5385  # https://github.com/randombit/botan/pull/5385
+  merge_commit: 90b85a862aa377f128d919b4312a61ef54947e5e
+  classification: relevant
+
+# Avoid a pointless heap allocation during GCM key schedule
+#   Author:    @randombit
+- pr: 5379  # https://github.com/randombit/botan/pull/5379
+  merge_commit: ef0dcf436b2476b650d8e16006b9d22f8389a551
+  classification: info
+
+# Minor SHA-NI SHA-256 improvements
+#   Author:    @randombit
+- pr: 5378  # https://github.com/randombit/botan/pull/5378
+  merge_commit: 5bc9eb6989845be24b27f46884eea0027268e40a
+  classification: relevant

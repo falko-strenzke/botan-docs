@@ -100,3 +100,17 @@ patches:
   auditer: falko-strenzke
   classification:  relevant
   comment: Achieves unconditionally constant-time DES operations which was not the case previously.
+
+# Generalized ECC scalar blinding in pcurves
+#   Author:    @randombit
+- pr: 5400  # https://github.com/randombit/botan/pull/5400
+  merge_commit: 6a82ea9000d12b24aaabe67f8a9c0058feda6e52
+  classification: critical
+  comment: Changes the behaviour of the ECC scalar blinding. Recommended for detailed review.
+
+# Change pcurve base point multiplication to use Booth encoding
+#   Author:    @randombit
+- pr: 5387  # https://github.com/randombit/botan/pull/5387
+  merge_commit: e5ec9cbce27cd09209965c3da0d8dd9a97e401a3
+  classification: critical
+  comment: Recommended for detailed review.

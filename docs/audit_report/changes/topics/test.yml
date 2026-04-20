@@ -205,3 +205,78 @@ patches:
 #   Author: Jack Lloyd
 - commit: 74e4d14986c91e883017412e7ff3c9ad1faa493d  # https://github.com/randombit/botan/commit/74e4d14986c91e883017412e7ff3c9ad1faa493d
   classification: info
+
+# Run latest Wycheproof tests every night
+#   Author:    @reneme
+#   Approvals: (@randombit)
+- pr: 5269  # https://github.com/randombit/botan/pull/5269
+  merge_commit: 8607df86fca56d55b2956bd1c26cff8453c039f5
+  classification: info
+
+# Add some more fuzzers for EC arithmetic
+#   Author:    @randombit
+- pr: 5420  # https://github.com/randombit/botan/pull/5420
+  merge_commit: 7d0b678e68f337367530fcc2d0cd73ca95e58e62
+  classification: info
+
+# Minor improvements to EC benchmarking cli utils
+#   Author:    @randombit
+- pr: 5413  # https://github.com/randombit/botan/pull/5413
+  merge_commit: ebae7cd2eec008d4f476c35e465be03cac27a7cc
+  classification: info
+
+# Fix input split bug in gcd fuzzer
+#   Author:    @OwenSanzas
+#   Approvals: (@randombit)
+- pr: 5415  # https://github.com/randombit/botan/pull/5415
+  merge_commit: 60372dc8072079fb0500b7332b230f96b6b9851f
+  classification: info
+
+# Extend compare_perf script to take one set of input from stdin
+#   Author:    @randombit
+- pr: 5392  # https://github.com/randombit/botan/pull/5392
+  merge_commit: c5ef4777fbabf19ff72ed500b8add677f01d8827
+  classification: info
+
+# Add perf report for PBKDf2
+#   Author:    @randombit
+- pr: 5389  # https://github.com/randombit/botan/pull/5389
+  merge_commit: 23e0fc0cc0df7d061886cde0eba875184faef423
+  classification: info
+
+# Disable XMSS concurrency test for now
+#   Author:    @randombit
+- pr: 5369  # https://github.com/randombit/botan/pull/5369
+  merge_commit: ada4c3047050098265b30fc7bcfde01d0085d0d5
+  classification: info
+
+# Add a test covering concurrent PK operations
+#   Author:    @randombit
+#   Approvals: @reneme
+- pr: 5359  # https://github.com/randombit/botan/pull/5359
+  merge_commit: b4032cdd8bbd83447d3030cf90f450e4af5ef0ab
+  classification: info
+
+# Add the math perf tests to the coverage build run
+#   Author:    @randombit
+- pr: 5360  # https://github.com/randombit/botan/pull/5360
+  merge_commit: 59d4d64fb7e6fcab58e3d67b514bfefdcf07b070
+  classification: info
+
+# Improve Test::Result::test_note
+#   Author:    @randombit
+- pr: 5357  # https://github.com/randombit/botan/pull/5357
+  merge_commit: 6c70f100303bea870ae9fe61939db90504551163
+  classification: info
+
+# Change VarMap to avoid copies internally
+#   Author:    @randombit
+- pr: 5352  # https://github.com/randombit/botan/pull/5352
+  merge_commit: 78fe2b5e6243615a367f7cec43a58acbd58be4ac
+  classification: info
+
+# For VarMap keys, use std::string_view instead of a const std::string ref
+#   Author:    @randombit
+- pr: 5351  # https://github.com/randombit/botan/pull/5351
+  merge_commit: cf5c9ad7fcac2243d9007589318c811304fc3bf9
+  classification: info
