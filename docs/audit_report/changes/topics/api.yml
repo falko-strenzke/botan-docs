@@ -42,12 +42,14 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5188  # https://github.com/randombit/botan/pull/5188
   merge_commit: 27fd567e939181f4d75872409ea253c0ce8711f0
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Allow unregistering EC Groups
 #   Author:    @arckoor
 #   Approvals: (@randombit)
 - pr: 5306  # https://github.com/randombit/botan/pull/5306
   merge_commit: 5b94bbd9d0705b59c99c39b4b317725b9ea57b87
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 

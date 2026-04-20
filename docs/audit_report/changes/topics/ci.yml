@@ -582,34 +582,40 @@ patches:
 # Silence a clang-tidy warning [ci skip]
 #   Author: Jack Lloyd
 - commit: 18526ddd34dfeab0724e396d8320d39d95ba8f24  # https://github.com/randombit/botan/commit/18526ddd34dfeab0724e396d8320d39d95ba8f24
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Regen src/.clang-tidy [ci skip]
 #   Author: Jack Lloyd
 - commit: 7dcd490423a8a43f1f18ca9b57bfe4247171615b  # https://github.com/randombit/botan/commit/7dcd490423a8a43f1f18ca9b57bfe4247171615b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Ignore .json and .sh files in the top level dir [ci skip]
 #   Author: Jack Lloyd
 - commit: cd3e2b4da849638cad6a05ea3a38000929a73cee  # https://github.com/randombit/botan/commit/cd3e2b4da849638cad6a05ea3a38000929a73cee
-  classification: out of scope
+  auditer: falko-strenzke
+  classification:  out of scope
 
 # Silence a new clang-tidy 20 warning in p11.h [ci skip]
 #   Author: Jack Lloyd
 - commit: c94c8e20d0e67307c920385746def1fa0ee2b0a6  # https://github.com/randombit/botan/commit/c94c8e20d0e67307c920385746def1fa0ee2b0a6
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # DevContainer: Install pylint, golang and repair `make fmt`
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5365  # https://github.com/randombit/botan/pull/5365
   merge_commit: 36394b4434428996a1ea35af1471787e61b28d5a
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # add clang-format option 'InsertNewlineAtEOF: True'
 #   Author:    @TJ-91
 #   Approvals: (@randombit)
 - pr: 5364  # https://github.com/randombit/botan/pull/5364
   merge_commit: 2cf293ee65fd370077cb3228bcf4549880a2a9f5
-  classification: info
+  auditer: falko-strenzke
+  classification:  info

@@ -282,269 +282,320 @@ patches:
 # Update for 3.10.0 release
 #   Author: Jack Lloyd
 - commit: e27d332089247f04e89854a2e60a3af2ec4e430f  # https://github.com/randombit/botan/commit/e27d332089247f04e89854a2e60a3af2ec4e430f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: cf5beb19ba8e829c855139d2ed9ba7858c2a15ed  # https://github.com/randombit/botan/commit/cf5beb19ba8e829c855139d2ed9ba7858c2a15ed
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 7ddf59169628be9ce169990e995ba94d17d1e8f1  # https://github.com/randombit/botan/commit/7ddf59169628be9ce169990e995ba94d17d1e8f1
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes
 #   Author: Jack Lloyd
 - commit: f7975f0dbbf71fd670141f5e02e2818566ec0789  # https://github.com/randombit/botan/commit/f7975f0dbbf71fd670141f5e02e2818566ec0789
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Some small typos cleanups [ci skip]
 #   Author: Jack Lloyd
 - commit: a41c4e9205654b923a3da374693e500a41848c31  # https://github.com/randombit/botan/commit/a41c4e9205654b923a3da374693e500a41848c31
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: b8c3339b98fbd0c344ccf9fceba9aeca8ab3291c  # https://github.com/randombit/botan/commit/b8c3339b98fbd0c344ccf9fceba9aeca8ab3291c
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Bump version to 3.10, add initial release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 548c59d41c5664744357e89a4b318bc56eca4f41  # https://github.com/randombit/botan/commit/548c59d41c5664744357e89a4b318bc56eca4f41
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update for 3.9.0 release
 #   Author: Jack Lloyd
 - commit: 07e1cfe0a06b224bbb37ad534736924931184246  # https://github.com/randombit/botan/commit/07e1cfe0a06b224bbb37ad534736924931184246
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 4e84a84d18c8a461823343f894faffdaba7d85cf  # https://github.com/randombit/botan/commit/4e84a84d18c8a461823343f894faffdaba7d85cf
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update support information [ci skip]
 #   Author: Jack Lloyd
 - commit: 6b24db8518d17ffae51ef07c5a32e5748d3aa40c  # https://github.com/randombit/botan/commit/6b24db8518d17ffae51ef07c5a32e5748d3aa40c
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: c9d60d429e2c69546bc450ae9815af0601a6ac80  # https://github.com/randombit/botan/commit/c9d60d429e2c69546bc450ae9815af0601a6ac80
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update change notes
 #   Author: Jack Lloyd
 - commit: 5f6d020174bbcfd0986289b3d781a549982288d8  # https://github.com/randombit/botan/commit/5f6d020174bbcfd0986289b3d781a549982288d8
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 55a783101735f9ab542007ffe7909e2b173b5a49  # https://github.com/randombit/botan/commit/55a783101735f9ab542007ffe7909e2b173b5a49
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: c4aa80cd6649a453396c4163e0745cf11816bd1c  # https://github.com/randombit/botan/commit/c4aa80cd6649a453396c4163e0745cf11816bd1c
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 1acee3b18e05b013333fbf0be973043ee557be2e  # https://github.com/randombit/botan/commit/1acee3b18e05b013333fbf0be973043ee557be2e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Document EC_Scalar::hash
 #   Author: Jack Lloyd
 - commit: ed7bc069281c4e21810eca51c91d79f82fee3575  # https://github.com/randombit/botan/commit/ed7bc069281c4e21810eca51c91d79f82fee3575
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update news [ci skip]
 #   Author: Jack Lloyd
 - commit: 6cd6fe3057318961da6a3cc3918b4590ae2595cc  # https://github.com/randombit/botan/commit/6cd6fe3057318961da6a3cc3918b4590ae2595cc
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update change notes
 #   Author: Jack Lloyd
 - commit: 0ec63a0392d32d50cca74f07ee3932860d52a91e  # https://github.com/randombit/botan/commit/0ec63a0392d32d50cca74f07ee3932860d52a91e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add comment regarding side-channel properties of the DES impl [ci skip]
 #   Author: Jack Lloyd
 - commit: aa801de269fe7d8af1d2218cfa465594a23dc9da  # https://github.com/randombit/botan/commit/aa801de269fe7d8af1d2218cfa465594a23dc9da
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
   comment: Code comment only.
 
 
 # Update todos [ci skip]
 #   Author: Jack Lloyd
 - commit: 29bc203e2c6a8a7b31a8405e0e0b3d5bc184301f  # https://github.com/randombit/botan/commit/29bc203e2c6a8a7b31a8405e0e0b3d5bc184301f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update change notes [ci skip]
 #   Author: Jack Lloyd
 - commit: aed9301b603a398d794bc751e950ecb174d11410  # https://github.com/randombit/botan/commit/aed9301b603a398d794bc751e950ecb174d11410
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Bump version to 3.9.0
 #   Author: Jack Lloyd
 - commit: d267d7fd2cd737b6a1930617fd843ed6530356da  # https://github.com/randombit/botan/commit/d267d7fd2cd737b6a1930617fd843ed6530356da
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update for 3.8.1 release
 #   Author: Jack Lloyd
 - commit: c06967092edd9baa2b42f89135380912113ae209  # https://github.com/randombit/botan/commit/c06967092edd9baa2b42f89135380912113ae209
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Bump version to 3.8.1
 #   Author: Jack Lloyd
 - commit: 75330121330f761f60331a00a4a737f648e6b204  # https://github.com/randombit/botan/commit/75330121330f761f60331a00a4a737f648e6b204
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Bump for 3.8.0 release
 #   Author: Jack Lloyd
 - commit: d738d3bb56c3ed5743652bdd699d84133da11793  # https://github.com/randombit/botan/commit/d738d3bb56c3ed5743652bdd699d84133da11793
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 3fcc094943620e3c6b4809cbb652a027369103a4  # https://github.com/randombit/botan/commit/3fcc094943620e3c6b4809cbb652a027369103a4
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # More todos [ci skip]
 #   Author: Jack Lloyd
 - commit: c47919cfa64886a350cc491b39fb51e72f5cd279  # https://github.com/randombit/botan/commit/c47919cfa64886a350cc491b39fb51e72f5cd279
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix date formatting
 #   Author: Jack Lloyd
 - commit: 2836c1016c5d9a5341f5895de9d31cd81863b119  # https://github.com/randombit/botan/commit/2836c1016c5d9a5341f5895de9d31cd81863b119
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update hardware acceleration doc
 #   Author: Jack Lloyd
 - commit: e5b8b6e516d7cddb5ceeacca7e98b694018f3f9a  # https://github.com/randombit/botan/commit/e5b8b6e516d7cddb5ceeacca7e98b694018f3f9a
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Update change notes
 #   Author: Jack Lloyd
 - commit: 7cd003ad2c2b308a3d4304ed6bfa3dd6a4390f9f  # https://github.com/randombit/botan/commit/7cd003ad2c2b308a3d4304ed6bfa3dd6a4390f9f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 440d3491c8bae3f77614ade0faa3a2e9a8075ce4  # https://github.com/randombit/botan/commit/440d3491c8bae3f77614ade0faa3a2e9a8075ce4
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update hardware_acceleration doc
 #   Author: Jack Lloyd
 - commit: 7f66c45b37b6beb016e49f38de0e438ec2be44bf  # https://github.com/randombit/botan/commit/7f66c45b37b6beb016e49f38de0e438ec2be44bf
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix compiling TPM2 example with GCC 13 or higher
 #   Author: Jack Lloyd
 - commit: fc2642dbc96e5eb3cf1237febbcb2f1ed242cbd4  # https://github.com/randombit/botan/commit/fc2642dbc96e5eb3cf1237febbcb2f1ed242cbd4
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
   comment: Affects example code only.
 
 # Check off a todo
 #   Author: Jack Lloyd
 - commit: 745aef04dc4862c5305eb8fb06f2534ef302b183  # https://github.com/randombit/botan/commit/745aef04dc4862c5305eb8fb06f2534ef302b183
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 05694b992f9423c42f51ee34fb2e8a80adb4bc8f  # https://github.com/randombit/botan/commit/05694b992f9423c42f51ee34fb2e8a80adb4bc8f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 16ec3630342d631949c4a15b4a74d61c9b9087fa  # https://github.com/randombit/botan/commit/16ec3630342d631949c4a15b4a74d61c9b9087fa
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update the todos [ci skip]
 #   Author: Jack Lloyd
 - commit: 547f47aa0fbc71a5ba4e39344a59e91c90ca3c78  # https://github.com/randombit/botan/commit/547f47aa0fbc71a5ba4e39344a59e91c90ca3c78
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add note to remove obscure secp521r1 OID in Botan4 [ci skip]
 #   Author: Jack Lloyd
 - commit: 60f5d5b60f69d01aaa90ff835a37fb323ea76ea7  # https://github.com/randombit/botan/commit/60f5d5b60f69d01aaa90ff835a37fb323ea76ea7
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update change notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 57cbd468acf5d76e33307c6c5fb1e163e01b93d9  # https://github.com/randombit/botan/commit/57cbd468acf5d76e33307c6c5fb1e163e01b93d9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 7349c667944c643a4b9bd87ee01bca9a8bb477eb  # https://github.com/randombit/botan/commit/7349c667944c643a4b9bd87ee01bca9a8bb477eb
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update news [ci skip]
 #   Author: Jack Lloyd
 - commit: 4dde5131267ed52dee600f1fdb6703d1149e8203  # https://github.com/randombit/botan/commit/4dde5131267ed52dee600f1fdb6703d1149e8203
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Release process checklist updates [ci skip]
 #   Author: Jack Lloyd
 - commit: 034277ebdd36c84eb2b91b6d163369aebb43a9d8  # https://github.com/randombit/botan/commit/034277ebdd36c84eb2b91b6d163369aebb43a9d8
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove checksums except the OpenPGP CRC from features list
 #   Author: Jack Lloyd
 - commit: 93092313ea3741adb2ec56948c2bff3217e3f0a5  # https://github.com/randombit/botan/commit/93092313ea3741adb2ec56948c2bff3217e3f0a5
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add notes regarding current plans for Botan4 [ci skip]
 #   Author: Jack Lloyd
 - commit: 927acccb2e77b03310431a78f67757e0abf7ffef  # https://github.com/randombit/botan/commit/927acccb2e77b03310431a78f67757e0abf7ffef
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update credits [ci skip]
 #   Author: Jack Lloyd
 - commit: 81b1ace5cd1c98055a79842ee31a07f6be587bb7  # https://github.com/randombit/botan/commit/81b1ace5cd1c98055a79842ee31a07f6be587bb7
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add a warning about --with-local-config being deprecated [ci skip]
 #   Author: Jack Lloyd
 - commit: c8473e243fd8c3cff9001882a7bf2f71f33e2553  # https://github.com/randombit/botan/commit/c8473e243fd8c3cff9001882a7bf2f71f33e2553
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Retract Othernames deprecation
 #   Author: Jack Lloyd
 - commit: 4f1cc235d7c9dcacac61bf12d7b9fa20169c8b0f  # https://github.com/randombit/botan/commit/4f1cc235d7c9dcacac61bf12d7b9fa20169c8b0f
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 357e634f4bd22c5680eec8aaaaaff6f455b08557  # https://github.com/randombit/botan/commit/357e634f4bd22c5680eec8aaaaaff6f455b08557
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Bump version to 3.8.0
 #   Author: Jack Lloyd
 - commit: 9c40b69fdb6787d711d7d658280456d4f740228b  # https://github.com/randombit/botan/commit/9c40b69fdb6787d711d7d658280456d4f740228b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add missing XMSS Parameters to pubkey.rst and fix comment for XMSS_PrivateKey::raw_private_key()
 #   Author:    @TJ-91
 #   Approvals: (@randombit)
 - pr: 5391  # https://github.com/randombit/botan/pull/5391
   merge_commit: 6eb7cfcc4f76765eccf73d65acb26391c922e8d9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Update the documentation on the test framework
 #   Author:    @randombit
 - pr: 5354  # https://github.com/randombit/botan/pull/5354
   merge_commit: 8bc12273b9be63b79bc3f7f8b5edf88d0d5a680e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info

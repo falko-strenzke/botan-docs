@@ -494,52 +494,61 @@ patches:
 # Add a Botan4 TODO [ci skip]
 #   Author: Jack Lloyd
 - commit: 4b559f55ea80e452653b1196c249edaef068f8f1  # https://github.com/randombit/botan/commit/4b559f55ea80e452653b1196c249edaef068f8f1
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Mark EC_Scalar and EC_AffinePoint with BOTAN_PUBLIC_API
 #   Author: Jack Lloyd
 - commit: c4bf10bfd3b0d5908c96dae245ecf879d36f9886  # https://github.com/randombit/botan/commit/c4bf10bfd3b0d5908c96dae245ecf879d36f9886
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add missing include in jitter_rng.h
 #   Author: Jack Lloyd
 - commit: 6f6bcfc52cee99633ba2bfce9605940207781c20  # https://github.com/randombit/botan/commit/6f6bcfc52cee99633ba2bfce9605940207781c20
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add missing include for BOTAN_UNUSED [ci skip]
 #   Author: Jack Lloyd
 - commit: 9fbffd0b38c4846d5bd06adf5a0354caa8b2c6b1  # https://github.com/randombit/botan/commit/9fbffd0b38c4846d5bd06adf5a0354caa8b2c6b1
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add missing ISA annotations to the SM4 x86 decrypt functions [ci skip]
 #   Author: Jack Lloyd
 - commit: 2cdb64cd66a0de42468abf863580e48c2710cd76  # https://github.com/randombit/botan/commit/2cdb64cd66a0de42468abf863580e48c2710cd76
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add missing include [ci skip]
 #   Author: Jack Lloyd
 - commit: c345e50bbb563135d44b10fa644e34f55c510260  # https://github.com/randombit/botan/commit/c345e50bbb563135d44b10fa644e34f55c510260
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add PKCS12 OIDs
 #   Author:    @dmazzella
 #   Approvals: (@randombit)
 - pr: 5411  # https://github.com/randombit/botan/pull/5411
   merge_commit: b47e9d96d4ac3ab24936ab34883da5c4b1ad462d
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Ensure BOTAN_FFI_EXPORT is consistently at the start of the ffi.h decls
 #   Author:    @randombit
 - pr: 5406  # https://github.com/randombit/botan/pull/5406
   merge_commit: 41015be85d90a951337b6ac8d6c257e43c9b03af
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # For FFDH exponents follow the guidance of NIST SP 800-56A and 800-56B
 #   Author:    @randombit
 #   Approvals: (@falko-strenzke)
 - pr: 5384  # https://github.com/randombit/botan/pull/5384
   merge_commit: ee07c593e8639961236179166953189ab495dc86
-  classification: critical
+  auditer: falko-strenzke
+  classification:  critical
   comment: This update of the exponent size choices has been found to be compliant with TR-02102.
 
 # Officially deprecate Round3 variants of Kyber and Dilithium
@@ -547,11 +556,13 @@ patches:
 #   Approvals: @reneme
 - pr: 5368  # https://github.com/randombit/botan/pull/5368
   merge_commit: 369046383597143ded68d2513fadcb508a4527a9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove misplaced FIXME annotations in bitvector.h
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5335  # https://github.com/randombit/botan/pull/5335
   merge_commit: 90b10f4159fdf96338772c28deb099e497c92971
-  classification: info
+  auditer: falko-strenzke
+  classification:  info

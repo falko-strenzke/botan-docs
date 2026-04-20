@@ -138,11 +138,13 @@ patches:
 #   Approvals: (@randombit)
 - pr: 5313  # https://github.com/randombit/botan/pull/5313
   merge_commit: 0460ad08f4a36986ffe2d3a0a11fb047cc44e0f9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # X509: Multiple OCSP Responders
 #   Author:    @atreiber94
 #   Approvals: (@randombit)
 - pr: 5231  # https://github.com/randombit/botan/pull/5231
   merge_commit: 20cc7dbce670fbf93eb0986a7d634bc93df49801
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant

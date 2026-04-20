@@ -405,46 +405,54 @@ patches:
 # Mark generated EC group defines as an internal define [ci skip]
 #   Author: Jack Lloyd
 - commit: 463b48f947bd41792135cd069d6c2c4def473be2  # https://github.com/randombit/botan/commit/463b48f947bd41792135cd069d6c2c4def473be2
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Set sha2_64_armv8 to require armv8crypto also
 #   Author: Jack Lloyd
 - commit: fa28fc6f4edc344490fab13916a1d6d3dfb7d44b  # https://github.com/randombit/botan/commit/fa28fc6f4edc344490fab13916a1d6d3dfb7d44b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Mark cryptobox module as deprecated, previously missed
 #   Author: Jack Lloyd
 - commit: 3e40bb9ef2df024828a23e80ee18da4e7c621194  # https://github.com/randombit/botan/commit/3e40bb9ef2df024828a23e80ee18da4e7c621194
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 
 # Clarify tpm module is TPMv1 only
 #   Author: Jack Lloyd
 - commit: 6196f58fceada52866472870d87982848354e994  # https://github.com/randombit/botan/commit/6196f58fceada52866472870d87982848354e994
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove Android Docker build setup [ci skip]
 #   Author: Jack Lloyd
 - commit: 02415ac51c64c82feb7512a5136303c72cbd0dd2  # https://github.com/randombit/botan/commit/02415ac51c64c82feb7512a5136303c72cbd0dd2
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Refactor: CMake Module now uses mostly hard-coded paths
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5402  # https://github.com/randombit/botan/pull/5402
   merge_commit: fac269140ef72bff3bd648351bdd58315bf11b02
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Fix the FFI datecode for 3.11
 #   Author:    @randombit
 - pr: 5377  # https://github.com/randombit/botan/pull/5377
   merge_commit: 4648c5020c8dcada728452597a2cc28976778ae4
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # For MSVC debug info prefer embedding into the object file rather than using PDB
 #   Author:    @randombit
 - pr: 5349  # https://github.com/randombit/botan/pull/5349
   merge_commit: e8d957052240e1777893df0061472203185677a9
-  classification: info
+  auditer: falko-strenzke
+  classification:  info

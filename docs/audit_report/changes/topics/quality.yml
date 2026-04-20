@@ -926,32 +926,38 @@ patches:
 # Fix typo in comment [ci skip]
 #   Author: Jack Lloyd
 - commit: 8b1f7ef93ea5b2333e022012ec15766c2f779625  # https://github.com/randombit/botan/commit/8b1f7ef93ea5b2333e022012ec15766c2f779625
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove unncessary semicolon
 #   Author: Jack Lloyd
 - commit: b6f2325af657c5462cab894b68a7f269bd3f7fec  # https://github.com/randombit/botan/commit/b6f2325af657c5462cab894b68a7f269bd3f7fec
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove some SIMD_4x32 constructor calls in the SHA-1 SIMD impl
 #   Author: Jack Lloyd
 - commit: 62083468ebf9aa9b7f2953dde2b44982067d43d0  # https://github.com/randombit/botan/commit/62083468ebf9aa9b7f2953dde2b44982067d43d0
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove unnecessary trailing semicolons
 #   Author: Jack Lloyd
 - commit: 3bdfe654f7a771250c505c324f5001543e0cece5  # https://github.com/randombit/botan/commit/3bdfe654f7a771250c505c324f5001543e0cece5
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Avoid some data ending up in modifiable data section
 #   Author: Jack Lloyd
 - commit: baf88b16f76e679ad83f5150a3f17d613605af4e  # https://github.com/randombit/botan/commit/baf88b16f76e679ad83f5150a3f17d613605af4e
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add constexpr for fe_invert2 functions that missed declaring as such
 #   Author: Jack Lloyd
 - commit: 69ecdf682dc6b61a7e9215baf77a46390000de8c  # https://github.com/randombit/botan/commit/69ecdf682dc6b61a7e9215baf77a46390000de8c
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Address (or silence) various new warnings from clang-tidy 22
 #   Author:    @randombit
@@ -978,83 +984,96 @@ patches:
 #   Author:    @randombit
 - pr: 5429  # https://github.com/randombit/botan/pull/5429
   merge_commit: b18efa76d16f5c65643ee5598a14d61638a1bb0b
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Add various precautionary null checks in TLS stack
 #   Author:    @randombit
 - pr: 5419  # https://github.com/randombit/botan/pull/5419
   merge_commit: 995debad3f2cc900978fbd1a0aed23c2ebd7da55
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Use RAII for addrinfo lifetime management
 #   Author:    @KaganCanSit
 #   Approvals: @reneme
 - pr: 5399  # https://github.com/randombit/botan/pull/5399
   merge_commit: ced0eca478bfa1a09e6361117fd1fcd19925b7fe
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # In SM2 header avoid defining a deprecated function in terms of another
 #   Author:    @randombit
 - pr: 5390  # https://github.com/randombit/botan/pull/5390
   merge_commit: b0ac573db5a33c78a18938f9c2e98fbf94246158
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Clean up pcurves use of clang-format off comments
 #   Author:    @randombit
 - pr: 5388  # https://github.com/randombit/botan/pull/5388
   merge_commit: c9845069ae7052e83d7d47d41f5641dea57ab675
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # IWYU - Clean up unused includes and forward declarations
 #   Author:    @KaganCanSit
 #   Approvals: (@randombit)
 - pr: 5350  # https://github.com/randombit/botan/pull/5350
   merge_commit: 710276f0028aa7fc1fec40baf1c457887e3b8eb6
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Avoid passing mutable references around in XMSS
 #   Author:    @randombit
 - pr: 5371  # https://github.com/randombit/botan/pull/5371
   merge_commit: 2e3855db402e38919afe4c9d3d85eb9043b7e15a
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
   comment: The auditor (falko-strenzke) suggests a review and documentation of the architecture of SHBS state management in Botan.
 
 # Misc BigInt related improvements
 #   Author:    @randombit
 - pr: 5370  # https://github.com/randombit/botan/pull/5370
   merge_commit: dfc0c00e706a0eb7e2217ffd79aac37edcd5596a
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Remove XMSS private key shared mutable state
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5366  # https://github.com/randombit/botan/pull/5366
   merge_commit: 8f2d77e6f2fcb4605371715351cf6128c59f4fec
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Fix FrodoKEM concurrency issue
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5361  # https://github.com/randombit/botan/pull/5361
   merge_commit: ee391d6d0cef00bb91eacab9b69c07008dc7beaf
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Cleanup Camellia GFNI integration a bit
 #   Author:    @randombit
 - pr: 5355  # https://github.com/randombit/botan/pull/5355
   merge_commit: 48aee647343d54ee1af2dc32e4a151c70ef526c3
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Changes to reduce dependencies in TLS sources/headers
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5347  # https://github.com/randombit/botan/pull/5347
   merge_commit: 481736b4e24c6d3e1825506f04b67654367848f0
-  classification: info
+  auditer: falko-strenzke
+  classification:  info
 
 # Allow disabling TLS 1.2 at Build Time
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5318  # https://github.com/randombit/botan/pull/5318
   merge_commit: 7b1bee2983ac578ac834e95ed801452159b87368
-  classification: info
+  auditer: falko-strenzke
+  classification:  info

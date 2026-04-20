@@ -1,6 +1,5 @@
 title: Uncategorized Patches
 
 # Note: Regex for vim to insert auditer:
-# %s/\(merge_commit: *.*\)\_s\+classification:/\1\r  auditer: falko-strenzke\r  classification:/g
-
+# %s/\(\(merge_\|\)commit: *.*\)\_s\+classification:/\1\r  auditer: falko-strenzke\r  classification:/g
 patches:

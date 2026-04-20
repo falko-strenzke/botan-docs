@@ -235,11 +235,13 @@ patches:
 #   Approvals: @reneme, (@randombit)
 - pr: 5166  # https://github.com/randombit/botan/pull/5166
   merge_commit: 1afa1b14a8ee5675154427184c9b516a1c088b25
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
 
 # Generalize XMSS_Index_Registry and use it for LMS as well
 #   Author:    @randombit
 #   Approvals: @reneme
 - pr: 5382  # https://github.com/randombit/botan/pull/5382
   merge_commit: 0a8351f33fca67d47baa445ba78bee2a01fa0f36
-  classification: relevant
+  auditer: falko-strenzke
+  classification:  relevant
