@@ -18,10 +18,10 @@ encapsulation and decapsulation or the key exchange mechanism.
    05_03_ecc
    05_04_rsa
    05_05_xmss
+   05_05_2_xmssmt
    05_06_hss_lms
    05_07_slh_dsa
    05_08_ml_dsa
    05_09_ml_kem
    05_10_frodokem
    05_11_cmce
-   05_12_xmssmt

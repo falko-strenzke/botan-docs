@@ -6,9 +6,8 @@ XMSS^MT
 Botan implements the multi-tree version of the eXtended Merkle
 Signature Scheme (XMSS^MT) using Winternitz One Time Signatures+ (WOTS+).
 
-XMSS^MT is built on XMSS and uses the same building blocks, that is, it uses same hash function address scheme (``ADRS``), WOTS+ one-time-signature scheme, uses the same L-Trees, and so on.
-In essence, XMSS^MT describes how XMSS trees can be arranged in a multi-layer hypertree to enable efficient scaling to a larger number of signatures,
-with the trade-off of increased signature size due to multiple intermediate (reduced) XMSS signatures.
+XMSS^MT, specified in RFC8391 [XMSS]_,  is realized by arranging individual XMSS trees in multiple layers to achieve efficient scaling of the key and signature generation time to a larger number of signatures.
+The reduced computational effort is achieved at the expense of larger signatures due to multiple intermediate (reduced) XMSS signatures.
 
 Despite being implemented in its own module, XMSS^MT heavily utilizes already-implemented functionality in the XMSS module.
 Therefore, the description in this section omits the details of the low-level building blocks and focuses on the XMSS^MT keys and signatures.
