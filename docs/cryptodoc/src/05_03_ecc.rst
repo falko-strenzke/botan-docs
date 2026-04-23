@@ -319,7 +319,7 @@ sufficient to ensure this constraint.
 with the algorithm shown in chapter 4.3.1 of [TR-03111]_ and thus fulfills
 the ECDH criteria listed in [TR-02102-1]_, if a recommended curve was
 chosen. Furthermore, it is recommended to utilize the optional KDF to
-derive a symmetric key.
+\derive a symmetric key.
 
 
 ECDSA
@@ -356,8 +356,7 @@ The signature generation algorithm works as follows (see
 
    **Steps:**
 
-   1. Sample a random blinding scalar :math:`1 \leq b_1 < n` from ``rng`` and
-      calculate its inverse :math:`b_1^{-1} \bmod n`
+   1. During the initialization the signature operation, sample a random blinding scalar :math:`1 \leq b_i < n` from ``rng`` 
 
    1. :math:`e = H` and truncate :math:`e` to be at most :math:`length(n)` bits long.
 
@@ -368,21 +367,27 @@ The signature generation algorithm works as follows (see
       number generator ``rng``.
 
    3. :math:`r = R_x \bmod n` where :math:`R_x` is the x-coordinate of the affine point
-      :math:`R_{x,y} = k \cdot G` (see :ref:`pubkey/ecc/scalar_mul`).
+      :math:`R_{x,y} = k \cdot G` (see :ref:`pubkey/ecc/scalar_mul`). The computation 
+      of :math:`k \cdot G` is done using a variable time exponentiation.
 
-   4. Compute :math:`k^{-1} = (b_1 \cdot k)^{-1} \cdot b_1` using the blinding
-      value :math:`b_1`. The inversion either uses Fermat's little theorem or a
+
+   4. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
+      value :math:`b_i`. The inversion either uses Fermat's little theorem or a
       curve-specific addition chain if available.
 
-   5. Square the blinding values :math:`b_1` and :math:`b_1^{-1} \bmod n` to
-      obtain new blinding values :math:`b_2` and :math:`b_2^{-1} \bmod n`. This
-      is done to avoid re-sampling/re-inverting the blinding values. When using
-      RFC6979 we might not have a seeded random number generator handy in this
-      phase of the signature creation.
+   4. Compute :math:`u=(d \cdot b) \cdot r + m \cdot b`. The braces indicate the order of evaluation.
 
-   6. Compute :math:`s = k^{-1} \cdot {b_2}^{-1} \cdot (d \cdot b_2 \cdot r + e \cdot b_2)`
+   6. Compute :math:`s = k'^{-1} \cdot u = (b \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b = k^{-1} \cdot (d \cdot r + m)`
 
-   7. Return :math:`(r, s)` if :math:`r \neq 0` and :math:`s \neq 0`. Otherwise throw an exception.
+   7. Square the blinding values :math:`b_i` to
+      obtain new blinding values :math:`b_{i+1}` which replaces :math:`b_i` in 
+      the next signature generation with the same signature operation instance. This
+      is done to avoid re-sampling/re-inverting the blinding value. This is useful when using
+      [RFC6979]_ as then there might not be a seeded random number generator available during the signature creation.
+
+   7. ensure that :math:`r \neq 0` and :math:`s \neq 0`. Otherwise throw an exception.
+   
+   8. Return :math:`(r, s)` 
 
 **Remark:** If Botan is built with the RFC6979 module, it implements
 deterministic ECDSA signatures, which are not covered by [TR-03111]_. In
