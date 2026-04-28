@@ -173,8 +173,7 @@ bit-length of at least 3000 bits. It is therefore advisable to choose ``pbits``
 accordingly. If the DL_Group is generated with ``type=Prime_Subgroup``, this
 means the only valid bit lengths of ``p`` and ``q`` are 3072 and 256 respectively.
 
-**Remark:** At the time of this writing [FIPS-186-4]_ from 2013 is still the
-latest revision. However [FIPS-186-5-draft]_ from 2019 is available which no
+**Remark:** [FIPS-186-5]_ no
 longer recommends DSA as a signature algorithm. Hence, the usage of
 ``type=DSA_Kosherizer`` for the generation of ``DL_Group`` objects might be
 unfavorable.

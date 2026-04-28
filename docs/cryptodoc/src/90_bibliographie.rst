@@ -65,12 +65,12 @@
    https://pq-crystals.org/dilithium/data/dilithium-specification-round3-20210208.pdf
 
 .. [FIPS-186-4] Federal Information Processing Standards Publication 186-4.
-   Digital Signature Standard (DSS).
+   Digital Signature Standard (DSS). Superseeded by [FIPS-186-5]
    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
 
-.. [FIPS-186-5-draft]  Federal Information Processing Standards Publication 186-5 (Draft).
+.. [FIPS-186-5]  Federal Information Processing Standards Publication 186-5.
    Digital Signature Standard (DSS).
-   https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5-draft.pdf
+   https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf
 
 .. [FIPS-202] Federal Information Processing Standards Publication 202.
    SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions.

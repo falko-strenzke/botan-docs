@@ -368,7 +368,7 @@ The signature generation algorithm works as follows (see
 
    3. :math:`r = R_x \bmod n` where :math:`R_x` is the x-coordinate of the affine point
       :math:`R_{x,y} = k \cdot G` (see :ref:`pubkey/ecc/scalar_mul`). The computation 
-      of :math:`k \cdot G` is done using a variable time exponentiation.
+      of :math:`k \cdot G` is done with the use of scalar blinding.
 
 
    4. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
@@ -377,7 +377,8 @@ The signature generation algorithm works as follows (see
 
    4. Compute :math:`u=(d \cdot b) \cdot r + m \cdot b`. The braces indicate the order of evaluation.
 
-   6. Compute :math:`s = k'^{-1} \cdot u = (b \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b = k^{-1} \cdot (d \cdot r + m)`
+   6. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b = k^{-1} \cdot (d \cdot r + m)`.
+      The inversion is done wit a variable time exponentiation.
 
    7. Square the blinding values :math:`b_i` to
       obtain new blinding values :math:`b_{i+1}` which replaces :math:`b_i` in 
