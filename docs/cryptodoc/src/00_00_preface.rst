@@ -28,8 +28,8 @@ The following persons are authors of previous versions of this document pertaini
 
 The authors of the present document version are listed in the table below.
 
-| Johannes Roth,  MTG AG
-| Falko Strenzke, MTG AG
+| Johannes Roth (JR),  MTG AG
+| Falko Strenzke (FS), MTG AG
 
 **Document Revision**
 
