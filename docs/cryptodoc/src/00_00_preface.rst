@@ -3,30 +3,33 @@ Preface
 
 **Summary**
 
-This document is a direct result of Projects 481 and 197 of the German Federal
-Office for Information Security (BSI) with the aim to support
-`Botan <https://github.com/randombit/botan>`_ - a secure, maintained and
-well-documented cryptographic library. Botan provides building blocks for a wide
-range of modern cryptographic applications that may have to protect their data
-against the upcoming threat of a quantum computer.
+This document has been created as part of Project P663 issued by the German Federal Office for
+Information Security (BSI).  The aim of this project is the enhancement and maintenance of the Botan
+cryptographic library `Botan <https://github.com/randombit/botan>`_.  Botan provides building blocks
+for a wide range of modern cryptographic applications.
 
-Botan may be used by manufacturers of VS-NfD products and this document will help
-the BSI to evaluate these products.
+As Botan may be used by manufacturers of VS-NfD products according to German national requirements,
+one purpose of this document is to facilitate the evaluation of such products by the BSI.
 
-This document describes the cryptographic implementations of Botan.
+This document describes the cryptographic implementations in Botan.
+
+**Historical Authors**
+
+The following persons are authors of previous versions of this document pertaining to earlier Botan releases. Parts of the document text and the tooling used to create the version at hand have been authored by them.
+
+| Fabian Albert (FA), Rohde & Schwarz Cybersecurity
+| René Meusel (RM), Rohde & Schwarz Cybersecurity
+| Tudor Soroceanu (TS), Fraunhofer AISEC
+| Amos Treiber (AT), Rohde & Schwarz Cybersecurity
+| Andreas Seelos-Zankl (ASZ), Fraunhofer AISEC
+| Alexander Wagner (AW), Fraunhofer AISEC
 
 **Authors**
 
-| René Fischer (RK)
-| Juraj Somorovsky (JSo)
-| Tobias Niemann (TN)
-| Fabian Weißberg (FW)
-| Sergii Cherkavskyi (SC)
-| Philippe Lieser (PL)
-| René Meusel (RM)
-| Amos Treiber (AT)
-| Fabian Albert (FA)
-| Johannes Roth (JR)
+The authors of the present document version are listed in the table below.
+
+| Johannes Roth,  MTG AG
+| Falko Strenzke, MTG AG
 
 **Document Revision**
 
