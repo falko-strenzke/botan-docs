@@ -183,13 +183,12 @@ Multiplication of Scalar k and Point P
 Scalar multiplication of the form :math:`k \cdot P` is implemented using a
 window method with precomputed points. For the curve's base point :math:`G` this
 precomputation is performed only once and the table is cached for later uses by
-the application. For the base point, a window size of 5 bits is used, for points
-known only at runtime, the window size is 4 bits.
+the application.
 
 The online phase of the multiplication is implemented in a side-channel silent
 manner ensuring table lookups aren't leaking information about the secret scalar
 :math:`k`. The secret scalar is blinded with a random value :math:`m` of
-bitlength :math:`length(n)/4` rounded up to the next word length of the target
+bit length :math:`bitlength(n)/8` rounded up to the next word length of the target
 machine. The scalar representation used in the multiplication is therefore
 :math:`r = k + n \cdot m`, with :math:`n` being the curve's group order.
 Finally, the projective Jacobian coordinate representation of the accumulator is
@@ -217,7 +216,7 @@ The online phase of this 2-ary multiplication table *is not side-channel
 silent*. However, it is used for only operations that don't handle secret values
 such as signature verification. An additional implementation applying the same
 countermeasures as the ordinary scalar multiplication is available. This may be
-useful when implementing cryptographic schemes such as sPAKE, but it is
+useful when implementing cryptographic schemes such as SPAKE, but it is
 currently not used in the elliptic curve algorithms outlined below.
 
 For links to the implementation, see ``WindowedMul2Table`` in the table above.
@@ -358,7 +357,7 @@ The signature generation algorithm works as follows (see
 
    1. During the initialization the signature operation, sample a random blinding scalar :math:`1 \leq b_i < n` from ``rng`` 
 
-   1. :math:`e = H` and truncate :math:`e` to be at most :math:`length(n)` bits long.
+   1. :math:`e = H` and truncate :math:`e` to be at most :math:`bit_length(n)` bits long.
 
    2. Generate parameter :math:`k` as a random number :math:`0 < k < n` using
       the algorithm described in Section :ref:`pubkey_param/rng` or as HMAC_DRBG
@@ -372,16 +371,15 @@ The signature generation algorithm works as follows (see
 
 
    4. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
-      value :math:`b_i`. The inversion either uses Fermat's little theorem or a
-      curve-specific addition chain if available.
+      value :math:`b_i`. The inversion either uses Fermat's little theorem (:math:`a^{-1} = a^{p-2} \text{mod} n`) or a
+      curve-specific addition chain if available. In the former case, the computation is realized with a variable time scalar exponentiation.
 
-   4. Compute :math:`u=(d \cdot b) \cdot r + m \cdot b`. The braces indicate the order of evaluation.
+   4. Compute :math:`u=(d \cdot b) \cdot r + e \cdot b`. The braces indicate the order of evaluation.
 
    6. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b = k^{-1} \cdot (d \cdot r + m)`.
-      The inversion is done wit a variable time exponentiation.
 
-   7. Square the blinding values :math:`b_i` to
-      obtain new blinding values :math:`b_{i+1}` which replaces :math:`b_i` in 
+   7. Square the blinding value :math:`b_i` to
+      obtain new a blinding value :math:`b_{i+1}` which replaces :math:`b_i` in 
       the next signature generation with the same signature operation instance. This
       is done to avoid re-sampling/re-inverting the blinding value. This is useful when using
       [RFC6979]_ as then there might not be a seeded random number generator available during the signature creation.
@@ -391,10 +389,8 @@ The signature generation algorithm works as follows (see
    8. Return :math:`(r, s)` 
 
 **Remark:** If Botan is built with the RFC6979 module, it implements
-deterministic ECDSA signatures, which are not covered by [TR-03111]_. In
-this case the implemented ECDSA signature algorithm is not [FIPS-186-4]_
-conform. However, the RFC6979 module is prohibited in the BSI module
-policy.
+deterministic ECDSA signatures, which are not covered by [TR-03111]_.
+Note that the RFC6979 module is prohibited in the BSI module policy.
 
 Signature Verification
 ^^^^^^^^^^^^^^^^^^^^^^
