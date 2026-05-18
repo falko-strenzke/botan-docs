@@ -203,6 +203,7 @@ patches:
   merge_commit: dc14a4820b77f0f24d64658fc26fcb6b03bba371
   auditer: TJ-91
   classification: info
+  comment: Affects CLI only.
 
 # Add RSA PKCS#1 pubkey loader
 #   Author:    @arckoor

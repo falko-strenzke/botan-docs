@@ -362,6 +362,8 @@ patches:
   merge_commit: f859c228b2ccd97acda2634b17fae372da6dca8c
   auditer: TJ-91
   classification: relevant
+  comment: |
+    Co-reviewed by falko-strenzke. The call to `is_bailie_psw_probable_prime()` for the order `n` and the prime `p` is avoided for a recognized group.
 
 # Implement GHASH/GMAC in terms of Polyval multiplication
 #   Author:    @randombit

@@ -392,6 +392,8 @@ The signature generation algorithm works as follows (see
 deterministic ECDSA signatures, which are not covered by [TR-03111]_.
 Note that the RFC6979 module is prohibited in the BSI module policy.
 
+**Remark:** The blinding countermeasure was reworked in Dec 2025 in the PR https://github.com/randombit/botan/pull/5173.
+
 Signature Verification
 ^^^^^^^^^^^^^^^^^^^^^^
 
