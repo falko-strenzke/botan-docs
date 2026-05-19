@@ -54,8 +54,8 @@ components. For the library implementation itself (``src/lib``), all modules
 that are *required* or *available* in the BSI build policy and their
 dependencies are in the scope of this document. Additionally, we review the
 following modules and its dependencies: ``certstor_flatfile``,
-``certstor_system``, ``classic_mceliece``, ``ml_dsa``, ``ffi``, ``frodokem``,
-``frodokem_aes``, ``hss_lms``, ``jitter_rng``, ``kmac``, ``ml_kem``,
+``certstor_system``, ``classic_mceliece``, ``ffi``, ``frodokem``,
+``frodokem_aes``, ``hss_lms``, ``jitter_rng``, ``kmac``,
 ``pcurves_brainpool256r1``, ``pcurves_brainpool384r1``,
 ``pcurves_brainpool512r1``, ``pcurves_secp256r1``, ``pcurves_secp256k1``,
 ``pcurves_secp384r1``, ``pcurves_secp521r1``, ``pkcs11``, ``shake``,
