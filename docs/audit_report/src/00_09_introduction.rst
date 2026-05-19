@@ -342,14 +342,11 @@ Approvals and Auditors
 
 The audit process is based on two requirements:
 
-* **The four-eye principle:** At least two individuals must inspect each patch
-* **Audit quality:** At least one of the inspectors must be involved in this audit process.
+* **The four-eye principle:** At least two individuals are involved in the review in the following manner. While the primary auditor, who is listed  in the report, reviewed the corresponding patch and decided the appropriate degree of
+  inspection. The second auditor reviews the list of
+  the changes of the primary auditor and decided which ones to inspect again and in which detail.
 
-Therefore, pull requests that were either authored or reviewed on GitHub by one
-of the members of this audit project do not require an additional in-depth
-review for this particular audit process. Other patches are evaluated and
-reviewed by an auditor retrospectively, with the results stated
-in this document. The distinction between "approvers" (of pull requests on
+The distinction between "approvers" (of pull requests on
 GitHub) and "auditors" (in retrospect, explicitly for this project) is visualized
 by setting the latter into parenthesis in the patch tables below.
 
