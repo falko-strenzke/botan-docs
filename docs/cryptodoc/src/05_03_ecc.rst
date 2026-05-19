@@ -371,7 +371,7 @@ The signature generation algorithm works as follows (see
 
 
    4. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
-      value :math:`b_i`. The inversion either uses Fermat's little theorem (:math:`a^{-1} = a^{p-2} \text{mod} n`) or a
+      value :math:`b_i`. The inversion either uses Fermat's little theorem (:math:`a^{-1} = a^{p-2} \bmod n`) or a
       curve-specific addition chain if available. In the former case, the computation is realized with a variable time scalar exponentiation.
 
    4. Compute :math:`u=(d \cdot b) \cdot r + e \cdot b`. The braces indicate the order of evaluation.
