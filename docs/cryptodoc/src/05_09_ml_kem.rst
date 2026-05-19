@@ -323,12 +323,7 @@ In combination, Botan does the following:
      :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp:232|Kyber_PrivateKey::Kyber_PrivateKey`.
    - Steps 2-7 correspond to Algorithms 16 and 13 of [FIPS-203]_ and are
      performed in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp:321|expand_keypair`.
-   - Botan follows the consensus [#seed_keys]_ that only the seeds are
-     stored in the private key. The required values for
-     decapsulation are recomputed on demand. Loading or storing the partially
-     expanded key format specified in [FIPS-203]_ is explicitly not supported.
-
-.. [#seed_keys] See `<https://mailarchive.ietf.org/arch/msg/spasm/KPg3lbPeNms2H5PNDBt0iJByuE0/>`_
+   - Botan supports the seed format as well as the expanded encoding specified by [FIPS-203]_.
 
 .. _pubkey/kyber/encaps:
 

@@ -193,3 +193,7 @@ Changelog
    |         |          | - DSA signing now uses additional blinding  |            |
    |         |          | - Update NIST SP.800-108 KDF description    |            |
    +---------+----------+---------------------------------------------+------------+
+   | 3.11.0  | JR, FS   | Update to 3.11.0:                           | 2026-05-19 |
+   |         |          |                                             |            |
+   |         |          | - Support ML-KEM expanded key format        |            |
+   +---------+----------+---------------------------------------------+------------+
