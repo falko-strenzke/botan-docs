@@ -21,7 +21,7 @@ between |botan_git_base_ref| and |botan_version|.
      - Earliest affected version is unknown
      - 3.11.1
      - TLS 1.3 client authentication can by trivially bypassed.
-   * - #5454, #5455
+   * - `#5454 <https://github.com/randombit/botan/issues/5454>`_, `#5455 <https://github.com/randombit/botan/issues/5455>`_
      - Earliest affected version is unknown
      - 3.11.1
      - The verification operation class of EdDSA and ECDSA handles the case of a too short signatures in an erroneous manner. The leads to the verification object remaining in a state with an already non-empty hashed message after a failed
@@ -41,8 +41,14 @@ between |botan_git_base_ref| and |botan_version|.
      - Earliest affected version is unknown
      - 3.11.0
      - Heap over-read during SM2 decryption.
-
-
+   * - `#5614 <https://github.com/randombit/botan/issues/5614>`_
+     - up to 3.11.0 and presumably also 3.12.0
+     - 
+     - Problematic behaviour of `Stateful_RNG::force_reseed()` with respect to the resulting RNG state with possible side effects to SCA countermeasures in ECC operations.
+   * - `#5615 <https://github.com/randombit/botan/issues/5615>`_
+     - up to 3.11.0 and presumably also 3.12.0
+     - 
+     - Control of SCA countermeasures in ECC operations depends implicitly on RNG seeding state. This is an obscure and error prone mechanism to control an important security measure.
 
 
 
