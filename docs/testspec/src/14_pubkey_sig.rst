@@ -1754,6 +1754,11 @@ bench run time. The hash function and algorithm parameters “w”, “h” are
 provided through the algorithm oid, which is part of the private key.
 The following table shows an example test case with one test vector.
 
+
+**Remark from review of 3.11.0:** No substantial change in the test code
+referenced here.
+No change in the test vectors referenced here.
+
 .. table::
    :class: longtable
    :widths: 20 80
@@ -1826,6 +1831,8 @@ the test case PKSIG-XMSS-2 and PKCS-XMSS-3 are listed in
 :srcref:`src/tests/data/pubkey/xmss_verify.vec` and in
 :srcref:`src/tests/data/pubkey/xmss_invalid.vec`, correspondingly.The following
 table shows an example test case with one test vector.
+
+**Remark from review of 3.11.0:** No change in the test vectors referenced here.
 
 .. table::
    :class: longtable
