@@ -32,12 +32,18 @@ granularity. Additionally, all commits added by the maintainer straight to the
 "atomic changesets" as *patches* in the remainder of this document.
 
 For each patch, the influence on the library's security guarantees is determined
-first. An in-depth review of the patch was conducted if the patch touches parts of the code base that are in scope for this review, and is considered to be prone to affect security critical aspects of the code that are not assumed to be covered by the test suite. 
+first. An in-depth review of the patch was conducted if the patch touches parts
+of the code base that are in scope for this review, and is considered to be
+prone to affect security critical aspects of the code that are not assumed to be
+covered by the test suite. 
 
-Due to the fact that the present
-review spans four Botan releases and more than 700 patches that have accumulated over the time frame of one year, many of the patches where only superficially reviewed. 
-This has been compensated by a detailed review of security critical aspects of the
-ECC implementations, which forms the most complex part of the core cryptographic functionality in the code base. Here, an analysis of the side channel countermeasures and security-critical checks was verified by adding corresponding trace
+Due to the fact that the present review spans four Botan releases and more than
+700 patches that have accumulated over the time frame of one year, many of the
+patches where only superficially reviewed.  This has been compensated by a
+detailed review of security critical aspects of the ECC implementations, which
+forms the most complex part of the core cryptographic functionality in the code
+base. Here, an analysis of the side channel countermeasures and
+security-critical checks was verified by adding corresponding trace
 logging to the implementation. 
 
 This document lists *all* patches along with links to their representation on
@@ -73,8 +79,6 @@ relevant modules are considered out-of-scope.
 Below is the full list of modules (from ``src/lib``) whose changes were
 reviewed:
 
-.. todo:: Update the module list below for the upcoming release
-
 .. For each new document version, the list below should be sanity checked
    and potentially adapted using the script in scripts/audited_modules_list.py
    like so:
@@ -89,6 +93,7 @@ reviewed:
         modules listed in the script.
      7. Adapt the paragraph under the enumeration of audited modules
         to reflect notable changes.
+     (FSE 2026-05-22: List was updated with changes for 3.11.0, changes see below)
 
 
 .. list-table::

@@ -5,7 +5,9 @@ DSA
 
 The Digital Signature Algorithm (DSA) is implemented in
 :srcref:`src/lib/pubkey/dsa/dsa.cpp`.
-The implementation follows [FIPS-186-4]_ or [RFC6979]_ if the corresponding module is enabled.
+The DSA signature scheme is no longer approved by [FIPS-186-5]_.
+The implementation generally follows [FIPS-186-4]_. If the  [RFC6979]_ if the
+corresponding compilation module `rfc6979` in Botan is enabled.
 
 Parameter Generation
 --------------------
