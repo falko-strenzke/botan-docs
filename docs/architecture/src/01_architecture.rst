@@ -48,7 +48,7 @@ tests            Test suite and test data
 
 The ``lib`` directory has a fine-grained structure into modules and sub-modules.
 Botan's `online documentation <https://botan.randombit.net/doxygen/topics.html>`_ provides a comprehensive overview of those modules and their inter-dependency.
-For further details, please see the Handbook section 18.1 or the online documentation:
+For further details, please see [REFG]_ Section 19.1 or the online documentation:
 `Notes for New Contributers <https://botan.randombit.net/handbook/dev_ref/contributing.html#library-layout>`_
 
 Botan Build System
@@ -66,7 +66,7 @@ E.g. the BSI build policy :srcref:`src/build-data/policy/bsi.txt` can be used to
 
 Further details on the usage and implementation of Botan's build system are available here:
 
- * Handbook sections 4 and 18.2 or
+ * [REFG]_, Sections 4 and 19.2 or
  * the online documentation
    * `Building the library <https://botan.randombit.net/handbook/building.html>`_
    * `Understanding configure.py <https://botan.randombit.net/handbook/dev_ref/configure.html>`_
@@ -93,7 +93,7 @@ Similar interfaces exist; e.g. ``HashFunction``, ``MessageAuthenticationCode``, 
 
 Other concepts like random number generators, public/private keys, block/stream ciphers or asymmetric operations are also clustered with similar abstract base classes.
 
-Further details can be found in the [REFG]_ (section 8), the API reference documentation or online:
+Further details can be found in the [REFG]_, Section 8, the API reference documentation or online:
 
  * `API Reference Handbook <https://botan.randombit.net/handbook/api_ref/contents.html>`_
  * `Doxygen Documentation <https://botan.randombit.net/doxygen/>`_
@@ -123,7 +123,7 @@ Note that the implementations of those CLI commands usually serve as good usage 
 
 The command line tool is invoked with ``./botan <cmd> <cmd-options>``.
 
-Further details about the available commands and functionality can be found in [REFG]_ section 7 or the online documentation:
+Further details about the available commands and functionality can be found in [REFG]_ Section 9 or the online documentation:
 `Command Line Interface <https://botan.randombit.net/handbook/cli.html>`_
 
 
@@ -136,7 +136,7 @@ Unit and Integration Tests
 Botan contains an extensive test suite that aims to cover the library source code with positive and negative tests.
 The test framework is homebrew and provides functionality for both typical "Arrange-Act-Assert"-style unit tests as well as more elaborate integration tests and external test-vector based KAT tests.
 
-Further details are in the [REFG]_ section 18.3 or the online documentation:
+Further details are in the [REFG]_ section 19.3 or the online documentation:
 `Test Framework <https://botan.randombit.net/handbook/dev_ref/test_framework.html>`_
 
 
