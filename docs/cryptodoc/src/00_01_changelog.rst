@@ -195,13 +195,13 @@ Changelog
    +---------+----------+---------------------------------------------+------------+
    | 3.11.0  | JR, FS   | Update to 3.11.0:                           | 2026-05-28 |
    |         |          |                                             |            |
-   |         |          | - Support ML-KEM expanded key format        |            |
+   |         |          | - Support ML-KEM expanded key format.       |            |
    |         |          | - Update description of of ECDSA side-      |            |
    |         |          |   channel countermeasures.                  |            |
    |         |          | - Update blinding size in                   |            |
-   |         |          |   "Multiplication of Scalar k and Point P"  |            |
+   |         |          |   "Multiplication of Scalar k and Point P". |            |
    |         |          | - Transition to                             |            |
-   |         |          | - `Stateful_Key_Index_Registry`             |            |
+   |         |          | - `Stateful_Key_Index_Registry`.            |            |
    |         |          | - Annotate references to FIPS-186 due to    |            |
    |         |          |   transition to FIPS-186-5. This outdates   |            |
    |         |          |   the references to the paragraph A.1.1.2   |            |
