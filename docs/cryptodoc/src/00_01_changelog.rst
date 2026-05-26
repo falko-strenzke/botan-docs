@@ -198,6 +198,16 @@ Changelog
    |         |          | - Support ML-KEM expanded key format        |            |
    |         |          | - Update description of of ECDSA side-      |            |
    |         |          |   channel countermeasures.                  |            |
-   |         |          | - annotate reference to FIPS-186 due to     |            |
-   |         |          |   transition to FIPS-186-5                  |            |
+   |         |          | - Update blinding size in                   |            |
+   |         |          |   "Multiplication of Scalar k and Point P"  |            |
+   |         |          | - Transition to                             |            |
+   |         |          | - `Stateful_Key_Index_Registry`             |            |
+   |         |          | - Annotate references to FIPS-186 due to    |            |
+   |         |          |   transition to FIPS-186-5. This outdates   |            |
+   |         |          |   the references to the paragraph A.1.1.2   |            |
+   |         |          |   in [FIPS-186-4] about prime generation    |            |
+   |         |          |   and the Lucas primality test as           |            |
+   |         |          |   implemented in Botan.                     |            |
+   |         |          |                                             |            |
+   |         |          |                                             |            |
    +---------+----------+---------------------------------------------+------------+
