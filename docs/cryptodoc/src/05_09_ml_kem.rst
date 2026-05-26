@@ -176,23 +176,23 @@ summary of these functions and their specific purposes.
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
    | Botan Function               | Code Reference                                                                              | Purpose                                                              | Algorithms of [FIPS-203]_ |
    +==============================+=============================================================================================+======================================================================+===========================+
-   | ``encode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:184|encode_polynomial_vector`  | Byte encoding of polynomial vectors                                  | 5                         |
+   | ``encode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`  | Byte encoding of polynomial vectors                                  | 5                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``decode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:192|decode_polynomial_vector`  | Byte decoding of polynomial vectors                                  | 6                         |
+   | ``decode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`  | Byte decoding of polynomial vectors                                  | 6                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``polynomial_from_message``  | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:204|polynomial_from_message`   | Byte decoding of the K-PKE message :math:`m`                         | 6                         |
+   | ``polynomial_from_message``  | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`   | Byte decoding of the K-PKE message :math:`m`                         | 6                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``polynomial_to_message``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:212|polynomial_to_message`     | Byte encoding of the K-PKE message :math:`m`                         | 5                         |
+   | ``polynomial_to_message``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`     | Byte encoding of the K-PKE message :math:`m`                         | 5                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``expand_keypair``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:321|expand_keypair`            | Create public and secret keys from the seeds :math:`d` and :math:`z` | 13, 16                    |
+   | ``expand_keypair``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`            | Create public and secret keys from the seeds :math:`d` and :math:`z` | 13, 16                    |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``compress_ciphertext``      | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:352|compress_ciphertext`       | Compress, byte encode, and concatenate polynomial vector             | 5, Formula 4.7            |
+   | ``compress_ciphertext``      | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`       | Compress, byte encode, and concatenate polynomial vector             | 5, Formula 4.7            |
    |                              |                                                                                             | :math:`\mathbf{u}` and polynomial :math:`\mathbf{v}`                 |                           |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``decompress_ciphertext``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:362|decompress_ciphertext`     | Split, byte decode, and decompress bytes to polynomial vector        | 6, Formula 4.8            |
+   | ``decompress_ciphertext``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`     | Split, byte decode, and decompress bytes to polynomial vector        | 6, Formula 4.8            |
    |                              |                                                                                             | :math:`\mathbf{u'}` and polynomial :math:`\mathbf{v'}`               |                           |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``sample_matrix``            | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp:380|sample_matrix`             | Samples a matrix from a secret seed                                  | 7, 13                     |
+   | ``sample_matrix``            | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`             | Samples a matrix from a secret seed                                  | 7, 13                     |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
 
 
@@ -213,11 +213,11 @@ object and is incremented with each method call accordingly.
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
    | Polynomial sampler method                | Code Reference                                                                                    | Purpose                                                             |
    +==========================================+===================================================================================================+=====================================================================+
-   | ``sample_polynomial_vector_cbd_eta1``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h:70|sample_polynomial_vector_cbd_eta1`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_1}(R_q)`     |
+   | ``sample_polynomial_vector_cbd_eta1``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_1}(R_q)`     |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
-   | ``sample_polynomial_cbd_eta2``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h:78|sample_polynomial_cbd_eta2`         | Polynomial sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`            |
+   | ``sample_polynomial_cbd_eta2``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`         | Polynomial sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`            |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
-   | ``sample_polynomial_vector_cbd_eta2``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h:86|sample_polynomial_vector_cbd_eta2`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`     |
+   | ``sample_polynomial_vector_cbd_eta2``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`     |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 
 
@@ -228,7 +228,7 @@ Symmetric Primitives
 
 In Botan, the symmetric primitives of ML-KEM are represented by the
 ``KyberSymmetricPrimitives`` class
-(:srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_symmetric_primitives.h:30|Kyber_Symmetric_Primitives`).
+(:srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_symmetric_primitives.h`).
 This class provides an interface for the primitives, which are defined as
 ``PRF``, ``H``, ``J``, ``G``, and ``XOF`` in Section 4.1 of
 [FIPS-203]_.
@@ -287,11 +287,11 @@ Key Generation
 --------------
 
 The high-level ML-KEM key generation (Algorithm 19) is implemented in
-:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp:232|Kyber_PrivateKey::Kyber_PrivateKey`
+:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp`
 within the ``Kyber_PrivateKey`` constructor. It delegates to the
 internal and K-PKE key generation algorithms (Algorithms 16 and 13 of
 [FIPS-203]_) implemented in
-:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp:321|expand_keypair`.
+:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp`.
 In combination, Botan does the following:
 
 .. admonition:: Kyber_PrivateKey::Kyber_PrivateKey
@@ -320,9 +320,9 @@ In combination, Botan does the following:
    **Notes:**
 
    - Step 1 corresponds to Algorithm 19 of [FIPS-203]_ and is performed in
-     :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp:232|Kyber_PrivateKey::Kyber_PrivateKey`.
+     :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp`.
    - Steps 2-7 correspond to Algorithms 16 and 13 of [FIPS-203]_ and are
-     performed in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp:321|expand_keypair`.
+     performed in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp`.
    - Botan supports the seed format as well as the expanded encoding specified by [FIPS-203]_.
 
 .. _pubkey/kyber/encaps:
@@ -332,10 +332,10 @@ Key Encapsulation
 
 The algorithms for high-level ML-KEM encapsulation and internal encapsulation
 (Algorithms 20 and 17 of [FIPS-203]_) are implemented in
-:srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp:25|ML_KEM_Encryptor::encapsulate`.
+:srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp`.
 They use the K-PKE encapsulation algorithm (Algorithm 14 of [FIPS-203]_)
 implemented in
-:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp:55|Kyber_PublicKeyInternal::indcpa_encrypt`.
+:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp`.
 In combination, Botan does the following:
 
 .. admonition:: ML_KEM_Encryptor::encapsulate
@@ -371,9 +371,9 @@ In combination, Botan does the following:
    **Notes:**
 
    - Steps 1-3 correspond to Algorithms 20 and 17 of [FIPS-203]_ and are
-     performed in :srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp:25|ML_KEM_Encryptor::encapsulate`.
+     performed in :srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp`.
    - Steps 3.1-3.9 correspond to Algorithms 14 of [FIPS-203]_ and are performed
-     in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp:55|indcpa_encrypt`.
+     in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp`.
    - The transposed matrix ``At`` is precomputed and stored in the public key
      object. This way, consecutive encapsulations for the same public key do not
      have to re-generate ``At`` from ``rho``.
@@ -386,12 +386,12 @@ Key Decapsulation
 
 The algorithms for high-level ML-KEM decapsulation and internal decapsulation
 (Algorithms 21 and 18 of [FIPS-203]_) are implemented in
-:srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp:48|ML_KEM_Decryptor::decapsulate`.
+:srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp`.
 They use the K-PKE encapsulation and decapsulation algorithms (Algorithm 14
 and 15 of [FIPS-203]_) implemented in
-:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp:55|Kyber_PublicKeyInternal::indcpa_encrypt`
+:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp`
 and
-:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp:84|Kyber_PrivateKeyInternal::indcpa_decrypt`.
+:srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp`.
 In combination, Botan does the following:
 
 .. admonition:: ML_KEM_Decryptor::decapsulate
@@ -423,7 +423,7 @@ In combination, Botan does the following:
    **Notes:**
 
    - Steps 1-6 correspond to Algorithm 18 of [FIPS-203]_ and are
-     performed in :srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp:48|ML_KEM_Decryptor::decapsulate`.
+     performed in :srcref:`[src/lib/pubkey/kyber]/ml_kem/ml_kem_impl.cpp`.
    - Steps 2.1-2.3 correspond to Algorithm 15 of [FIPS-203]_ and are performed
-     in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp:84|Kyber_PrivateKeyInternal::indcpa_decrypt`.
+     in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_keys.cpp`.
    - Step 6 uses a constant time check and memory assignment function.
