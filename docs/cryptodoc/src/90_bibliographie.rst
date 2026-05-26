@@ -295,11 +295,11 @@
 
 .. [TR-02102-1] BSI Technical Guideline BSI TR-02102-1:
    "Cryptographic Mechanisms: Recommendations and Key Lengths",
-   Version 2025-01, 31.01.2025
+   Version 2026-01, 23.01.2026
 
 .. [TR-02102-2] BSI Technical Guideline BSI TR-02102-2:
    "Cryptographic Mechanisms: Recommandations and Key Lengths: Use of Transport Layer Security (TLS)",
-   Version 2025-01, 21.01.2025
+   Version 2026-01, 27.01.2026
 
 .. [TR-02103] BSI Technische Richtlinie BSI TR-02103
    "X.509 Zertifikate und Zertifikatspfadvalidierung"
@@ -307,7 +307,7 @@
 
 .. [TR-03111] BSI Technical Guideline TR-03111:
    "Elliptic Curve Cryptography",
-   Version 2.1, 01.06.2018
+   Version 2.1.0, 01.06.2018
 
 .. [X9.62] ANSI X9.62.
    Public Key Cryptography for the Financial Services Industry:

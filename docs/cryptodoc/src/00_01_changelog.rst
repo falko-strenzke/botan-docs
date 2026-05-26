@@ -16,7 +16,7 @@ Changelog
    |         |          | | Replace top level chapter                 |            |
    |         |          |   "Certificates" by "X.509 Path             |            |
    |         |          |   Validation"                               |            |
-   |         |          | | Add introductary text and                 |            |
+   |         |          | | Add introductionary text and                 |            |
    |         |          |   subsections to RNG chapter                |            |
    |         |          | | Fix wrong and add missing                 |            |
    |         |          |   paths to source files in RNG              |            |
@@ -129,7 +129,7 @@ Changelog
    |         |          | - Asymmetric algorithm chapters are now     |            |
    |         |          |   structured by algorithm not by operation  |            |
    |         |          | - XMSS with NIST's keygen and parameters    |            |
-   |         |          | - Hash trunction in ECKCDSA                 |            |
+   |         |          | - Hash truncation in ECKCDSA                 |            |
    |         |          | - Implementation updates in the RNG and     |            |
    |         |          |   random generation of big integers         |            |
    |         |          | - New PQC algorithms                        |            |
@@ -157,7 +157,7 @@ Changelog
    +---------+----------+---------------------------------------------+------------+
    | 3.4.0   | FA, RM   | Update to 3.4.0:                            | 2024-04-08 |
    |         |          |                                             |            |
-   |         |          | - Detailed explaination of counter-measures |            |
+   |         |          | - Detailed explanation of counter-measures |            |
    |         |          |   against KyberSlash side-channel attack    |            |
    |         |          | - X.509 path validation may optionally      |            |
    |         |          |   ignore the validity interval of a trusted |            |
@@ -193,7 +193,11 @@ Changelog
    |         |          | - DSA signing now uses additional blinding  |            |
    |         |          | - Update NIST SP.800-108 KDF description    |            |
    +---------+----------+---------------------------------------------+------------+
-   | 3.11.0  | JR, FS   | Update to 3.11.0:                           | 2026-05-19 |
+   | 3.11.0  | JR, FS   | Update to 3.11.0:                           | 2026-05-28 |
    |         |          |                                             |            |
    |         |          | - Support ML-KEM expanded key format        |            |
+   |         |          | - Update description of of ECDSA side-      |            |
+   |         |          |   channel countermeasures.                  |            |
+   |         |          | - annotate reference to FIPS-186 due to     |            |
+   |         |          |   transition to FIPS-186-5                  |            |
    +---------+----------+---------------------------------------------+------------+
