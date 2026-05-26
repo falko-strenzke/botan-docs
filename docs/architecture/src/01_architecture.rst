@@ -17,7 +17,7 @@ Repository Anatomy
 ================ ===============================================================
 File/Dir. Name   Description
 ================ ===============================================================
-doc              The handbook and more general information, like a roadmap
+doc              The Botan Reference Guide [REFG]_ and more general information, like a roadmap
 src              The actual source code for all provided software artefacts
 configure.py     Build system configuration script
 license.txt      BSD-2-Clause license information
@@ -55,7 +55,7 @@ Botan Build System
 ==================
 
 The library follows the usual configure, build, test, install compilation workflow.
-Though, Botan does rely on its own homebrew build system implemented in python.
+Though, Botan does rely on its own Homebrew build system implemented in python.
 This enables the library to provide a flexible module system as well as advanced build features like an amalgamation build.
 
 Users can specify fine-grained selections on which cryptographic algorithms,
@@ -79,7 +79,7 @@ Abstract Base Classes and Algorithm Instantiation
 -------------------------------------------------
 
 Usually, Botan groups algorithms behind generic interfaces.
-This allows implementations to instatiate different algorithms at runtime via a simple algorithm identifier.
+This allows implementations to instantiate different algorithms at runtime via a simple algorithm identifier.
 
 For example, instantiating an AEAD for encrypting some data in-place might look like that:
 
@@ -93,7 +93,7 @@ Similar interfaces exist; e.g. ``HashFunction``, ``MessageAuthenticationCode``, 
 
 Other concepts like random number generators, public/private keys, block/stream ciphers or asymmetric operations are also clustered with similar abstract base classes.
 
-Further details can be found in the handbook (section 8), the API reference documentation or online:
+Further details can be found in the [REFG]_ (section 8), the API reference documentation or online:
 
  * `API Reference Handbook <https://botan.randombit.net/handbook/api_ref/contents.html>`_
  * `Doxygen Documentation <https://botan.randombit.net/doxygen/>`_
@@ -123,7 +123,7 @@ Note that the implementations of those CLI commands usually serve as good usage 
 
 The command line tool is invoked with ``./botan <cmd> <cmd-options>``.
 
-Further details about the available commands and functionality can be found in the handbook section 7 or the online documentation:
+Further details about the available commands and functionality can be found in [REFG]_ section 7 or the online documentation:
 `Command Line Interface <https://botan.randombit.net/handbook/cli.html>`_
 
 
@@ -136,7 +136,7 @@ Unit and Integration Tests
 Botan contains an extensive test suite that aims to cover the library source code with positive and negative tests.
 The test framework is homebrew and provides functionality for both typical "Arrange-Act-Assert"-style unit tests as well as more elaborate integration tests and external test-vector based KAT tests.
 
-Further details are in the handbook section 18.3 or the online documentation:
+Further details are in the [REFG]_ section 18.3 or the online documentation:
 `Test Framework <https://botan.randombit.net/handbook/dev_ref/test_framework.html>`_
 
 

@@ -3,6 +3,6 @@
    Bibliography
    ============
 
-.. [Btn-ref] The Botan Authors. "Botan Reference Guide – Release 3.11.0"
-
-
+.. [REFG] Jack Lloyd, Daniel Neus, René Fischer, Juraj Somorovsky, Tobias Niemann:
+   "Botan Reference Guide",
+   Release |botan_version|
