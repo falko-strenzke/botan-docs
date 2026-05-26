@@ -5,7 +5,6 @@ This audit report summarizes the review results of changes to the Botan library 
 base between the tagged releases |botan_git_base_ref| and |botan_version|.
 They were examined by considering the BSI technical guidelines' recommendations.
 In the meantime, the development of Botan continues, e.g., new algorithms are added, or bugs are fixed.
-Rohde & Schwarz Cybersecurity is part of this maintenance process as a contractor for this project.
 
 Before switching to a new Botan version as part of the maintenance, all official and possibly hidden
 changes to the code must be thoroughly checked. For this purpose, each reviewed version comes with an
@@ -27,7 +26,7 @@ our review on the Git history between those revisions.
 
 Botan is developed publicly on GitHub; hence, we take all individual pull
 requests in the code base between the two revisions as the changeset
-granularity. Additionally, all commits added by the maintainer straight to the
+granularity. Additionally, all commits added to the
 *master* branch are considered changesets to be reviewed. We refer to these
 "atomic changesets" as *patches* in the remainder of this document.
 
@@ -43,7 +42,7 @@ patches where only superficially reviewed.  This has been compensated by a
 detailed review of security critical aspects of the ECC implementations, which
 forms the most complex part of the core cryptographic functionality in the code
 base. Here, an analysis of the side channel countermeasures and
-security-critical checks was verified by adding corresponding trace
+security-critical parameter checks was verified by adding corresponding trace
 logging to the implementation. 
 
 This document lists *all* patches along with links to their representation on
@@ -347,9 +346,14 @@ Approvals and Auditors
 
 The audit process is based on two requirements:
 
-* **The four-eye principle:** At least two individuals are involved in the review in the following manner. While the primary auditor, who is listed  in the report, reviewed the corresponding patch and decided the appropriate degree of
-  inspection. The second auditor reviews the list of
-  the changes of the primary auditor and decided which ones to inspect again and in which detail.
+* **The four-eye principle:** At least two individuals are involved in the
+  review in the following manner. The primary auditor, whose GitHub name is
+  listed in the report, reviewed the corresponding patch and decided the
+  appropriate degree of inspection.  The second auditor reviewed the list of the
+  changes of the primary auditor and decided which ones to inspect again and in
+  which detail. The name of the second auditor is not explicitly listed, but can
+  be uniquely inferred to be the one of the two auditors listed below who is not
+  given as the primary auditor.
 
 The distinction between "approvers" (of pull requests on
 GitHub) and "auditors" (in retrospect, explicitly for this project) is visualized
