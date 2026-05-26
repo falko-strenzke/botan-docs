@@ -4,7 +4,7 @@ Classic McEliece
 ================
 
 Botan implements the Classic McEliece Key Encapsulation Mechanism (KEM) as defined in the
-Round 4 NIST submission [CMCE-R4]_ and the ClassicMcEliece ISO Draft [CMCE-ISO]_. It
+Round 4 NIST submission [CMCE-R4]_ and the Classic McEliece ISO Draft [CMCE-ISO]_. It
 supports all parameter sets defined in both documents, listed
 in Table :ref:`Supported Classic McEliece parameter sets <pubkey/cmce/parameter_table>`.
 
