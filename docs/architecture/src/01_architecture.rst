@@ -6,7 +6,7 @@ Introduction
 
 Botan consists of three main parts: the library itself, a CLI tool, and the test suite.
 The library itself is divided into separate modules.
-Botan uses a homebrew build system allowing for fine-grained configuration of the desired algorithms being built.
+Botan uses a Homebrew build system allowing for fine-grained configuration of the desired algorithms being built.
 This document relies heavily on Botan's public documentation merely providing guidance and pointers to get accustomed to the library and its architecture.
 
 Repository Anatomy
@@ -68,6 +68,7 @@ Further details on the usage and implementation of Botan's build system are avai
 
  * [REFG]_, Sections 4 and 19.2 or
  * the online documentation
+
    * `Building the library <https://botan.randombit.net/handbook/building.html>`_
    * `Understanding configure.py <https://botan.randombit.net/handbook/dev_ref/configure.html>`_
 
