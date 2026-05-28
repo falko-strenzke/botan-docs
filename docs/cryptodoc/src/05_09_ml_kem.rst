@@ -176,23 +176,23 @@ summary of these functions and their specific purposes.
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
    | Botan Function               | Code Reference                                                                              | Purpose                                                              | Algorithms of [FIPS-203]_ |
    +==============================+=============================================================================================+======================================================================+===========================+
-   | ``encode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`  | Byte encoding of polynomial vectors                                  | 5                         |
+   | ``encode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Byte encoding of polynomial vectors                                  | 5                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``decode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`  | Byte decoding of polynomial vectors                                  | 6                         |
+   | ``decode_polynomial_vector`` | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Byte decoding of polynomial vectors                                  | 6                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``polynomial_from_message``  | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`   | Byte decoding of the K-PKE message :math:`m`                         | 6                         |
+   | ``polynomial_from_message``  | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Byte decoding of the K-PKE message :math:`m`                         | 6                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``polynomial_to_message``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`     | Byte encoding of the K-PKE message :math:`m`                         | 5                         |
+   | ``polynomial_to_message``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Byte encoding of the K-PKE message :math:`m`                         | 5                         |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``expand_keypair``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`            | Create public and secret keys from the seeds :math:`d` and :math:`z` | 13, 16                    |
+   | ``expand_keypair``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Create public and secret keys from the seeds :math:`d` and :math:`z` | 13, 16                    |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``compress_ciphertext``      | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`       | Compress, byte encode, and concatenate polynomial vector             | 5, Formula 4.7            |
+   | ``compress_ciphertext``      | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Compress, byte encode, and concatenate polynomial vector             | 5, Formula 4.7            |
    |                              |                                                                                             | :math:`\mathbf{u}` and polynomial :math:`\mathbf{v}`                 |                           |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``decompress_ciphertext``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`     | Split, byte decode, and decompress bytes to polynomial vector        | 6, Formula 4.8            |
+   | ``decompress_ciphertext``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Split, byte decode, and decompress bytes to polynomial vector        | 6, Formula 4.8            |
    |                              |                                                                                             | :math:`\mathbf{u'}` and polynomial :math:`\mathbf{v'}`               |                           |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
-   | ``sample_matrix``            | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`             | Samples a matrix from a secret seed                                  | 7, 13                     |
+   | ``sample_matrix``            | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.cpp`                               | Samples a matrix from a secret seed                                  | 7, 13                     |
    +------------------------------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------+---------------------------+
 
 
@@ -213,11 +213,11 @@ object and is incremented with each method call accordingly.
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
    | Polynomial sampler method                | Code Reference                                                                                    | Purpose                                                             |
    +==========================================+===================================================================================================+=====================================================================+
-   | ``sample_polynomial_vector_cbd_eta1``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_1}(R_q)`     |
+   | ``sample_polynomial_vector_cbd_eta1``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`                                       | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_1}(R_q)`     |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
-   | ``sample_polynomial_cbd_eta2``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`         | Polynomial sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`            |
+   | ``sample_polynomial_cbd_eta2``           | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`                                       | Polynomial sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`            |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
-   | ``sample_polynomial_vector_cbd_eta2``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`  | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`     |
+   | ``sample_polynomial_vector_cbd_eta2``    | :srcref:`[src/lib/pubkey/kyber/kyber_common]/kyber_algos.h`                                       | Polynomial vector sampling in :math:`\mathcal{D}_{\eta_2}(R_q)`     |
    +------------------------------------------+---------------------------------------------------------------------------------------------------+---------------------------------------------------------------------+
 
 
