@@ -6,7 +6,7 @@ Introduction
 
 Botan consists of three main parts: the library itself, a CLI tool, and the test suite.
 The library itself is divided into separate modules.
-Botan uses a Homebrew build system allowing for fine-grained configuration of the desired algorithms being built.
+Botan uses a custom build system allowing for fine-grained configuration of the desired algorithms being built.
 This document relies heavily on Botan's public documentation merely providing guidance and pointers to get accustomed to the library and its architecture.
 
 Repository Anatomy
@@ -55,7 +55,7 @@ Botan Build System
 ==================
 
 The library follows the usual configure, build, test, install compilation workflow.
-Though, Botan does rely on its own Homebrew build system implemented in python.
+Though, Botan does rely on its own custom build system implemented in python.
 This enables the library to provide a flexible module system as well as advanced build features like an amalgamation build.
 
 Users can specify fine-grained selections on which cryptographic algorithms,
