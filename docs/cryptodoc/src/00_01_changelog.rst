@@ -193,3 +193,9 @@ Changelog
    |         |          | - DSA signing now uses additional blinding  |            |
    |         |          | - Update NIST SP.800-108 KDF description    |            |
    +---------+----------+---------------------------------------------+------------+
+   | TBD     | JR       | Update to TBD:                              | TBD        |
+   |         |          |                                             |            |
+   |         |          | - Add XMSS^MT, the multi-tree variant of    |            |
+   |         |          |   XMSS, as specified in RFC 8391 and        |            |
+   |         |          |   NIST SP 800-208                           |            |
+   +---------+----------+---------------------------------------------+------------+

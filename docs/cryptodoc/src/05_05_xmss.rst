@@ -13,7 +13,7 @@ Key Generation
 --------------
 
 The implementation is based on RFC8391 [XMSS]_ and implements
-the additional parameter sets and the adaptions to the key generation defined in
+the additional parameter sets and the adaptations to the key generation defined in
 NIST's [SP800-208]_.
 The list of supported algorithms and their parameters is depicted in
 Table :ref:`Supported XMSS Signature algorithms <pubkey_key_generation/xmss/table>`.
@@ -396,7 +396,7 @@ arrays.
 
 .. _pubkey_signature/xmss/stateful_key_index_registry:
 
-Stateful_Key_Index_Registry
+Stateful Key Index Registry
 ---------------------------
 
 Handling the safe and persistent state update of XMSS private keys is crucial.
