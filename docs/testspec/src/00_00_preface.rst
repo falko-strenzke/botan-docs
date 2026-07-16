@@ -11,7 +11,7 @@ for a wide range of modern cryptographic applications.
 As Botan may be used by manufacturers of VS-NfD products according to German national requirements,
 one purpose of this document is to facilitate the evaluation of such products by the BSI.
 
-This document describes the cryptographic implementations in Botan.
+This document specifies test cases implemented in the library's test suite.
 
 **Historical Authors**
 
