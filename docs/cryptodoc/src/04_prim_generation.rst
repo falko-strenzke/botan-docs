@@ -149,7 +149,7 @@ the additional check :math:`\text{GCD}(C, \frac{1-D}{4}) = 1`.
 
          - If :math:`j = 0`, return ``false``
          - If :math:`j = -1`, set :math:`D = D_i` and continue with Step 4
-         - If :math:`D_i = 17` and :math:`C` is not a perfect square, return false
+         - If :math:`D_i = 17` and :math:`C` is a perfect square, return false
 
    4. Set:
 
@@ -157,7 +157,7 @@ the additional check :math:`\text{GCD}(C, \frac{1-D}{4}) = 1`.
       - :math:`U = 1`
       - :math:`V = 1`
 
-   5. For each bit :math:`K_i` in :math:`C` in order of decreasing significance
+   5. For each bit :math:`K_i` in :math:`K` in order of decreasing significance
       (but excluding the most significant bit):
 
       1. :math:`U_{temp} = U * V \bmod C`

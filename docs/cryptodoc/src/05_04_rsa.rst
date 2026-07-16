@@ -215,7 +215,7 @@ Padding a message ``k`` for a maximum input length ``l`` works as follows:
    1. Check that :math:`len(k) <= l - 10`
    2. Create an output buffer matching the maximum raw input length: :math:`l`
    3. Set the first byte to ``0x02`` [#rsa_pkcs1_leading_zero]_
-   4. Fill the buffer with random non-zero values up to :math:`len(k) - 2`
+   4. Fill the buffer with :math:`l - len(k) - 2` random non-zero bytes
    5. Insert a ``0x00`` to separate padding and message bytes
    6. Append the message bytes in ``k`` -- fully filling up the buffer
 
@@ -252,13 +252,13 @@ timing constant validation. This method is implemented as follows:
    2. ``seen_zero_m = 0``
    3. ``delim_idx = 2``
    4. ``bad_input_m |= (m[0] != 0x00)``
-   5. ``bad_input_m |= (m[0] != 0x02)``
+   5. ``bad_input_m |= (m[1] != 0x02)``
    6. ``for (i = 2; i < |m|; i++)``
 
       -  ``delim_idx += (seen_zero_m == 0) & 1``
       -  ``seen_zero_m |= (m[i] == 0x00)``
 
-   7. ``bad_input_m |= ~seen_zero``
+   7. ``bad_input_m |= ~seen_zero_m``
    8. ``bad_input_m |= (delim_idx < 11)``
    9. ``valid_mask = ~bad_input_m;``
    10. Set ``k`` to the byte array behind the first ``0x00``

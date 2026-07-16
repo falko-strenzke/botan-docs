@@ -427,7 +427,7 @@ It does the following:
    3. Verify that ``lms-pk[i].verify_signature`` returns ``true`` for signature
       ``lms-sig[i]`` of message ``lms-pk[i+1]`` for ``i = 0, ..., Nspk-1``.
       Return ``false`` otherwise.
-   4. Return ``true`` iff ``lms-pk[Nspk-1].verify_signature`` returns ``true``
+   4. Return ``true`` iff ``lms-pk[Nspk].verify_signature`` returns ``true``
       for signature ``lms-sig[Nspk]`` of message ``m``.
 
    **Notes:**

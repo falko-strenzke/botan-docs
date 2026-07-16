@@ -254,7 +254,7 @@ operates as follows:
       <pubkey/ecc/scalar_mul>` :math:`d \cdot G`, where :math:`G` is the base
       point of the curve. Note that if the passed parameter
       ``with_modular_inverse`` is set to ``true``, the public point :math:`Q` is
-      instead computed as :math:`d^{-1} \cdot G`. This is required for ECKDSA
+      instead computed as :math:`d^{-1} \cdot G`. This is required for ECKCDSA
       and ECGDSA key generation, but results in an invalid ECDH/ECDSA key.
 
 Optionally ``EC_PublicKeys`` can be explicitly checked with a call to
@@ -357,36 +357,36 @@ The signature generation algorithm works as follows (see
 
    1. During the initialization the signature operation, sample a random blinding scalar :math:`1 \leq b_i < n` from ``rng``
 
-   1. :math:`e = H` and truncate :math:`e` to be at most :math:`bit_length(n)` bits long.
+   2. :math:`e = H` and truncate :math:`e` to be at most bitlength(:math:`n`) bits long.
 
-   2. Generate parameter :math:`k` as a random number :math:`0 < k < n` using
+   3. Generate parameter :math:`k` as a random number :math:`0 < k < n` using
       the algorithm described in Section :ref:`pubkey_param/rng` or as HMAC_DRBG
       output [RFC6979]_. If Botan is compiled with the module RFC6979 the
       HMAC_DRBG is used, otherwise :math:`k` is sampled from the passed random
       number generator ``rng``.
 
-   3. :math:`r = R_x \bmod n` where :math:`R_x` is the x-coordinate of the affine point
+   4. :math:`r = R_x \bmod n` where :math:`R_x` is the x-coordinate of the affine point
       :math:`R_{x,y} = k \cdot G` (see :ref:`pubkey/ecc/scalar_mul`). The computation
       of :math:`k \cdot G` is done with the use of scalar blinding.
 
 
-   4. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
+   5. Compute :math:`k'^{-1} = (b_i \cdot k)^{-1}` using the blinding
       value :math:`b_i`. The inversion either uses Fermat's little theorem (:math:`a^{-1} = a^{p-2} \bmod n`) or a
       curve-specific addition chain if available. In the former case, the computation is realized with a variable time scalar exponentiation.
 
-   4. Compute :math:`u=(d \cdot b) \cdot r + e \cdot b`. The braces indicate the order of evaluation.
+   6. Compute :math:`u=(d \cdot b_i) \cdot r + e \cdot b_i`. The braces indicate the order of evaluation.
 
-   6. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b = k^{-1} \cdot (d \cdot r + m)`.
+   7. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b_i \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b_i = k^{-1} \cdot (d \cdot r + m)`.
 
-   7. Square the blinding value :math:`b_i` to
+   8. Square the blinding value :math:`b_i` to
       obtain new a blinding value :math:`b_{i+1}` which replaces :math:`b_i` in
       the next signature generation with the same signature operation instance. This
       is done to avoid re-sampling/re-inverting the blinding value. This is useful when using
       [RFC6979]_ as then there might not be a seeded random number generator available during the signature creation.
 
-   7. ensure that :math:`r \neq 0` and :math:`s \neq 0`. Otherwise throw an exception.
+   9. ensure that :math:`r \neq 0` and :math:`s \neq 0`. Otherwise throw an exception.
 
-   8. Return :math:`(r, s)`
+   10. Return :math:`(r, s)`
 
 **Remark:** If Botan is built with the RFC6979 module, it implements
 deterministic ECDSA signatures, which are not covered by [TR-03111]_.

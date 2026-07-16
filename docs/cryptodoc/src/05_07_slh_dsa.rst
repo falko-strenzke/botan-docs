@@ -8,7 +8,7 @@ Botan's implementation of the Stateless Hash-Based Digital Signature Standard
 :srcref:`src/lib/pubkey/sphincsplus/` and follows [FIPS-205]_.
 
 BSI's [TR-02102-1]_ recommends using SLH-DSA in "hedged" mode with the parameter
-sets that fulfill NIST's category 3 and 5 ("192" or "256", with botn SHA2 or
+sets that fulfill NIST's category 3 and 5 ("192" or "256", with both SHA2 or
 SHAKE and either fast or small). Hash-based signatures are considered secure for
 long-term secure authentication and are not required to be used in a hybrid form
 with a classical signature method.
@@ -115,8 +115,6 @@ constructor according to Sections 11.1 and 11.2 of [FIPS-205]_. The specific
 child classes for the SHA2 and SHAKE modules are given in
 :srcref:`[src/lib/pubkey/sphincsplus/sphincsplus_common]/sphincsplus_sha2_base/sp_hash_sha2.h` and
 :srcref:`[src/lib/pubkey/sphincsplus/sphincsplus_common]/sphincsplus_shake_base/sp_hash_shake.h`.
-
-respectively.
 
 The specification defines three tweaked hash functions that share similarities.
 :math:`\mathbf{T_\ell}` is a tweaked hash function with a message input length

@@ -380,24 +380,43 @@ function.
    1. ``output``: The pseudorandom bits to be returned to the consuming
       application.
 
-   **Steps:**
+   **Implementation:**
 
-   1. Set ``bytes_to_generate = output.size()``
-   2. While (``bytes_to_generate`` > 0) do:
+   If ``output`` is empty, the call exclusively adds entropy: ``input`` is
+   incorporated into the internal state via ``update()`` and the reseed
+   counter is reset if at least ``security_level()`` bits were provided.
+   Otherwise, the request is delegated to
+   ``Stateful_RNG::generate_batched_output()``
+   (:srcref:`src/lib/rng/stateful_rng/stateful_rng.cpp`), which splits it
+   into chunks of at most ``max_number_of_bytes_per_request`` bytes and
+   serves each chunk with the [SP800-90A]_ generate function
+   ``generate_output()`` described above:
 
-      1. Set ``this_req = min(max_number_of_bytes_per_request, bytes_to_generate)``
-      2. Call Stateful_RNG's ``reseed_check()``
-      3. If ``input.size() != 0``, then ``update(input)`` (once per top-level request, see (7))
-      4. While (``this_req`` > 0) do:
+   .. code-block:: C++
 
-         1. ``to_copy = min(this_req, V.size())``
-         2. ``V = HMAC(Key, V)``
-         3. ``output = output || leftmost(V, to_copy)``
-         4. ``this_req = this_req - to_copy``
+      void Stateful_RNG::generate_batched_output(std::span<uint8_t> output, std::span<const uint8_t> input) {
+         BOTAN_ASSERT_NOMSG(!output.empty());
 
-      5. Call ``update(input)``
-      6. Set ``bytes_to_generate = bytes_to_generate - this_req``
-      7. Clear the input for the next inner loop: ``input = {}``
+         const size_t max_per_request = max_number_of_bytes_per_request();
+
+         if(max_per_request == 0) {
+            // no limit
+            reseed_check();
+            this->generate_output(output, input);
+         } else {
+            while(!output.empty()) {
+               const size_t this_req = std::min(max_per_request, output.size());
+
+               reseed_check();
+               this->generate_output(output.subspan(0, this_req), input);
+
+               // only include the input for the first iteration
+               input = {};
+
+               output = output.subspan(this_req);
+            }
+         }
+      }
 
 ``randomize_with_ts_input()`` incorporates a 64 bit processor timestamp,
 using QueryPerformanceCounter's QuadPart value on Windows and an inline
@@ -480,7 +499,7 @@ implemented as follows.
             returning the number of bits collected; ``poll()`` takes a
             timeout value in milliseconds after which polling of the
             entropy sources is stopped, the value used here is
-            ``BOTAN_RNG_RESEED_POLL_BITS``, which defaults to 50
+            ``BOTAN_RNG_RESEED_DEFAULT_TIMEOUT``, which defaults to 50
             milliseconds
          2. If the returned number of bits collected is equal to or
             exceeds ``security_level()`` bits then:

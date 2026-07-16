@@ -65,7 +65,7 @@
    https://pq-crystals.org/dilithium/data/dilithium-specification-round3-20210208.pdf
 
 .. [FIPS-186-4] Federal Information Processing Standards Publication 186-4.
-   Digital Signature Standard (DSS). Superseeded by [FIPS-186-5]
+   Digital Signature Standard (DSS). Superseded by [FIPS-186-5]_
    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf
 
 .. [FIPS-186-5]  Federal Information Processing Standards Publication 186-5.
@@ -223,7 +223,12 @@
    "Representation and Verification of Domain-Based Application Service Identity within Internet Public Key Infrastructure Using X.509 (PKIX) Certificates in the Context of Transport Layer Security (TLS)",
    http://tools.ietf.org/html/rfc6125, March 2011
 
-.. [RFC6979] Internet Engineering Task Force: RF6979:
+.. [RFC6960] S. Santesson, M. Myers, R. Ankney, A. Malpani, S. Galperin, C. Adams: RFC 6960:
+   "X.509 Internet Public Key Infrastructure Online Certificate Status Protocol - OCSP",
+   https://www.rfc-editor.org/info/rfc6960,
+   June 2013
+
+.. [RFC6979] Internet Engineering Task Force: RFC6979:
    "Deterministic Usage of the Digital Signature Algorithm (DSA) and Elliptic Curve Digital Signature Algorithm (ECDSA)",
    August 2013
 
