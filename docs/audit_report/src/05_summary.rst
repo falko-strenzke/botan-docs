@@ -13,5 +13,4 @@ This audit report is part of the submission to the BSI, which includes the follo
 * Test Specification
 * Test Report
 * Cryptographic Documentation
-* Coverage Report
 * A signed archive of the audited Botan version

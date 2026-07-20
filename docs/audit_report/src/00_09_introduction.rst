@@ -34,16 +34,16 @@ For each patch, the influence on the library's security guarantees is determined
 first. An in-depth review of the patch was conducted if the patch touches parts
 of the code base that are in scope for this review, and is considered to be
 prone to affect security critical aspects of the code that are not assumed to be
-covered by the test suite. 
+covered by the test suite.
 
 Due to the fact that the present review spans four Botan releases and more than
 700 patches that have accumulated over the time frame of one year, many of the
-patches where only superficially reviewed.  This has been compensated by a
+patches were only superficially reviewed. This has been compensated by a
 detailed review of security critical aspects of the ECC implementations, which
 forms the most complex part of the core cryptographic functionality in the code
 base. Here, an analysis of the side channel countermeasures and
 security-critical parameter checks was verified by adding corresponding trace
-logging to the implementation. 
+logging to the implementation.
 
 This document lists *all* patches along with links to their representation on
 GitHub, our classification, and optionally noteworthy remarks from the
@@ -276,7 +276,7 @@ reviewed:
 
 Here are some notable module changes compared to the last review (Botan |botan_git_base_ref|):
 
-* The following modules where removed in Botan |botan_version|: 
+* The following modules were removed in Botan |botan_version|:
 
   - argon2_ssse3
   - pk_pad
@@ -285,7 +285,7 @@ Here are some notable module changes compared to the last review (Botan |botan_g
   - sha2_64_bmi2
   - simd
 
-* The following modules where added in Botan |botan_version|: 
+* The following modules were added in Botan |botan_version|:
 
   - argon2_simd64
   - cpuid_x86

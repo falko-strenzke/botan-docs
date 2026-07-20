@@ -3,7 +3,7 @@
    Bibliography
    ============
 
-.. [PRM] René Fischer, Juraj Somorvsky, Daniel Neus, Phillippe Lieser, René Meusel:
+.. [PRM] René Fischer, Juraj Somorovsky, Daniel Neus, Philippe Lieser, René Meusel:
    "Pflege und Weiterentwicklung der Kryptobibliothek Botan (Weiterentwicklung Botan):
    Prüfmethodik für die Freigabe neuer Botan-Versionen"
 

@@ -24,10 +24,10 @@ between |botan_git_base_ref| and |botan_version|.
    * - `#5454 <https://github.com/randombit/botan/issues/5454>`_, `#5455 <https://github.com/randombit/botan/issues/5455>`_
      - Earliest affected version is unknown
      - 3.11.1
-     - The verification operation class of EdDSA and ECDSA handles the case of a too short signatures in an erroneous manner. The leads to the verification object remaining in a state with an already non-empty hashed message after a failed
+     - The verification operation class of EdDSA and ECDSA handles the case of a too short signature in an erroneous manner. This leads to the verification object remaining in a state with an already non-empty hashed message after a failed
        signature verification. While the
        caller assumes that a new verification is started, the verification operation instance appends the new message for verification to the previous one. This allows attacks where the attacker first deliberately causes a failed
-       verification for some prefix A. In the second step he submits the message B together with a valid signature for the message A || B. The verification of B succeeds to to the pending message in the internal hash context, even though
+       verification for some prefix A. In the second step he submits the message B together with a valid signature for the message A || B. The verification of B succeeds due to the pending message in the internal hash context, even though
        the legitimate signer only signed A || B, and never signed B.
    * - CVE-2026-32883
      - Since 2022, the corresponding version has not been determined. 
@@ -69,11 +69,11 @@ The following known issues are present in Botan |botan_version|.
    * - #5002
      - All earlier versions featuring ML-DSA
      - Fix is pending. PR exists (#5307).
-     - RFC 9881 specifies three alternative encodings of the ML-DSA the private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9881.
+     - RFC 9881 specifies three alternative encodings of the ML-DSA private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9881.
 
    * - Not tracked in GitHub 
      - All earlier versions featuring ML-KEM
      - Fix is pending.
-     - RFC 9935 specifies three alternative encodings of the ML-KEM the private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9935.
+     - RFC 9935 specifies three alternative encodings of the ML-KEM private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9935.
 
 

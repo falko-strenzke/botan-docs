@@ -4,14 +4,16 @@ Preface
 **Summary**
 
 This document has been created as part of Project P663 issued by the German Federal Office for
-Information Security (BSI).  The aim of this project is the enhancement and maintenance of the Botan
-cryptographic library `Botan <https://github.com/randombit/botan>`_.  Botan provides building blocks
+Information Security (BSI).  The aim of this project is the enhancement and maintenance of the
+`Botan <https://github.com/randombit/botan>`_ cryptographic library.  Botan provides building blocks
 for a wide range of modern cryptographic applications.
 
 As Botan may be used by manufacturers of VS-NfD products according to German national requirements,
 one purpose of this document is to facilitate the evaluation of such products by the BSI.
 
-This document describes the cryptographic implementations in Botan.
+This document provides a high-level overview of the library's architecture and
+refers to various places of its documentation. It is meant to act as a starting
+point for users that are new to Botan.
 
 **Historical Authors**
 
