@@ -8,7 +8,7 @@ This document provides the result of the audit review of the Botan releases foll
 the German Federal
 Office for Information Security (BSI).
 The aim of this project is the enhancement and maintenance of the Botan cryptographic library
-`Botan <https://github.com/randombit/botan>`_. 
+`Botan <https://github.com/randombit/botan>`_.
 Botan provides building blocks for a wide
 range of modern cryptographic applications.
 

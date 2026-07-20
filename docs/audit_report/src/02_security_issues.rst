@@ -1,16 +1,16 @@
 Security and Vulnerabilities
 ============================
 
-Currently, we are not aware of any security issues that needed to be addressed
-between |botan_git_base_ref| and |botan_version|.
+The security issues that were identified between |botan_git_base_ref| and
+|botan_version| are listed in the following table.
 
 .. list-table::
    :class: longtable
    :widths: 10 20 10 50
    :header-rows: 1
 
-   * - Security Issue 
-     - Affected versions 
+   * - Security Issue
+     - Affected versions
      - Fixed in Version
      - Description
    * - CVE-2026-35580
@@ -30,7 +30,7 @@ between |botan_git_base_ref| and |botan_version|.
        verification for some prefix A. In the second step he submits the message B together with a valid signature for the message A || B. The verification of B succeeds due to the pending message in the internal hash context, even though
        the legitimate signer only signed A || B, and never signed B.
    * - CVE-2026-32883
-     - Since 2022, the corresponding version has not been determined. 
+     - Since 2022, the corresponding version has not been determined.
      - 3.11.0
      - OCSP signature verification was skipped and thus OCSP responses could straightforwardly be forged.
    * - CVE-2026-32884
@@ -43,16 +43,16 @@ between |botan_git_base_ref| and |botan_version|.
      - Heap over-read during SM2 decryption.
    * - `#5614 <https://github.com/randombit/botan/issues/5614>`_
      - up to 3.11.0 and presumably also 3.12.0
-     - 
+     -
      - Problematic behaviour of `Stateful_RNG::force_reseed()` with respect to the resulting RNG state with possible side effects to SCA countermeasures in ECC operations.
    * - `#5615 <https://github.com/randombit/botan/issues/5615>`_
      - up to 3.11.0 and presumably also 3.12.0
-     - 
+     -
      - Control of SCA countermeasures in ECC operations depends implicitly on RNG seeding state. This is an obscure and error prone mechanism to control an important security measure.
 
 
 
-Non-Security Critical Issues 
+Non-Security Critical Issues
 ============================
 
 The following known issues are present in Botan |botan_version|.
@@ -62,8 +62,8 @@ The following known issues are present in Botan |botan_version|.
    :widths: 10 20 10 50
    :header-rows: 1
 
-   * - Reference 
-     - Affected versions 
+   * - Reference
+     - Affected versions
      - Fixed in Version
      - Description
    * - #5002
@@ -71,7 +71,7 @@ The following known issues are present in Botan |botan_version|.
      - Fix is pending. PR exists (#5307).
      - RFC 9881 specifies three alternative encodings of the ML-DSA private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9881.
 
-   * - Not tracked in GitHub 
+   * - Not tracked in GitHub
      - All earlier versions featuring ML-KEM
      - Fix is pending.
      - RFC 9935 specifies three alternative encodings of the ML-KEM private key. Botan still reads and writes the "pure seed" format, which is not compatible to any of those specified in RFC 9935.
