@@ -50,242 +50,332 @@ patches:
 #   Author:    @randombit
 - pr: 5569  # https://github.com/randombit/botan/pull/5569
   merge_commit: 5e3e3f97db6b733ea9bc700691516d908caef525
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes, pki
+  comment: Substantial PR adding more constraints on ASN.1 parsing in the context of X.509 and OCSP. See appendix for details.
 
 # Added ALPN support to Boost ASIO
 #   Author:    @fxdupont
 #   Approvals: (@randombit)
 - pr: 5428  # https://github.com/randombit/botan/pull/5428
   merge_commit: 690916ff21850bbcc1f431d1c11f24475d1a9efe
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: additions
 
 # Avoid a hidden dependency of <algorithm> in secmem.h
 #   Author:    @randombit
 - pr: 5572  # https://github.com/randombit/botan/pull/5572
   merge_commit: 333ee1e3d413c09523ceeb95e51223bf0d2d39ff
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores, quality
 
 # Small RNG fixes
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5570  # https://github.com/randombit/botan/pull/5570
   merge_commit: 564ec01f3027f16d2be0381963ff89ef6fa96c21
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
+  comment: Move some sanity checks of RNG-ctor arguments from debug assertions to run-time errors.
 
 # Check for newline and null characters in HTTP inputs
 #   Author:    @randombit
 - pr: 5567  # https://github.com/randombit/botan/pull/5567
   merge_commit: d8188886beb8a856429afde3a9646d6c8e8450a5
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: fixes, quality
 
 # Refactor: extract `specialize to<>` helper template
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5566  # https://github.com/randombit/botan/pull/5566
   merge_commit: 1a65f84e15e6adbb061832e194400aae7195d9b4
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # More minor TLS hardening/bug fixes
 #   Author:    @randombit
 - pr: 5568  # https://github.com/randombit/botan/pull/5568
   merge_commit: 25fbec3fa89fd85f648ec65a18f33a2ad2845558
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Fix some security issues in TLS, for instance refuse session resumption across different virtual hosts.
 
 # Fixes for GCC 16
 #   Author:    @randombit
 - pr: 5564  # https://github.com/randombit/botan/pull/5564
   merge_commit: c3b808013146c430d175600057d4c4e6a05fa292
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
+  comment: Introduces XMSS_PublicKey_Internal
 
 # Discard TLS handshake state after handshake has completed
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5517  # https://github.com/randombit/botan/pull/5517
   merge_commit: 424030807099e158f3da8c986e1f46719c689df4
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: quality, optimization
+  comment: |
+    Introduces a TLS Connection State class for TLS 1.2 and 1.3.
 
 # Make EC_Scalar FFI serializable
 #   Author:    @arckoor
 #   Approvals: (@randombit)
 - pr: 5565  # https://github.com/randombit/botan/pull/5565
   merge_commit: 5897abf93ab95e3454bb2a53b55b3af12515f809
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: api
 
 # Various OCSP hardenings
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5562  # https://github.com/randombit/botan/pull/5562
   merge_commit: 971661b05233f8510433cff8ba9b861a4918ce53
-  classification: unspecified
+  classification: critical
+  auditer: falko-strenzke
+  categories: fixes
+  comment: |
+    Closes two security issues with OCSP responses: 1. Refusing of responses with unknown critical extensions. 2. Enforcing correct EKU for OCSP-signers.
 
 # Add some missing calls to BER_Decoder::verify_end
 #   Author:    @randombit
 - pr: 5561  # https://github.com/randombit/botan/pull/5561
   merge_commit: d7cdbec4f8c1b9ada741caba9a3cc230f2e2dc1d
   classification: unspecified
+  auditer: falko-strenzke
+  categories: fixes, quality
+  comment: Before this fix some DER constructs could have invalid trailing data in some constructed types that was not detected by Botan.
 
 # add test for point not on curve
 #   Author:    @falko-strenzke
 #   Approvals: (@randombit)
 - pr: 5552  # https://github.com/randombit/botan/pull/5552
   merge_commit: f2074456d5818de6a5db4d4d9a3ed9fc8cd16e23
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Repin BoGo to BoringSSL main as of 2026-04-29
 #   Author:    @randombit
 - pr: 5556  # https://github.com/randombit/botan/pull/5556
   merge_commit: 52a6e8345e29f19e6b7e1403eb2b42bc9fd16672
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Improve TLS::Ciphersuite::is_usable and fix autogenerated files
 #   Author:    @randombit
 - pr: 5551  # https://github.com/randombit/botan/pull/5551
   merge_commit: 4dd1cc5eb1b88a873ccf10701b6b5c61df182a3f
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality, ci
 
 # Download sccache directly from Mozilla's release binaries on Github
 #   Author:    @randombit
 - pr: 5557  # https://github.com/randombit/botan/pull/5557
   merge_commit: 3bdb4549cf598eb477fcd3816321212c05a39388
-  classification: unspecified
+  classification: out of scope
+  auditer: falko-strenzke
+  categories: ci
 
 # Tighten checks on DER class tags
 #   Author:    @randombit
 - pr: 5554  # https://github.com/randombit/botan/pull/5554
   merge_commit: 5eb19dc0cfd8730f03dcf5ad13878c36eb8c2224
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Adds missing checks of the decoded ASN.1 tag bits against the expected type when decoding ASN.1 objects.
 
 # Some fixes for TLS-Anvil
 #   Author:    @randombit
 - pr: 5555  # https://github.com/randombit/botan/pull/5555
   merge_commit: 76d84f093d9f81d68f5f3ba020c5667497768421
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Add some missing nullptr checks to ffi
 #   Author:    @randombit
 - pr: 5553  # https://github.com/randombit/botan/pull/5553
   merge_commit: defa401fcc99ae6a1bfcae8d10e14f4021dbc2a7
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: api, quality
 
 # TLS conformance, hardening, and performance fixes
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5550  # https://github.com/randombit/botan/pull/5550
   merge_commit: 9db7e5dd85078fcb5bd8a800ee56cab0ad42b190
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Huge PR addressing many at least robustness-related issues in TLS code. It remains unclear in how far this includes security -critical issues.
 
 # Feature: More configuration options for installation directory structure
 #   Author:    @reneme
 #   Approvals: (@randombit)
 - pr: 5528  # https://github.com/randombit/botan/pull/5528
   merge_commit: e79f1f66b032f4d7b8da51cbc08316199163b9f2
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: build
 
 # refactor(streebog): Replace memcpy with typecast_copy
 #   Author:    @KaganCanSit
 #   Approvals: (@randombit)
 - pr: 5548  # https://github.com/randombit/botan/pull/5548
   merge_commit: 48d874d9fd3868a3160fc9a3c491eaba93bdb82a
-  classification: unspecified
+  classification: info 
+  auditer: falko-strenzke
+  categories: quality
 
 # Fix some bugs relating to CRL distribution point handling
 #   Author:    @randombit
 - pr: 5546  # https://github.com/randombit/botan/pull/5546
   merge_commit: 757a28492a9b076c684f954ca1f49028310cfc71
   classification: unspecified
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Addresses among other things the scope of CRL via the issuing distributions points extension.
 
 # Fix bugs in handling of indefinite length BER data
 #   Author:    @randombit
 - pr: 5545  # https://github.com/randombit/botan/pull/5545
   merge_commit: 44bf6e2721d21c8691714daa4c575ce5612c9d95
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Refactor and optimize Windows certificate store
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5539  # https://github.com/randombit/botan/pull/5539
   merge_commit: d4191bc5ae8e8d0fc039b9d8f42420eef8f8b730
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: optimization, quality
 
 # Add support for IPv6 name constraints
 #   Author:    @randombit
 - pr: 5537  # https://github.com/randombit/botan/pull/5537
   merge_commit: a9880548f7b05cf66914ef7e20eb10ebe0465312
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: additions
 
 # In timing_test shuffle the inputs before measurement
 #   Author:    @randombit
 - pr: 5538  # https://github.com/randombit/botan/pull/5538
   merge_commit: 1c4c94543162744b3ef51e8309c47b52f9b93fef
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Various PKIX optimizations and bug fixes
 #   Author:    @randombit
 - pr: 5536  # https://github.com/randombit/botan/pull/5536
   merge_commit: dafca6824b7548a67435ca68999fb79c36bb59c1
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Add IPv6 parsing and formatting utilities
 #   Author:    @randombit
 - pr: 5534  # https://github.com/randombit/botan/pull/5534
   merge_commit: 69e2f378fe8995ad3e4f2887eb5786bad567d329
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: additions
 
 # Optimize host_wildcard_match
 #   Author:    @randombit
 - pr: 5535  # https://github.com/randombit/botan/pull/5535
   merge_commit: 880764db284ff66d3179fed7887ee2bf0368a0eb
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: optimization
 
 # Add EC scalars and points to FFI
 #   Author:    @arckoor
 #   Approvals: (@randombit)
 - pr: 5404  # https://github.com/randombit/botan/pull/5404
   merge_commit: e452c0b1c7b8297ac71b68b8cb5ea35ceba3cc32
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: api
 
 # Update BoGo shim, various TLS updates
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5523  # https://github.com/randombit/botan/pull/5523
   merge_commit: e10ad9c01b8b64391d594d8c85e86b1eedf8c77b
-  classification: unspecified
+  classification: critical
+  auditer: falko-strenzke
+  categories: fixes, additions, test
+  comment: Substantial changes to the TLS layer which fixes a security vulnerability in the TLS client with respect to ALPN. See appendix for an AI-generated summary.
 
 # Avoid buffering the entire file in memory in download_ci_dep.py
 #   Author:    @randombit
 - pr: 5530  # https://github.com/randombit/botan/pull/5530
   merge_commit: ea96b69d31d9420ad9761e232a07a52427722b01
-  classification: unspecified
+  classification: out of scope 
+  auditer: falko-strenzke
+  categories: ci
 
 # Add script for running ACVP test vectors
 #   Author:    @randombit
 - pr: 5527  # https://github.com/randombit/botan/pull/5527
   merge_commit: c4e13cb91b68aef876f0fc4a9791d8c6a1965cba
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test, ci
 
 # Upgrade TLS-Anvil and add client-side testing
 #   Author:    @randombit
 - pr: 5503  # https://github.com/randombit/botan/pull/5503
   merge_commit: 7ee5d80ce4fad66ac72f23b937bf2fe102bcd9a3
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Rewrite and extend the Wycheproof test script
 #   Author:    @randombit
 - pr: 5526  # https://github.com/randombit/botan/pull/5526
   merge_commit: 7e69b76ca927d53df5ab7babde7739419db1a6cc
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # CI hardening and config changes
 #   Author:    @randombit
 - pr: 5525  # https://github.com/randombit/botan/pull/5525
   merge_commit: 3890e88c465aa01da2b100179b426e4d57535e74
-  classification: unspecified
+  classification: out of scope
+  auditer: falko-strenzke
+  categories: ci
 
 # Various TLS fixes
 #   Author:    @randombit
 - pr: 5522  # https://github.com/randombit/botan/pull/5522
   merge_commit: 5183e74ba25e16736e99991a8cfca2aa3edaf141
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Substantial amount of fixes in the TLS layer. See appendix for details.
 
 # Rollup of small fixes
 #   Author:    @randombit
