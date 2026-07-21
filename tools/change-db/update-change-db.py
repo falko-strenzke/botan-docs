@@ -60,6 +60,35 @@ def change_key(entry: dict) -> str:
     raise RuntimeError(f"Change entry is neither a Pull Request nor a Commit: {entry}")
 
 
+def load_entry_annotations(topic_file_text: str) -> list[dict]:
+    """ Extracts title and author from the comment lines preceding each
+        top-level patch entry, in entry order. The comment block directly
+        above an entry starts with the title line, followed by an
+        '#   Author: ...' line. """
+
+    author_pattern = re.compile(r"^#\s*Author:\s*(.*?)\s*$")
+    meta_pattern = re.compile(r"^#\s*(Author|Approvals):")
+
+    annotations = []
+    pending_comments = []
+    for line in topic_file_text.splitlines():
+        if line.startswith('#'):
+            pending_comments.append(line)
+        elif re.match(r"^- (pr|commit):", line):
+            title = None
+            author = None
+            for comment in pending_comments:
+                if match := author_pattern.match(comment):
+                    author = match.group(1)
+                elif title is None and not meta_pattern.match(comment):
+                    title = comment.lstrip('#').strip() or None
+            annotations.append({"title": title, "author": author})
+            pending_comments = []
+        else:
+            pending_comments = []
+    return annotations
+
+
 def load_changes(topics_dir: str) -> list[dict]:
     topic_files = sorted(glob(os.path.join(topics_dir, "*.yml")))
     if not topic_files:
@@ -69,18 +98,26 @@ def load_changes(topics_dir: str) -> list[dict]:
     for topic_file in topic_files:
         topic_reference = os.path.splitext(os.path.basename(topic_file))[0]
         with open(topic_file, encoding="utf-8") as f:
-            cfg = yaml.load(f, Loader=yaml.FullLoader)
+            text = f.read()
+        cfg = yaml.load(text, Loader=yaml.FullLoader)
         if not cfg:
             raise RuntimeError(f"Failed to load topic file: {topic_file}")
 
-        for patch in cfg.get('patches') or []:
-            entry = dict(patch)
+        patches = cfg.get('patches') or []
+        annotations = load_entry_annotations(text)
+        if len(annotations) != len(patches):
+            raise RuntimeError(f"Found {len(annotations)} annotated entries for "
+                               f"{len(patches)} patches in: {topic_file}")
+
+        for patch, annotation in zip(patches, annotations):
+            entry = dict(annotation)
+            entry.update(patch)
             if 'categories' in entry:
                 entry['categories'] = parse_categories(entry['categories'])
             else:
                 entry['categories'] = [topic_reference]
             changes.append(entry)
-        logging.debug("Read %d change entries from '%s'", len(cfg.get('patches') or []), topic_file)
+        logging.debug("Read %d change entries from '%s'", len(patches), topic_file)
 
     return changes
 
