@@ -51,7 +51,10 @@ def load_databases(database_dir: str) -> list[dict]:
     rows = []
     for database_file in database_files:
         with open(database_file, encoding="utf-8") as f:
-            db = json.load(f)
+            try:
+                db = json.load(f)
+            except json.JSONDecodeError as ex:
+                raise RuntimeError(f"Failed to parse '{database_file}': {ex}") from ex
         version = db.get('meta', {}).get('botan_version', '?')
         for entry in db.get('changes', []):
             rows.append({
@@ -140,6 +143,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 </table>
 <script>
 const REPO = __REPO__;
+const RELOAD_SECONDS = __RELOAD__;
 const DATA = __DATA__;
 
 const textInput = document.getElementById('text');
@@ -152,31 +156,43 @@ const FILTERS = [
   {id: 'classification', label: 'Classification', values: row => [row.classification]},
 ];
 
+// The current filter selection is kept in the URL fragment, so that it
+// survives the periodic self-reload of the page.
+const RESTORED = new URLSearchParams((location.hash || '').replace(/^#/, ''));
+
 function distinct(values) {
   return [...new Set(values)].sort((a, b) => a.localeCompare(b, undefined, {numeric: true}));
 }
 
 function buildFilter(spec) {
-  spec.selected = new Set();
+  const available = distinct(DATA.flatMap(spec.values));
+  spec.selected = new Set((RESTORED.get(spec.id) || '').split('|')
+    .filter(value => available.includes(value)));
+
   const container = document.getElementById('filter-' + spec.id);
   const caption = document.createElement('label');
   caption.textContent = spec.label;
   const details = document.createElement('details');
   const summary = document.createElement('summary');
-  summary.textContent = 'All';
   const options = document.createElement('div');
   options.className = 'options';
 
-  for (const value of distinct(DATA.flatMap(spec.values))) {
+  function updateSummary() {
+    summary.textContent = spec.selected.size === 0 ? 'All'
+      : spec.selected.size <= 2 ? [...spec.selected].join(', ')
+      : `${spec.selected.size} selected`;
+  }
+  updateSummary();
+
+  for (const value of available) {
     const option = document.createElement('label');
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = value;
+    checkbox.checked = spec.selected.has(value);
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) { spec.selected.add(value); } else { spec.selected.delete(value); }
-      summary.textContent = spec.selected.size === 0 ? 'All'
-        : spec.selected.size <= 2 ? [...spec.selected].join(', ')
-        : `${spec.selected.size} selected`;
+      updateSummary();
       render();
     });
     option.appendChild(checkbox);
@@ -304,9 +320,35 @@ function render() {
     cell(tr, highlighted(row.auditer || ''), 'nowrap');
     tbody.appendChild(tr);
   }
-  count.textContent = `${rows.length} of ${DATA.length} changes`;
+  count.textContent = `${rows.length} of ${DATA.length} changes`
+    + (RELOAD_SECONDS ? ` \\u00b7 reloading every ${RELOAD_SECONDS}s` : '');
 }
 
+function currentStateHash() {
+  const params = new URLSearchParams();
+  for (const spec of FILTERS) {
+    if (spec.selected.size) { params.set(spec.id, [...spec.selected].join('|')); }
+  }
+  if (textInput.value) { params.set('q', textInput.value); }
+  return params.toString();
+}
+
+function scheduleReload() {
+  if (!RELOAD_SECONDS) {
+    return;
+  }
+  setTimeout(() => {
+    // Don't reload while the view is being operated; try again shortly.
+    if (document.activeElement === textInput || document.querySelector('.filter details[open]')) {
+      scheduleReload();
+      return;
+    }
+    location.hash = currentStateHash();
+    location.reload();
+  }, RELOAD_SECONDS * 1000);
+}
+
+textInput.value = RESTORED.get('q') || '';
 FILTERS.forEach(buildFilter);
 document.addEventListener('click', event => {
   for (const details of document.querySelectorAll('.filter details[open]')) {
@@ -317,18 +359,20 @@ document.addEventListener('click', event => {
 });
 textInput.addEventListener('input', render);
 render();
+scheduleReload();
 </script>
 </body>
 </html>
 """
 
 
-def render_page(rows: list[dict]) -> str:
+def render_page(rows: list[dict], reload_seconds: float = 0) -> str:
     def embed(value):
         # '</' must not appear verbatim inside the inline <script> block
         return json.dumps(value, ensure_ascii=False).replace('</', '<\\/')
 
     return (PAGE_TEMPLATE
+            .replace('__RELOAD__', embed(reload_seconds))
             .replace('__REPO__', embed(github_repo()))
             .replace('__DATA__', embed(rows)))
 
@@ -341,6 +385,9 @@ def main():
     parser.add_argument('-o', '--output',
                         default=None,
                         help="HTML output file (default: botan-changes.html in the database directory)")
+    parser.add_argument('-r', '--reload', type=float, default=0, metavar='SECONDS',
+                        help="Let the rendered page reload itself every SECONDS "
+                             "(0 disables the self-reload, which is the default)")
     parser.add_argument('-v', '--verbose', action='store_true', default=False,
                         help="Enable detailed logging")
     args = parser.parse_args()
@@ -351,7 +398,7 @@ def main():
     rows = load_databases(args.database_dir)
     output_file = args.output or os.path.join(args.database_dir, "botan-changes.html")
     with open(output_file, 'w', encoding="utf-8") as f:
-        f.write(render_page(rows))
+        f.write(render_page(rows, args.reload))
     logging.info("Wrote %d change entries to: %s", len(rows), output_file)
     return 0
 

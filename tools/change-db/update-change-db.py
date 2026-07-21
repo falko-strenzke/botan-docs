@@ -99,7 +99,10 @@ def load_changes(topics_dir: str) -> list[dict]:
         topic_reference = os.path.splitext(os.path.basename(topic_file))[0]
         with open(topic_file, encoding="utf-8") as f:
             text = f.read()
-        cfg = yaml.load(text, Loader=yaml.FullLoader)
+        try:
+            cfg = yaml.load(text, Loader=yaml.FullLoader)
+        except yaml.YAMLError as ex:
+            raise RuntimeError(f"Failed to parse '{topic_file}': {ex}") from ex
         if not cfg:
             raise RuntimeError(f"Failed to load topic file: {topic_file}")
 
