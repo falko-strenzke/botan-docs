@@ -20,4 +20,6 @@ Contents
    06_bibliography
    07_appendix_pr5569_review
    08_appendix_pr5523_review
+   09_appendix_pr5522_review
+   10_appendix_pr5521_review
 

@@ -382,7 +382,10 @@ patches:
 #   Approvals: (@reneme)
 - pr: 5521  # https://github.com/randombit/botan/pull/5521
   merge_commit: 8a7f43563751b4ecdf490aa4c41879d441c18692
-  classification: unspecified
+  classification: info 
+  auditer: falko-strenzke
+  categories: fixes
+  comment: Huge PR spanning 116 files. See appendix for details.
 
 # Skip consulting OCSP or CRLs on chains that we are rejecting anyway
 #   Author:    @randombit
