@@ -32,7 +32,7 @@ patches:
 #   Author:    @randombit
 - pr: 5575  # https://github.com/randombit/botan/pull/5575
   merge_commit: f5ba920bd56d425455da58d3941a96271a49d1db
-  classification: unspecified
+  classification: info
   comment: Allow lookup of curves registered by name at run-time.
   auditer: falko-strenzke
   categories: fixes, test
@@ -152,7 +152,7 @@ patches:
 #   Author:    @randombit
 - pr: 5561  # https://github.com/randombit/botan/pull/5561
   merge_commit: d7cdbec4f8c1b9ada741caba9a3cc230f2e2dc1d
-  classification: unspecified
+  classification: relevant
   auditer: falko-strenzke
   categories: fixes, quality
   comment: Before this fix some DER constructs could have invalid trailing data in some constructed types that was not detected by Botan.
@@ -247,7 +247,7 @@ patches:
 #   Author:    @randombit
 - pr: 5546  # https://github.com/randombit/botan/pull/5546
   merge_commit: 757a28492a9b076c684f954ca1f49028310cfc71
-  classification: unspecified
+  classification: relevant
   auditer: falko-strenzke
   categories: fixes
   comment: Addresses among other things the scope of CRL via the issuing distributions points extension.
@@ -392,183 +392,251 @@ patches:
 #   Approvals: (@reneme)
 - pr: 5512  # https://github.com/randombit/botan/pull/5512
   merge_commit: 417709dd7959316243c28678dceaa7b9b6e7f399
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: optimization, quality, pki
 
 # Add a test of DFS certificate path search
 #   Author:    @randombit
 - pr: 5520  # https://github.com/randombit/botan/pull/5520
   merge_commit: 352bda8c3eceb486747f7200ea55b11f4c8bfda6
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test, pki
 
 # Add BER_Decoder::Limits
 #   Author:    @randombit
 - pr: 5514  # https://github.com/randombit/botan/pull/5514
   merge_commit: 143d0c257902915d69e24ada5f31f53996b4f972
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
+  comment: |
+    Quote from PR: "Introduces configurable decoding limits for BER_Decoder and switches many ASN.1-consuming code paths to require canonical DER encodings by default."
 
 # Add BigInt::signum
 #   Author:    @randombit
 - pr: 5519  # https://github.com/randombit/botan/pull/5519
   merge_commit: c4bf8cc35e7888a59ed6e104bbabe780862757f4
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality, api
 
 # Improve handling of X509 extensions which fail to parse
 #   Author:    @randombit
 - pr: 5518  # https://github.com/randombit/botan/pull/5518
   merge_commit: 00c63a4d87c8fc6e5a7f86a903bec1d56f0596a1
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: pki, quality
+  comment: Refined modelling of known X.509 extensions which failed to be parsed.
 
 # Remove signature check for detecting self-signed vs self-issued certs
 #   Author:    @randombit
 - pr: 5515  # https://github.com/randombit/botan/pull/5515
   merge_commit: 73b945e271934a844b01c9e9d7c4b0d67c60ed5a
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: pki, optimization
+  comment: |
+    Summary from Claude/Fable 5: For a certificate where subject DN == issuer DN but the SKID and AKID extensions are not both present, the parser previously loaded the certificate's own public key and cryptographically verified the certificate's signature with it — signature OK (or unknown algorithm) meant "self-signed", a failed verification meant "self-issued but not self-signed".  That verification was removed. Now such a certificate is unconditionally flagged as self-signed. The SKID == AKID comparison path (when both extensions are present) is unchanged.
 
 # Add a regression test for CVE-2026-35580
 #   Author:    @randombit
 - pr: 5502  # https://github.com/randombit/botan/pull/5502
   merge_commit: eaf12915e3ba1246e4b4410294af293a0e548299
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test, pki
 
 # Make the X509 path building DFS incremental
 #   Author:    @randombit
 - pr: 5513  # https://github.com/randombit/botan/pull/5513
   merge_commit: fc221e72481fd67b0412fad782922f8fff6eaf8b
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization, pki
+  comment: Dynamic / on request generation of the next path (depth-first (DFS) search logic) makes the path validation more scalable.
 
 # Add an index of serial numbers to X509_CRL for fast lookups
 #   Author:    @randombit
 - pr: 5511  # https://github.com/randombit/botan/pull/5511
   merge_commit: 021b73c3a2cb3684d0411cf18e6cce45f0f0b67f
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: optimization, pki
 
 # Improve search and indexing in Certificate_Store implementations
 #   Author:    @randombit
 - pr: 5510  # https://github.com/randombit/botan/pull/5510
   merge_commit: ec092a57cb9d24093261ed4cac43c11723025b1f
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: optimization, pki
 
 # Add X509_Certificate::Tag
 #   Author:    @randombit
 - pr: 5509  # https://github.com/randombit/botan/pull/5509
   merge_commit: 87d9feb01c0747bd39a8d59e7516d6ed22e67175
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: optimization, pki
+  comment: Introduce comparable and hashable only tags for X.509 certificates.
 
 # Use a shared_ptr pimpl for X509_Object
 #   Author:    @randombit
 - pr: 5504  # https://github.com/randombit/botan/pull/5504
   merge_commit: 7e1cfb983a0fe13cb94d05daf52782ddea7f01bc
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Simplify BER_Decoder constructors
 #   Author:    @randombit
 - pr: 5507  # https://github.com/randombit/botan/pull/5507
   merge_commit: 3275f63d57bae25176541c9e2b1dfbd77311c846
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Merge ocsp_types.cpp into ocsp.cpp
 #   Author:    @randombit
 - pr: 5508  # https://github.com/randombit/botan/pull/5508
   merge_commit: dce093f6fd58cee204e963ba6553286f1f49ef0b
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Use an iterator-style producer for X500 name comparisons
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5505  # https://github.com/randombit/botan/pull/5505
   merge_commit: 913b0003f72fb25d47a37ec55e937203b3be87eb
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Fix Certificate_Store::certificate_known
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5500  # https://github.com/randombit/botan/pull/5500
   merge_commit: 0bb8b3f407e9e5d887c84bbd9bda4b74e36d1587
-  classification: unspecified
+  classification: critical
+  auditer: falko-strenzke
+  categories: fixes, pki
+  comment: This PR fixes the X.509 certification path validation bypass CVE-2026-34580.
 
 # In TLS 1.3 require that the handshake is completed prior to application data
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5499  # https://github.com/randombit/botan/pull/5499
   merge_commit: d0c85903c7efdb0bdf6042008e63e3115fc34df4
-  classification: unspecified
+  classification: critical
+  auditer: falko-strenzke
+  categories: quality
+  comment: Per AI-review, this PR closes a real vulnerability in the TLS layer. See appendix.
 
 # Add missing check on TLS 1.3 ClientHello legacy_version
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5498  # https://github.com/randombit/botan/pull/5498
   merge_commit: 8759fe96940965af7530e38ff68e64936d71759d
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Address various minor TLS 1.3 issues
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5494  # https://github.com/randombit/botan/pull/5494
   merge_commit: 839b455636a57e9b1df285c8a99e5610b5702e8e
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
+  
 
 # Remove SM4 iterations test
 #   Author:    @randombit
 - pr: 5492  # https://github.com/randombit/botan/pull/5492
   merge_commit: bbfa6f3053d75209838591bdc0d23149efd35c12
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Improve performance of SHA-512 AVX-512 codepath
 #   Author:    @randombit
 - pr: 5490  # https://github.com/randombit/botan/pull/5490
   merge_commit: 507bbbfe3efa6e9beb218302a1e5fbfff6eca6b2
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: optimization
 
 # Enable explicit_bzero, getentropy, getrandom on Hurd
 #   Author:    @pinotree
 #   Approvals: (@randombit)
 - pr: 5488  # https://github.com/randombit/botan/pull/5488
   merge_commit: 065f936463754b8d78e01c15c3dfe0d30adb619d
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: build
 
 # docs: update null cipher documentation in TLS::Policy [ci skip]
 #   Author:    @lars-du
 #   Approvals: (@randombit)
 - pr: 5487  # https://github.com/randombit/botan/pull/5487
   merge_commit: 70da5139bd26f6d96bd99a67335d658142670bef
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Interleave hw AES SM4 implementation
 #   Author:    @randombit
 - pr: 5485  # https://github.com/randombit/botan/pull/5485
   merge_commit: f4222026969b4c4e4544c591c40fc67622135dec
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: optimization
 
 # Enable the macos-15-intel CI builds again
 #   Author:    @randombit
 - pr: 5483  # https://github.com/randombit/botan/pull/5483
   merge_commit: c96680a4f13b654f461b338dbac593f485aab6a3
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: build
 
 # Improve IDEA multiplication implementations
 #   Author:    @randombit
 - pr: 5484  # https://github.com/randombit/botan/pull/5484
   merge_commit: c050d37b41dd861e7916c12a9083412c0e61a769
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: optimization
 
 # Fix: Amalgamated Windows Builds with PKCS 11
 #   Author:    @FAlbertDev
 #   Approvals: (@randombit)
 - pr: 5486  # https://github.com/randombit/botan/pull/5486
   merge_commit: 35787f547a25a0c4fcb7c2e7fa86a2a971fefc26
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: fixes, build
 
 # Add Camellia implementation using hardware AES instructions
 #   Author:    @randombit
 - pr: 5481  # https://github.com/randombit/botan/pull/5481
   merge_commit: db4897d1b84afe2bdf06ec1e5bd8db933871f1ee
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: additions
 
 # Add SIMD_4x32 based counter increment and XOR for CTR
 #   Author:    @randombit
 - pr: 5480  # https://github.com/randombit/botan/pull/5480
   merge_commit: 3a4ae17b0d48da54f380d47bdc33779340e6e3e7
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization
 
 # Add ARIA implementation using hardware AES instructions
 #   Author:    @randombit

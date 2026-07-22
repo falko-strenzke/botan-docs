@@ -22,4 +22,6 @@ Contents
    08_appendix_pr5523_review
    09_appendix_pr5522_review
    10_appendix_pr5521_review
+   11_appendix_pr5499_review
+   12_appendix_pr5494_review
 
