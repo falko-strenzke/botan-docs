@@ -642,94 +642,124 @@ patches:
 #   Author:    @randombit
 - pr: 5479  # https://github.com/randombit/botan/pull/5479
   merge_commit: 2ddc528b11bb4e49119daca279208cac78d026bf
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: additions
 
 # Handle Not_Implemented in pwdhash tune_params test
 #   Author:    @KaganCanSit
 #   Approvals: (@randombit), (@ffplexim)
 - pr: 5438  # https://github.com/randombit/botan/pull/5438
   merge_commit: 4f8f699a3aa8de491089ecd0723af7663c2ef68d
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test, fixes
 
 # Add implementation of SEED using hardware AES instructions
 #   Author:    @randombit
 - pr: 5477  # https://github.com/randombit/botan/pull/5477
   merge_commit: e8ed80c84eb35c9da3deae4b347ec65b959cd16d
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: additions, optimization
 
 # Added utf8_to_ucs2 and utf8_to_ucs4
 #   Author:    @dmazzella
 #   Approvals: (@randombit)
 - pr: 5459  # https://github.com/randombit/botan/pull/5459
   merge_commit: c868150bc35e1aa33a3e17225fe56255dfd38f4c
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: additions
 
 # Add implementation of SM4 using hardware AES instructions
 #   Author:    @randombit
 - pr: 5476  # https://github.com/randombit/botan/pull/5476
   merge_commit: 282afd036a21393ead1e9d6aad7b63673f6d6dc5
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: additions, optimization
 
 # Fix the ML-DSA Wycheproof tests which were broken by a recent schema change
 #   Author:    @randombit
 #   Approvals: (@reneme)
 - pr: 5475  # https://github.com/randombit/botan/pull/5475
   merge_commit: 980f1561887854f18e947d9583fc84e00a41fbd4
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: test, fixes
 
 # Add AVX2 implementation of Whirlpool compression
 #   Author:    @randombit
 - pr: 5473  # https://github.com/randombit/botan/pull/5473
   merge_commit: 407ff8f65533aa4e07f5fa6b56e9d75fffd67c3b
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: additions, optimization
 
 # Avoid tables for GF(2^8) arithmetic in TSS
 #   Author:    @randombit
 - pr: 5470  # https://github.com/randombit/botan/pull/5470
   merge_commit: 7258ed0280c9c774db51f6ba5f8ed7c6a4596362
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: sca
 
 # Add AVX2 codepath for CTR counter handling and XOR
 #   Author:    @randombit
 - pr: 5474  # https://github.com/randombit/botan/pull/5474
   merge_commit: 0f222ba0fe750ef5be11ece1cce46f41642b2c7e
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization
 
 # Add AVX512+GFNI implementation of SEED
 #   Author:    @randombit
 - pr: 5472  # https://github.com/randombit/botan/pull/5472
   merge_commit: 78cf4c1a9624de4435f14510be446c69d318f616
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization
 
 # Add AVX-512 execution of Argon2 function
 #   Author:    @randombit
 - pr: 5471  # https://github.com/randombit/botan/pull/5471
   merge_commit: d430f08deeca9da0cc394d98d84105c8c42abd0d
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization, additions
 
 # Remove SSE2 implementation of ZFEC encoding
 #   Author:    @randombit
 - pr: 5469  # https://github.com/randombit/botan/pull/5469
   merge_commit: 9348bd7a29e7e9187f97c2a8c69ccbe121729401
-  classification: unspecified
+  classification: info 
+  auditer: falko-strenzke
+  categories: chores
 
 # Refactor vperm AES to avoid global constants
 #   Author:    @randombit
 - pr: 5463  # https://github.com/randombit/botan/pull/5463
   merge_commit: 0a06cccccae7902e07a37d930115baa501193625
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: quality
 
 # Disable the macos-15-intel CI jobs
 #   Author:    @randombit
 - pr: 5468  # https://github.com/randombit/botan/pull/5468
   merge_commit: acc941d5a1d4ffd29e3d81278ecf8bcb683f1ff0
-  classification: unspecified
+  classification: out of scope
+  auditer: falko-strenzke
+  categories: ci
 
 # Add Twofish AVX512+GFNI implementation
 #   Author:    @randombit
 - pr: 5465  # https://github.com/randombit/botan/pull/5465
   merge_commit: f33c6ad58bac9636a7cfc4cdc3b34d48de07d95e
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: optimization, additions
 
 # Add some missing dependencies and includes
 #   Author:    @randombit
