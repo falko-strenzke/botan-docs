@@ -766,231 +766,332 @@ patches:
 #   Approvals: (@reneme)
 - pr: 5464  # https://github.com/randombit/botan/pull/5464
   merge_commit: e4cc5ba4018b428650f7fe137a22a05569e30752
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores
 
 # Fix building FFI without bcrypt
 #   Author:    @randombit
 - pr: 5462  # https://github.com/randombit/botan/pull/5462
   merge_commit: 05106c5878e9ae3862a0d63ef61359c40d1f57c3
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores
 
 # Fix various warnings from clang-tidy 22
 #   Author:    @randombit
 - pr: 5456  # https://github.com/randombit/botan/pull/5456
   merge_commit: a7cbacbd5fb755146e5ceffa9bd6684649b75ea4
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality, test
+  comment: Affects CLI tool and test suite, beyond that only one minor change in TLS.
 
 # When testing PK decryption, verify correct ciphertext decrypts after testing mutations
 #   Author:    @randombit
 - pr: 5457  # https://github.com/randombit/botan/pull/5457
   merge_commit: b542ed6768ad71962413d9f42723366d6fe98ff7
-  classification: unspecified
+  classification: info 
+  auditer: falko-strenzke
+  categories: test
 
 # Fix a bug in handling invalid DER ECDSA signatures
 #   Author:    @randombit
 - pr: 5455  # https://github.com/randombit/botan/pull/5455
   merge_commit: 588516d8d8e6a6a0a48bbc9fdaec5086f4d90433
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # test and fix for Ed25519 good-after-bad verify problem
 #   Author:    @falko-strenzke
 #   Approvals: (@randombit)
 - pr: 5454  # https://github.com/randombit/botan/pull/5454
   merge_commit: a2d9ecf60bf9a07250025ed7c90c46eae6829634
-  classification: unspecified
+  classification: critical 
+  auditer: falko-strenzke
+  categories: fixes
+  comment: |
+    Fixes the "good-after-bad signature verification" issue for Ed25519: after an attempt to verify an invalid signature with a specific format, the verifier object remained in a state with a pending message in its internal hasher, thus enabling effectively signature forgeries in this state: the received message would be different from the verified message in this case.
 
 # Add Whirlpool implementation using AVX-512
 #   Author:    @randombit
 - pr: 5453  # https://github.com/randombit/botan/pull/5453
   merge_commit: 66b006cf991c4849393109324a1ab9ff8e3c9ad8
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: optimization
 
 # Update for 3.12.0 release
 #   Author: Jack Lloyd
 - commit: 45d6f286c320b2f2efd5373d195ec88c367e3071  # https://github.com/randombit/botan/commit/45d6f286c320b2f2efd5373d195ec88c367e3071
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Fix another formatting issue [ci skip]
 #   Author: Jack Lloyd
 - commit: 0f9e5326ad584cf14ec0f62225abefecc59fe436  # https://github.com/randombit/botan/commit/0f9e5326ad584cf14ec0f62225abefecc59fe436
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores
 
 # Correct formatting in previous commit [ci skip]
 #   Author: Jack Lloyd
 - commit: 3b29e816016d5b573fc2715aae6c30ac04e84c9b  # https://github.com/randombit/botan/commit/3b29e816016d5b573fc2715aae6c30ac04e84c9b
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores 
 
 # In TLS 1.3 verification of client certs, check the correct extension for OCSP
 #   Author: Jack Lloyd
 - commit: b5f41e29a30bce6a0f630dc02d2c793f97b8e29a  # https://github.com/randombit/botan/commit/b5f41e29a30bce6a0f630dc02d2c793f97b8e29a
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: fixes
+  comment: |
+    Extended commit message is: This was checking if the client asked us (the server) for OCSP, instead of checking if we asked the client for OCSP when we sent the CertificateRequest.
 
 # Avoid potential null deref in Truncated_Hash constructor
 #   Author: Jack Lloyd
 - commit: cd3c00cb542fb6a25bd99e9f9bdb790c3557418e  # https://github.com/randombit/botan/commit/cd3c00cb542fb6a25bd99e9f9bdb790c3557418e
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Fix certificate verification test to not use local clock
 #   Author: Jack Lloyd
 - commit: 3a181697cd4fe9b4b544ff0b8c23da6ed169c53a  # https://github.com/randombit/botan/commit/3a181697cd4fe9b4b544ff0b8c23da6ed169c53a
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: test
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 916f9b582d1bdc5a77183faeb899e2e8dcfc914a  # https://github.com/randombit/botan/commit/916f9b582d1bdc5a77183faeb899e2e8dcfc914a
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Correct TLS::Record_Size_Limit to not use BOTAN_ASSERT for input validation
 #   Author: Jack Lloyd
 - commit: 4f8daeb95d85228a0e0cda21f657325e56cfb0b9  # https://github.com/randombit/botan/commit/4f8daeb95d85228a0e0cda21f657325e56cfb0b9
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Avoid using BOTAN_ASSERT for input validation
 #   Author: Jack Lloyd
 - commit: 40b24c3313358b5ec4e6ac0f4f2e865a7f46924b  # https://github.com/randombit/botan/commit/40b24c3313358b5ec4e6ac0f4f2e865a7f46924b
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Update path for SDE [ci skip]
 #   Author: Jack Lloyd
 - commit: 3ef943741342321a17827aca82fe72a16f021741  # https://github.com/randombit/botan/commit/3ef943741342321a17827aca82fe72a16f021741
-  classification: unspecified
+  classification: out of scope
+  auditer: falko-strenzke
+  categories: ci
 
 # Update SDE download URL and hash to latest version
 #   Author: Jack Lloyd
 - commit: 69b11ce066ec04ad540b7e6c645a87dc6b3341d8  # https://github.com/randombit/botan/commit/69b11ce066ec04ad540b7e6c645a87dc6b3341d8
-  classification: unspecified
+  classification: out of scope 
+  auditer: falko-strenzke
+  categories: ci
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: e33e282671f84e55904ada1e0d4fedf4db689add  # https://github.com/randombit/botan/commit/e33e282671f84e55904ada1e0d4fedf4db689add
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Fix a warning when building for Emscripten
 #   Author: Jack Lloyd
 - commit: 570b415e21d9874f13b0c753fa267f163748e23e  # https://github.com/randombit/botan/commit/570b415e21d9874f13b0c753fa267f163748e23e
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: chores
 
 # Correct both CVE numbers from 3.11.1
 #   Author: Jack Lloyd
 - commit: cdc53c1ee381e6cf62ecc5973c8e49c10abb5e51  # https://github.com/randombit/botan/commit/cdc53c1ee381e6cf62ecc5973c8e49c10abb5e51
-  classification: unspecified
+  classification: critical 
+  auditer: falko-strenzke
+  categories: documentation
 
 # Update release notes, bump version 3.12.0
 #   Author: Jack Lloyd
 - commit: 0fd0090521ad987c8b022d6b3ce7497d149a7076  # https://github.com/randombit/botan/commit/0fd0090521ad987c8b022d6b3ce7497d149a7076
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Add a RFC 5280 reference comment in GeneralSubtree::decode_from
 #   Author: Jack Lloyd
 - commit: 042e5bd9885877408dfd43f00ff1b8d285ba6540  # https://github.com/randombit/botan/commit/042e5bd9885877408dfd43f00ff1b8d285ba6540
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Avoid a timing channel during SM2 decryption
 #   Author: Jack Lloyd
 - commit: f97a85b9b966e6565ebfab806a07165f320227cb  # https://github.com/randombit/botan/commit/f97a85b9b966e6565ebfab806a07165f320227cb
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: sca
+  comment: Not a real SCA vulnerability what is addressed here.
 
 # Remove unused member of Sphincs_Hash_Functions_Shake
 #   Author: Jack Lloyd
 - commit: dcbac288db4abd366dea21adf93230c68c0f9d5b  # https://github.com/randombit/botan/commit/dcbac288db4abd366dea21adf93230c68c0f9d5b
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Simplify the ICV check during unwrap of NIST keywrap with padding
 #   Author: Jack Lloyd
 - commit: 6bc6c5fdea1e87d4d32e4242497cd675b1317dd8  # https://github.com/randombit/botan/commit/6bc6c5fdea1e87d4d32e4242497cd675b1317dd8
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: quality
 
 # Simplify and clean up the SP800-56C One Step KDF implementation
 #   Author: Jack Lloyd
 - commit: 9a78305aa05a72436ebf5b0e99c618375ec4c44e  # https://github.com/randombit/botan/commit/9a78305aa05a72436ebf5b0e99c618375ec4c44e
-  classification: unspecified
+  classification: relevant 
+  auditer: falko-strenzke
+  categories: quality 
 
 # Return early if scrypt is invoked asking for 0 bytes of output
 #   Author: Jack Lloyd
 - commit: e3d827991498eab5e28694971c514249e365104c  # https://github.com/randombit/botan/commit/e3d827991498eab5e28694971c514249e365104c
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Check maximum output length for PBKDF2
 #   Author: Jack Lloyd
 - commit: 3c8422fe1d23620c6c56227295b2440547205598  # https://github.com/randombit/botan/commit/3c8422fe1d23620c6c56227295b2440547205598
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # Check maximum output length for X9.42 PRF
 #   Author: Jack Lloyd
 - commit: 487731b10a6745a68db1612a3fc5b2318824245b  # https://github.com/randombit/botan/commit/487731b10a6745a68db1612a3fc5b2318824245b
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: quality
 
 # In pcurves check that the result in mul_x_only is not the identity
 #   Author: Jack Lloyd
 - commit: 993d01b0cfad803182d5ba8d711fc103c8320bf8  # https://github.com/randombit/botan/commit/993d01b0cfad803182d5ba8d711fc103c8320bf8
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: quality
 
 # Use secure_vector for FrodoKEM's k_bar
 #   Author: Jack Lloyd
 - commit: fc7727a646d1efb482b69a2009bd239be0bccacd  # https://github.com/randombit/botan/commit/fc7727a646d1efb482b69a2009bd239be0bccacd
-  classification: unspecified
+  classification: relevant
+  auditer: falko-strenzke
+  categories: fixes
 
 # Update for 3.11.1
 #   Author: Jack Lloyd
 - commit: 86d105523def181ae833e3aaaf773b1b0c20dda4  # https://github.com/randombit/botan/commit/86d105523def181ae833e3aaaf773b1b0c20dda4
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 11aa82ad14f902cea8a1249f54257f4a963113a1  # https://github.com/randombit/botan/commit/11aa82ad14f902cea8a1249f54257f4a963113a1
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 547c5d7d599ac79da8fea98adc7bf0b337b0d25f  # https://github.com/randombit/botan/commit/547c5d7d599ac79da8fea98adc7bf0b337b0d25f
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
+
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: b79dd0e1761164ebec58861cfb4639e123448e43  # https://github.com/randombit/botan/commit/b79dd0e1761164ebec58861cfb4639e123448e43
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation, build
+
 
 # Properly use double backticks in the hardware accel doc [ci skip]
 #   Author: Jack Lloyd
 - commit: 2b48f42a7334589106e0e11eeb0804333946b03a  # https://github.com/randombit/botan/commit/2b48f42a7334589106e0e11eeb0804333946b03a
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
+
 
 # Update hardware support doc [ci skip]
 #   Author: Jack Lloyd
 - commit: 75ed466c36ac80aa349d261d4c361d14eac162ee  # https://github.com/randombit/botan/commit/75ed466c36ac80aa349d261d4c361d14eac162ee
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
+
 
 # Fix os_utils.cpp compilation when PROT_MAX is supported
 #   Author: Jack Lloyd
 - commit: 60de912fbb5f24bfdd4ddb1fa45ff137d81187df  # https://github.com/randombit/botan/commit/60de912fbb5f24bfdd4ddb1fa45ff137d81187df
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: fixes
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: ca567507d995c2f8eaebeae2bbcaf66c01d79b06  # https://github.com/randombit/botan/commit/ca567507d995c2f8eaebeae2bbcaf66c01d79b06
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Check off a few todo items [ci skip]
 #   Author: Jack Lloyd
 - commit: bbca7965e0b85ccabc5a8cec9392018906269a62  # https://github.com/randombit/botan/commit/bbca7965e0b85ccabc5a8cec9392018906269a62
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Update release notes [ci skip]
 #   Author: Jack Lloyd
 - commit: 8b66858c02f67e0f572f0a37a578059224658d74  # https://github.com/randombit/botan/commit/8b66858c02f67e0f572f0a37a578059224658d74
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Update hardware acceleration doc [ci skip]
 #   Author: Jack Lloyd
 - commit: f93749a2093c674d35af7c62d315695768d0100d  # https://github.com/randombit/botan/commit/f93749a2093c674d35af7c62d315695768d0100d
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Note CBC's inability to process blocks in parallel when encrypting [ci skip]
 #   Author: Jack Lloyd
 - commit: 4a3cb8cacf9fe7d1a7d2d7db17681e9f4c74db1d  # https://github.com/randombit/botan/commit/4a3cb8cacf9fe7d1a7d2d7db17681e9f4c74db1d
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
 
 # Add the CVE IDs assigned to the issues fixed in 3.11.0 [ci skip]
 #   Author: Jack Lloyd
 - commit: 4a421b525a46ccdc165a9646a46ed0fe7d651364  # https://github.com/randombit/botan/commit/4a421b525a46ccdc165a9646a46ed0fe7d651364
-  classification: unspecified
+  classification: info
+  auditer: falko-strenzke
+  categories: documentation
+  comment: Adding 3 CVEs to release notes that have been fixed in 3.11 .
