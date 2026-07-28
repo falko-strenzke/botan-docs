@@ -728,7 +728,7 @@
       "categories": [
         "quality"
       ],
-      "comment": "Per AI-review, this PR closes a real vulnerability in the TLS layer. See appendix."
+      "comment": "This PR fixes the vulnerability described in CVE-2026-34582, see https://github.com/openembedded/meta-openembedded/commit/1f8d2c36c01e9290507f492a1ed7c4a527f64d1d."
     },
     {
       "title": "Add missing check on TLS 1.3 ClientHello legacy_version",
