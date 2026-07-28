@@ -88,6 +88,7 @@ reviewed:
 
 .. list-table::
 
+
    * - aead
      - aes
      - aes_armv8
@@ -162,107 +163,107 @@ reviewed:
      - hss_lms
    * - http_util
      - hybrid_kem
+     - ip_address
      - iso9796
-     - jitter_rng
-   * - kdf
+   * - jitter_rng
+     - kdf
      - kdf1_iso18033
      - keccak_perm
-     - keccak_perm_bmi2
-   * - kex_to_kem_adapter
+   * - keccak_perm_bmi2
+     - kex_to_kem_adapter
      - keypair
      - kmac
-     - kyber_common
-   * - locking_allocator
+   * - kyber_common
+     - locking_allocator
      - mac
      - mdx_hash
-     - mem_pool
-   * - mgf1
+   * - mem_pool
+     - mgf1
      - ml_dsa
      - ml_kem
-     - mode_pad
-   * - modes
+   * - mode_pad
+     - modes
      - mp
      - nist_keywrap
-     - numbertheory
-   * - os_utils
+   * - numbertheory
+     - os_utils
      - pbkdf
      - pcurves
-     - pcurves_brainpool256r1
-   * - pcurves_brainpool384r1
+   * - pcurves_brainpool256r1
+     - pcurves_brainpool384r1
      - pcurves_brainpool512r1
      - pcurves_frp256v1
-     - pcurves_generic
-   * - pcurves_impl
+   * - pcurves_generic
+     - pcurves_impl
      - pcurves_numsp512d1
      - pcurves_secp192r1
-     - pcurves_secp224r1
-   * - pcurves_secp256k1
+   * - pcurves_secp224r1
+     - pcurves_secp256k1
      - pcurves_secp256r1
      - pcurves_secp384r1
-     - pcurves_secp521r1
-   * - pcurves_sm2p256v1
+   * - pcurves_secp521r1
+     - pcurves_sm2p256v1
      - pem
      - pkcs11
-     - poly_dbl
-   * - pqcrystals
+   * - poly_dbl
+     - pqcrystals
      - prf_tls
      - processor_rng
-     - pubkey
-   * - rdseed
+   * - pubkey
+     - rdseed
      - rng
      - rsa
-     - sha1
-   * - sha1_armv8
+   * - sha1
+     - sha1_armv8
      - sha1_x86
      - sha2_32
-     - sha2_32_armv8
-   * - sha2_32_avx2
+   * - sha2_32_armv8
+     - sha2_32_avx2
      - sha2_32_simd
      - sha2_32_x86
-     - sha2_64
-   * - sha2_64_armv8
+   * - sha2_64
+     - sha2_64_armv8
      - sha2_64_avx2
      - sha2_64_avx512
-     - sha2_64_x86
-   * - sha3
+   * - sha2_64_x86
+     - sha3
      - shake
      - shake_xof
-     - sig_padding
-   * - simd_2x64
+   * - sig_padding
+     - simd_2x64
      - simd_4x32
      - simd_4x64
-     - simd_8x64
-   * - simd_avx2
+   * - simd_8x64
+     - simd_avx2
      - slh_dsa_sha2
      - slh_dsa_shake
-     - socket
-   * - sp800_108
+   * - socket
+     - sp800_108
      - sp800_56c
      - sphincsplus_common
-     - sphincsplus_sha2_base
-   * - sphincsplus_shake_base
+   * - sphincsplus_sha2_base
+     - sphincsplus_shake_base
      - sponge
      - stateful_key_index
-     - stateful_rng
-   * - stream
+   * - stateful_rng
+     - stream
      - system_rng
      - tls
-     - tls12
-   * - tls13
+   * - tls12
+     - tls13
      - tls13_pqc
      - tls_cbc
-     - tpm2
-   * - tpm2_crypto_backend
+   * - tpm2
+     - tpm2_crypto_backend
      - tpm2_ecc
      - tpm2_rsa
-     - tree_hash
-   * - trunc_hash
+   * - tree_hash
+     - trunc_hash
      - utils
      - x509
-     - xmss
-   * - xof
+   * - xmss
+     - xof
      - xts
-     -
      -
 
 Here are some notable module changes compared to the last review (Botan |botan_git_base_ref|):
@@ -271,13 +272,13 @@ Here are some notable module changes compared to the last review (Botan |botan_g
    the modules that were removed and added compared to |botan_git_base_ref|
    here (see the instructions in the comment above the table).
 
-* The following modules were removed in Botan |botan_version|:
+* The following modules were removed in Botan |botan_version|: None
 
-  - (TODO: to be determined during the review)
+   
 
 * The following modules were added in Botan |botan_version|:
 
-  - (TODO: to be determined during the review)
+  - ip_address
 
 Patch Description Content
 -------------------------
