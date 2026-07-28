@@ -56,7 +56,7 @@
       "author": "@randombit",
       "pr": 5574,
       "merge_commit": "1b346237d8ba93bf4eec1f44d3995774d8018bf8",
-      "classification": "info",
+      "classification": "relevant",
       "auditer": "falko-strenzke",
       "categories": [
         "quality"
