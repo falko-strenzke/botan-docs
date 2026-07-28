@@ -190,7 +190,8 @@
       "classification": "critical",
       "auditer": "falko-strenzke",
       "categories": [
-        "fixes"
+        "fixes",
+        "pki"
       ],
       "comment": "Closes two security issues with OCSP responses: 1. Refusing of responses with unknown critical extensions. 2. Enforcing correct EKU for OCSP-signers.\n"
     },
@@ -329,7 +330,8 @@
       "classification": "relevant",
       "auditer": "falko-strenzke",
       "categories": [
-        "fixes"
+        "fixes",
+        "pki"
       ],
       "comment": "Addresses among other things the scope of CRL via the issuing distributions points extension."
     },
@@ -353,7 +355,8 @@
       "auditer": "falko-strenzke",
       "categories": [
         "optimization",
-        "quality"
+        "quality",
+        "pki"
       ]
     },
     {
@@ -364,7 +367,8 @@
       "classification": "relevant",
       "auditer": "falko-strenzke",
       "categories": [
-        "additions"
+        "additions",
+        "pki"
       ]
     },
     {
@@ -386,7 +390,8 @@
       "classification": "relevant",
       "auditer": "falko-strenzke",
       "categories": [
-        "fixes"
+        "fixes",
+        "pki"
       ]
     },
     {
@@ -661,7 +666,8 @@
       "classification": "info",
       "auditer": "falko-strenzke",
       "categories": [
-        "quality"
+        "quality",
+        "pki"
       ]
     },
     {
@@ -683,7 +689,8 @@
       "classification": "info",
       "auditer": "falko-strenzke",
       "categories": [
-        "quality"
+        "quality",
+        "pki"
       ]
     },
     {
@@ -694,7 +701,8 @@
       "classification": "info",
       "auditer": "falko-strenzke",
       "categories": [
-        "quality"
+        "quality",
+        "pki"
       ]
     },
     {
