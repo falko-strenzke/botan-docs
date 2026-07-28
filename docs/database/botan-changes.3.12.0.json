@@ -1250,7 +1250,7 @@
       "title": "Correct both CVE numbers from 3.11.1",
       "author": "Jack Lloyd",
       "commit": "cdc53c1ee381e6cf62ecc5973c8e49c10abb5e51",
-      "classification": "critical",
+      "classification": "info",
       "auditer": "falko-strenzke",
       "categories": [
         "documentation"
