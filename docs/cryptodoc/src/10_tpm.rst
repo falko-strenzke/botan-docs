@@ -32,7 +32,7 @@ TPM Context
 The TPM context is the main entry point to the TPM functionality. It is required
 for virtually all TPM operations. The context is created by calling
 :srcref:`Botan::TPM_Context::create
-<src/lib/prov/tpm2/tpm2_context.h>` and provides access to the TPM's
+<src/lib/prov/tpm2/tpm2_context.h:52|create>` and provides access to the TPM's
 capabilities and fundamental key management operations.
 
 .. admonition:: TPM2::Context::create()
@@ -163,7 +163,7 @@ Botan provides such a "crypto backend" to form a self-contained TPM wrapper that
 does not depend on any other cryptographic library.
 
 See
-:srcref:`[src/lib/prov/tpm2/tpm2_crypto_backend]/tpm2_crypto_backend_impl.cpp`
+:srcref:`[src/lib/prov/tpm2/tpm2_crypto_backend]/tpm2_crypto_backend_impl.cpp:861|set_crypto_callbacks`
 for the implementation of the crypto backend.
 
 
@@ -198,8 +198,8 @@ overview of the functionality without distinguishing between RSA and ECC keys.
 
    **Code:**
 
-   - RSA: :srcref:`TPM2::RSA_PrivateKey::create_unrestricted_transient <src/lib/prov/tpm2/tpm2_rsa/tpm2_rsa.cpp>`
-   - ECDSA: :srcref:`TPM2::ECDSA_PrivateKey::create_unrestricted_transient <src/lib/prov/tpm2/tpm2_ecc/tpm2_ecc.cpp>`
+   - RSA: :srcref:`TPM2::RSA_PrivateKey::create_unrestricted_transient <src/lib/prov/tpm2/tpm2_rsa/tpm2_rsa.cpp:68|create_unrestricted_transient>`
+   - ECDSA: :srcref:`TPM2::ECDSA_PrivateKey::create_unrestricted_transient <src/lib/prov/tpm2/tpm2_ecc/tpm2_ecc.cpp:61|create_unrestricted_transient>`
 
    **Input:**
 
@@ -224,7 +224,7 @@ overview of the functionality without distinguishing between RSA and ECC keys.
 
    **Code:**
 
-   - :srcref:`TPM2::PrivateKey::load_transient <src/lib/prov/tpm2/tpm2_key.cpp>`
+   - :srcref:`TPM2::PrivateKey::load_transient <src/lib/prov/tpm2/tpm2_key.cpp:187|load_transient>`
 
    **Input:**
 
@@ -249,7 +249,7 @@ overview of the functionality without distinguishing between RSA and ECC keys.
 
    **Code:**
 
-   - :srcref:`TPM2::PrivateKey::load_persistent <src/lib/prov/tpm2/tpm2_key.cpp>`
+   - :srcref:`TPM2::PrivateKey::load_persistent <src/lib/prov/tpm2/tpm2_key.cpp:177|load_persistent>`
 
    **Input:**
 
@@ -301,7 +301,7 @@ here.
          2. ``Esys_SequenceUpdate(ctx, hash_obj, sessions, data)``
          3. ``(digest, validation_ticket) = Esys_SequenceComplete(ctx, hash_obj, sessions)``
 
-   2. ``sig = Esys_Sign(ctx, key, sessions, digest, validation_ticket)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_pkops.cpp`)
+   2. ``sig = Esys_Sign(ctx, key, sessions, digest, validation_ticket)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_pkops.cpp:51|sign`)
    3. Marshal the signature into its canonical byte encoding
    4. Return the signature
 
@@ -324,7 +324,7 @@ here.
 
    1. Calculate the digest of ``data`` using Botan's software implementation of ``hash_name``
    2. Unmarshal the signature from bytes into a ``TPMT_SIGNATURE`` object
-   3. ``valid = Esys_Verify(ctx, key, sessions, digest, signature)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_pkops.cpp`)
+   3. ``valid = Esys_Verify(ctx, key, sessions, digest, signature)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_pkops.cpp:103|is_valid_signature`)
    4. Return ``valid`` (either ``true`` or ``false``)
 
 
@@ -350,7 +350,7 @@ supported at the moment.
 
    **Steps:**
 
-   1. ``ciphertext = Esys_RSA_Encrypt(ctx, key, sessions, padding, plaintext)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_rsa/tpm2_rsa.cpp`)
+   1. ``ciphertext = Esys_RSA_Encrypt(ctx, key, sessions, padding, plaintext)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_rsa/tpm2_rsa.cpp:269|encrypt`)
    2. Return the ciphertext
 
 .. admonition:: Decryption
@@ -369,5 +369,5 @@ supported at the moment.
 
    **Steps:**
 
-   1. ``plaintext = Esys_RSA_Decrypt(ctx, key, sessions, padding, ciphertext)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_rsa/tpm2_rsa.cpp`)
+   1. ``plaintext = Esys_RSA_Decrypt(ctx, key, sessions, padding, ciphertext)`` (see :srcref:`[src/lib/prov/tpm2]/tpm2_rsa/tpm2_rsa.cpp:352|decrypt`)
    2. Return the plaintext
