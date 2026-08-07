@@ -75,7 +75,7 @@ parameters:
 
 These restrictions are compatible with the main recommendations from [ReqEC]_
 and checked during the construction of any custom `EC_Group` (see
-:srcref:`[src/lib/pubkey/ec_group]/ec_group.cpp:414|EC_Group`). Previous
+:srcref:`[src/lib/pubkey/ec_group]/ec_group.cpp:503|EC_Group`). Previous
 versions of the library had more liberal restrictions on the custom group
 parameters, but those are now deprecated. Particularly, the restriction on
 the cofactor is new and in the future custom curves with a cofactor not
@@ -129,28 +129,28 @@ consult the implementations linked in the table below.
    | (:srcref:`code <[src/lib/math/pcurves]/pcurves.h>`)                                                 |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``AffineCurvePoint``                                                                                | Curve specific representation of an affine point with coordinates :math:`x,y \in \mathbb{F}_p`.                                                                                                                                                      |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:706|AffineCurvePoint>`)          |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:909|AffineCurvePoint>`)          |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``ProjectiveCurvePoint``                                                                            | Curve-specific implementation of a projective point using Jacobian coordinates :math:`x,y,z \in \mathbb{F}_p`. Provides foundational point algorithms, such as addition and doubling.                                                                |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:879|ProjectiveCurvePoint>`)      |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1000|ProjectiveCurvePoint>`)     |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``IntMod``                                                                                          | Curve-specific representation of an integer modulo a prime (either :math:`p` for field elements, or :math:`n` for scalar arithmetics). Provides foundational modular arithmetics algorithms and a customization point for curve-specific reductions. |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:145|IntMod>`)                    |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:163|IntMod>`)                    |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``EllipticCurve``                                                                                   | Trait type for the concrete elliptic curve, its parameters and helper structures. Provides customization points for curve-specific field inversion algorithms.                                                                                       |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1271|EllipticCurve>`)            |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1228|EllipticCurve>`)            |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``BlindedScalarBits``                                                                               | Allows randomizing the representation of a scalar :math:`k` by adding the curve's prime order :math:`n` random :math:`m` times (:math:`k + n \cdot m`).                                                                                              |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1450|BlindedScalarBits>`)        |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1293|BlindedScalarBits>`)        |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``PrecomputedBaseMulTable``                                                                         | Represents a precomputed multiplication table to perform window multiplication by :math:`G`. The table is precomputed using a sequence of point additions of successive powers of the base point in a comb-like technique.                           |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1605|PrecomputedBaseMulTable>`)  |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1390|PrecomputedBaseMulTable>`)  |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``WindowedMulTable``                                                                                | Allows precomputing a multiplication table for generic point multiplication using a fixed window of some bit length :math:`W`. Then the usage of this precomputed table uses only double and add operations.                                         |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1693|WindowedMulTable>`)         |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1422|WindowedMulTable>`)         |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ``WindowedMul2Table``                                                                               | Allows precomputing a multiplication table for 2-ary point multiplication as a windowed variant of "Shamir's Trick" of some window bit length :math:`W`.                                                                                             |
-   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1805|WindowedMul2Table>`)        |                                                                                                                                                                                                                                                      |
+   | (:srcref:`code <[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1538|WindowedMul2Table>`)        |                                                                                                                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Fundamental Elliptic Curve Algorithms
@@ -160,9 +160,9 @@ Point Addition
 ~~~~~~~~~~~~~~
 
 Implementations are provided for mixed projective and affine additions (see
-:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:958|add_mixed`) and
+:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1091|add_mixed`) and
 projective-projective additions (see
-:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1009|add`). Both
+:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1103|add`). Both
 follow the suggestions in [EFD]_.
 
 Point Doubling
@@ -170,9 +170,9 @@ Point Doubling
 
 Point doubling is implemented following the suggestions in [EFD]_ with
 optimizations for curves with :math:`a = -3` or :math:`a = 0` (see
-:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1135|dbl`).
+:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1121|dbl`).
 Additionally, iterated point doubling is provided (see
-:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1065|dbl_n`) with
+:srcref:`[src/lib/math/pcurves/pcurves_impl]/pcurves_impl.h:1108|dbl_n`) with
 similar special treatment for curves with :math:`a = -3` or :math:`a = 0`.
 
 .. _pubkey/ecc/scalar_mul:
@@ -226,7 +226,7 @@ Key Generation
 
 Botan provides the elliptic curve private key class ``EC_PrivateKey``, the
 respective public key class ``EC_PublicKey``, and the key generation algorithm
-in :srcref:`src/lib/pubkey/ecc_key/ecc_key.cpp:140|EC_PrivateKey`. To generate a
+in :srcref:`src/lib/pubkey/ecc_key/ecc_key.cpp:141|EC_PrivateKey`. To generate a
 private key the constructor ``EC_PrivateKey(RandomNumberGenerator& rng, const
 EC_Group& ec_group, bool with_modular_inverse)`` is called. The constructor
 operates as follows:
@@ -286,7 +286,7 @@ Key Agreement
 ^^^^^^^^^^^^^
 
 The shared secret is computed in
-:srcref:`[src/lib/pubkey/ecdh]/ecdh.cpp:35|raw_agree`. The algorithm receives
+:srcref:`[src/lib/pubkey/ecdh]/ecdh.cpp:37|raw_agree`. The algorithm receives
 the public point of the other party and computes the shared secret as follows:
 
 .. admonition:: ``ECDH_KA_Operation::raw_agree()``
@@ -338,7 +338,7 @@ Signature Creation
 ^^^^^^^^^^^^^^^^^^
 
 The signature generation algorithm works as follows (see
-:srcref:`[src/lib/pubkey/ecdsa]/ecdsa.cpp:162|raw_sign`):
+:srcref:`[src/lib/pubkey/ecdsa]/ecdsa.cpp:163|raw_sign`):
 
 .. admonition:: ``ECDSA_Signature_Operation::raw_sign()``
 
@@ -398,7 +398,7 @@ Signature Verification
 ^^^^^^^^^^^^^^^^^^^^^^
 
 The signature verification algorithm works as follows (see
-:srcref:`[src/lib/pubkey/ecdsa]/ecdsa.cpp:214|verify`):
+:srcref:`[src/lib/pubkey/ecdsa]/ecdsa.cpp:230|verify`):
 
 .. admonition:: ``ECDSA_Verification_Operation::verify()``
 
@@ -448,7 +448,7 @@ Signature Creation
 ^^^^^^^^^^^^^^^^^^
 
 The signature generation algorithm works as follows (see
-:srcref:`[src/lib/pubkey/eckcdsa]/eckcdsa.cpp:163|raw_sign`):
+:srcref:`[src/lib/pubkey/eckcdsa]/eckcdsa.cpp:164|raw_sign`):
 
 .. admonition:: ``ECKCDSA_Signature_Operation::raw_sign()``
 
@@ -482,7 +482,7 @@ Signature Verification
 ^^^^^^^^^^^^^^^^^^^^^^
 
 The signature verification algorithm works as follows (see
-:srcref:`[src/lib/pubkey/eckcdsa]/eckcdsa.cpp:235|verify`):
+:srcref:`[src/lib/pubkey/eckcdsa]/eckcdsa.cpp:236|verify`):
 
 .. admonition:: ``ECKCDSA_Verification_Operation::verify()``
 

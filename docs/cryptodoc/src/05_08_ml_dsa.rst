@@ -164,37 +164,37 @@ encoding functionality from [FIPS-204]_ Section 7.1.
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
    | Function                                                                                                                              | Description                                                                                | [FIPS-204]_ |
    +=======================================================================================================================================+============================================================================================+=============+
-   | :srcref:`encode_public_key <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:327|encode_public_key>`                   | Byte encoding of a public key                                                              | Alg. 22     |
+   | :srcref:`encode_public_key <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:330|encode_public_key>`                   | Byte encoding of a public key                                                              | Alg. 22     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`decode_public_key <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:345|decode_public_key>`                   | Decoding a public key from bytes                                                           | Alg. 23     |
+   | :srcref:`decode_public_key <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:348|decode_public_key>`                   | Decoding a public key from bytes                                                           | Alg. 23     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`encode_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:368|encode_keypair>` [#dilithium_comp]_      | Byte encoding of a private key                                                             | Alg. 24     |
+   | :srcref:`encode_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:371|encode_keypair>` [#dilithium_comp]_      | Byte encoding of a private key                                                             | Alg. 24     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`decode_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:409|decode_keypair>` [#dilithium_comp]_      | Decoding a private key from bytes                                                          | Alg. 25     |
+   | :srcref:`decode_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:412|decode_keypair>` [#dilithium_comp]_      | Decoding a private key from bytes                                                          | Alg. 25     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`encode_signature <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:474|encode_signature>`                     | Byte encoding of a signature                                                               | Alg. 26     |
+   | :srcref:`encode_signature <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:477|encode_signature>`                     | Byte encoding of a signature                                                               | Alg. 26     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`decode_signature <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:493|decode_signature>`                     | Decoding a signature from bytes                                                            | Alg. 27     |
+   | :srcref:`decode_signature <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:496|decode_signature>`                     | Decoding a signature from bytes                                                            | Alg. 27     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`encode_commitment <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:518|encode_commitment>`                   | Byte encoding of a commitment                                                              | Alg. 28     |
+   | :srcref:`encode_commitment <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:521|encode_commitment>`                   | Byte encoding of a commitment                                                              | Alg. 28     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`sample_in_ball <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:532|sample_in_ball>`                         | Sample a challenge from the commitment hash                                                | Alg. 29     |
+   | :srcref:`sample_in_ball <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:535|sample_in_ball>`                         | Sample a challenge from the commitment hash                                                | Alg. 29     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`expand_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:665|expand_keypair>`                         | Expand a private key from a seed :math:`\xi`                                               | Alg. 6      |
+   | :srcref:`expand_keypair <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:668|expand_keypair>`                         | Expand a private key from a seed :math:`\xi`                                               | Alg. 6      |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`expand_A <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:695|expand_A>`                                     | Expand matrix :math:`A` from a seed :math:`\rho`                                           | Alg. 32     |
+   | :srcref:`expand_A <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:698|expand_A>`                                     | Expand matrix :math:`A` from a seed :math:`\rho`                                           | Alg. 32     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`expand_s <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:708|expand_s>`                                     | Expand vectors :math:`s_1` and :math:`s_2` from a seed :math:`\rho`                        | Alg. 33     |
+   | :srcref:`expand_s <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:711|expand_s>`                                     | Expand vectors :math:`s_1` and :math:`s_2` from a seed :math:`\rho`                        | Alg. 33     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`expand_mask <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:728|expand_mask>`                               | Samples a vector :math:`y` from a seed :math:`\rho'` and a nonce :math:`\kappa`            | Alg. 34     |
+   | :srcref:`expand_mask <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:731|expand_mask>`                               | Samples a vector :math:`y` from a seed :math:`\rho'` and a nonce :math:`\kappa`            | Alg. 34     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`decompose <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:819|decompose>`                                   | Decompose coefficients in a vector :math:`w` into high and low bits                        | Alg. 36     |
+   | :srcref:`decompose <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:822|decompose>`                                   | Decompose coefficients in a vector :math:`w` into high and low bits                        | Alg. 36     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`make_hint <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:843|make_hint>`                                   | Allows the signer to compress the signature                                                | Alg. 39     |
+   | :srcref:`make_hint <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:846|make_hint>`                                   | Allows the signer to compress the signature                                                | Alg. 39     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`use_hint <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:918|use_hint>`                                     | Lets the verifier decompress the signature                                                 | Alg. 40     |
+   | :srcref:`use_hint <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:921|use_hint>`                                     | Lets the verifier decompress the signature                                                 | Alg. 40     |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
-   | :srcref:`infinity_norm_within_bound <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:936|infinity_norm_within_bound>` | Given vector :math:`v` and :math:`bound`, validates that :math:`\|v\|_{\infty} \geq bound` | n/a         |
+   | :srcref:`infinity_norm_within_bound <[src/lib/pubkey/dilithium/dilithium_common]/dilithium_algos.cpp:939|infinity_norm_within_bound>` | Given vector :math:`v` and :math:`bound`, validates that :math:`\|v\|_{\infty} \geq bound` | n/a         |
    +---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+-------------+
 
 .. [#dilithium_comp] The private key encoding and decoding functions are used
@@ -214,11 +214,11 @@ To allow sharing significant portions of the ML-DSA implementation with the
 pre-standard Dilithium and Dilithium-AES algorithms that Botan currently keeps
 supporting, these primitives are accessible via the polymorphic base classes
 :srcref:`Dilithium_Symmetric_Primitives_Base
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:101|Dilithium_Symmetric_Primitives_Base>`,
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:96|Dilithium_Symmetric_Primitives_Base>`,
 :srcref:`DilithiumXOF
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:89|DilithiumXOF>`,
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:84|DilithiumXOF>`,
 and :srcref:`DilithiumMessageHash
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:31|DilithiumMessageHash>`.
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:28|DilithiumMessageHash>`.
 
 The concrete implementations relevant for ML-DSA may
 be found in :srcref:`[src/lib/pubkey/dilithium]/ml_dsa/ml_dsa_impl.h` and
@@ -276,9 +276,9 @@ Public API
 ^^^^^^^^^^
 
 The :srcref:`Dilithium_PublicKey
-<src/lib/pubkey/dilithium/dilithium_common/dilithium.h:67|Dilithium_PublicKey>`
+<src/lib/pubkey/dilithium/dilithium_common/dilithium.h:68|Dilithium_PublicKey>`
 and :srcref:`Dilithium_PrivateKey
-<src/lib/pubkey/dilithium/dilithium_common/dilithium.h:115|Dilithium_PrivateKey>`
+<src/lib/pubkey/dilithium/dilithium_common/dilithium.h:112|Dilithium_PrivateKey>`
 classes serve as Botan's public API for public and private ML-DSA keys,
 respectively. The :srcref:`DilithiumMode
 <src/lib/pubkey/dilithium/dilithium_common/dilithium.h:21|DilithiumMode>` class
@@ -315,7 +315,7 @@ Algorithm 1, is available in the constructor of :srcref:`Dilithium_PrivateKey
 <src/lib/pubkey/dilithium/dilithium_common/dilithium.cpp:406|Dilithium_PrivateKey>`.
 This mostly delegates the actual key generation to the internal function
 :srcref:`expand_keypair
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:665|expand_keypair>`
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:668|expand_keypair>`
 that follows [FIPS-204]_ Section 6.1 Algorithm 6.
 
 .. admonition:: Dilithium_PrivateKey::Dilithium_PrivateKey / Dilithium_Algos::expand_keypair
@@ -336,10 +336,10 @@ that follows [FIPS-204]_ Section 6.1 Algorithm 6.
    2. ``(rho, rho', K) = H(xi)`` (32, 64, and 32 bytes respectively)
    3. Sample matrix ``A_hat`` from ``rho`` using ``expand_A``
    4. Sample vectors ``s_1`` and ``s_2`` from ``rho'`` using ``expand_s``
-   5. Calculate ``(t_1, t_0)`` from ``A_hat``, ``s_1``, and ``s_2`` using ``compute_t1_and_t0`` (see :srcref:`here <src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:310|compute_t1_and_t0>`)
+   5. Calculate ``(t_1, t_0)`` from ``A_hat``, ``s_1``, and ``s_2`` using ``compute_t1_and_t0`` (see :srcref:`here <src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:313|compute_t1_and_t0>`)
 
       1. ``t = ntt_inverse(A_hat * ntt(s_1)) + s_2``
-      2. ``(t_1, t_0) = power2round(t)`` (see :srcref:`here <src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:746|power2round>`)
+      2. ``(t_1, t_0) = power2round(t)`` (see :srcref:`here <src/lib/pubkey/dilithium/dilithium_common/dilithium_algos.cpp:749|power2round>`)
 
    6. ``pk = (rho, t_1)`` and ``sk = (xi, K, s_1, s_2, t_0)``
 
@@ -362,7 +362,7 @@ implemented in :srcref:`Dilithium_Signature_Operation::sign
 <src/lib/pubkey/dilithium/dilithium_common/dilithium.cpp:153|sign>` with the
 preparation of the message representative ``mu`` being done in
 :srcref:`DilithiumMessageHash
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:31|DilithiumMessageHash>`.
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:28|DilithiumMessageHash>`.
 
 .. admonition:: Dilithium_Signature_Operation::sign
 
@@ -428,7 +428,7 @@ implemented in :srcref:`Dilithium_Verification_Operation::is_valid_signature
 <src/lib/pubkey/dilithium/dilithium_common/dilithium.cpp:269|is_valid_signature>`
 with the preparation of the message representative ``mu`` being done in
 :srcref:`DilithiumMessageHash
-<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:31|DilithiumMessageHash>`.
+<src/lib/pubkey/dilithium/dilithium_common/dilithium_symmetric_primitives.h:28|DilithiumMessageHash>`.
 
 .. admonition:: Dilithium_Verification_Operation::is_valid_signature
 
