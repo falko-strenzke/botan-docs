@@ -402,7 +402,10 @@ Stateful_Key_Index_Registry
 Handling the safe and persistent state update of XMSS private keys is crucial.
 Botan manages the XMSS private key states in a ``Stateful_Key_Index_Registry``, a
 thread-safe "Singleton" object. That way, XMSS private key states are kept in
-a centrally managed location during application execution.
+a centrally managed location during application execution. The implementations is found in the files
+
+- :srcref:`src/lib/pubkey/stateful_key_index/stateful_key_index_registry.h`
+- :srcref:`src/lib/pubkey/stateful_key_index/stateful_key_index_registry.cpp`
 
 The ``Stateful_Key_Index_Registry`` singleton provides the following methods::
 
