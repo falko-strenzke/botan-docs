@@ -464,7 +464,7 @@ to use the same XMSS private key in multiple threads of the same process. A new
 private key calling ``Stateful_Key_Index_Registry::reserve_next_index()`` for the first time lazily initializes the state
 variable to "0".
 
-When serializing private keys (using ``XMSS_PrivateKey::private_key_bits()``)
+When serializing private keys (using ``XMSS_PrivateKey::private_key_bits()``),
 the next unused WOTS+ leaf index is persisted (using ``Stateful_Key_Index_Registry::current_index()``) along with the private key data.
 Loading a private key from a serialized buffer will initialize the leaf index in
 the registry object.
