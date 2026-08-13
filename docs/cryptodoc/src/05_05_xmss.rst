@@ -456,7 +456,7 @@ Here the ``KeyId`` is defined as follows::
 
 For XMSS, the ``algo_name`` is ``"XMSS"``, the ``algo_params`` is the OID value, and ``key_material_1`` is the private seed, and ``key_material_2`` is the PRF.
 The parameters uniquely identify the managed XMSS private key and the ``Stateful_Key_Index_Registry::reserve_next_index()`` method
-returns a safe-to-use leaf index and ensures atomically increasing the state for the next call.
+returns a safe-to-use leaf index and ensures atomic incrementation of the state for the next call.
 The signing algorithm now manipulates the XMSS state as needed *before* actually
 signing with the respective WOTS+ leaf.
 Since the state is manipulated with atomic memory access operations, it is safe
