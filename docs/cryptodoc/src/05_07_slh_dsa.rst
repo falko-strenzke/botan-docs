@@ -11,7 +11,7 @@ BSI's [TR-02102-1]_ recommends using SLH-DSA in "hedged" mode with the parameter
 sets that fulfill NIST's category 3 and 5 ("192" or "256", with both SHA2 or
 SHAKE and either fast or small). Hash-based signatures are considered secure for
 long-term secure authentication and are not required to be used in a hybrid form
-with a classical signature method.
+with a traditional signature method.
 
 Algorithm Internals
 -------------------
