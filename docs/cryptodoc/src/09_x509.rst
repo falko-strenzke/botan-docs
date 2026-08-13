@@ -887,7 +887,11 @@ in Step 3c), the revocation-related restrictions are relaxed: no revocation
 information is required for the responder certificate and no OCSP requests
 are made for it, as discussed at the beginning of this section.
 
-**Remark 2:** The function evaluate_ocsp_response() is called from the following API functions:``PKIX::check_ocsp()``: It receives as input OCSP responses and it evaluates them per certificate. ``x509_path_validate()``: pass responses via the trailing ``ocsp_resp`` parameter. ``PKIX::check_ocsp_online()`` (guarded by ``BOTAN_HAS_ONLINE_REVOCATION_CHECKS``): fetches responses over HTTP and then calls ``check_ocsp()``
+**Remark 2:** The function evaluate_ocsp_response() is called from the following API functions:
+
+- ``PKIX::check_ocsp()``: It receives as input OCSP responses and it evaluates them per certificate. 
+- ``x509_path_validate()``: pass responses via the trailing ``ocsp_resp`` parameter. 
+- ``PKIX::check_ocsp_online()`` (guarded by ``BOTAN_HAS_ONLINE_REVOCATION_CHECKS``): fetches responses over HTTP and then calls ``check_ocsp()``
   
 
 Function status_for()
