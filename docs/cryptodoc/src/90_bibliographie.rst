@@ -247,6 +247,11 @@
    https://www.rfc-editor.org/info/rfc9106,
    September 2021
 
+.. [RFC9881] J. Massimo, P. Kampanakis, S. Turner, and B. E. Westerbaan: RFC 9881:
+   "Internet X.509 Public Key Infrastructure -- Algorithm Identifiers for the
+   Module-Lattice-Based Digital Signature Algorithm (ML-DSA)"
+   https://datatracker.ietf.org/doc/html/rfc9881
+
 .. [draft-fluhrer-11] S. Fluhrer, Q. Dang, Cisco Systems, NIST: Internet-Draft draft-fluhrer-lms-more-parm-sets-11:
    "Additional Parameter sets for HSS/LMS Hash-Based Signatures",
    https://datatracker.ietf.org/doc/draft-fluhrer-lms-more-parm-sets/11/,

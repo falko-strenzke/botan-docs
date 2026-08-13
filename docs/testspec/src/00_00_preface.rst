@@ -4,7 +4,8 @@ Preface
 **Summary**
 
 This document has been created as part of Project P663 issued by the German Federal Office for
-Information Security (BSI).  The aim of this project is the enhancement and maintenance of the Botan
+Information Security (BSI) and is based on the cryptographic documentation written as part of the previous Projects P197 and P481 of BSI. 
+  The aim of P663 is the enhancement and maintenance of the
 cryptographic library `Botan <https://github.com/randombit/botan>`_.  Botan provides building blocks
 for a wide range of modern cryptographic applications.
 

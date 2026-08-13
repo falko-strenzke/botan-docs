@@ -4,7 +4,8 @@ Preface
 **Summary**
 
 This document has been created as part of Project P663 issued by the German Federal Office for
-Information Security (BSI).  The aim of this project is the enhancement and maintenance of the Botan
+Information Security (BSI) and is based on the cryptographic documentation written as part of the previous Projects P197 and P481 of BSI. 
+The aim of P663 is the enhancement and maintenance of the Botan
 cryptographic library `Botan <https://github.com/randombit/botan>`_.  Botan provides building blocks
 for a wide range of modern cryptographic applications.
 
@@ -17,12 +18,15 @@ This document describes the cryptographic implementations in Botan.
 
 The following persons are authors of previous versions of this document pertaining to earlier Botan releases. Parts of the document text and the tooling used to create the version at hand have been authored by them.
 
-| Fabian Albert (FA), Rohde & Schwarz Cybersecurity
-| René Meusel (RM), Rohde & Schwarz Cybersecurity
-| Tudor Soroceanu (TS), Fraunhofer AISEC
-| Amos Treiber (AT), Rohde & Schwarz Cybersecurity
-| Andreas Seelos-Zankl (ASZ), Fraunhofer AISEC
-| Alexander Wagner (AW), Fraunhofer AISEC
+| René Fischer (RK)
+| Juraj Somorovsky (JSo)
+| Tobias Niemann (TN)
+| Fabian Weißberg (FW)
+| Sergii Cherkavskyi (SC)
+| Philippe Lieser (PL)
+| René Meusel (RM)
+| Amos Treiber (AT)
+| Fabian Albert (FA)
 
 **Authors**
 
