@@ -319,7 +319,7 @@ In combination, Botan does the following:
 
    **Notes:**
 
-   - Step 1 corresponds to Algorithm 19 of [FIPS-203]_ and is performed in
+   - Step 1 is part of Algorithm 19 of [FIPS-203]_ and is performed in
      :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber.cpp:219|Kyber_PrivateKey::Kyber_PrivateKey`.
    - Steps 2-7 correspond to Algorithms 16 and 13 of [FIPS-203]_ and are
      performed in :srcref:`[src/lib/pubkey/kyber]/kyber_common/kyber_algos.cpp:323|expand_keypair`.
