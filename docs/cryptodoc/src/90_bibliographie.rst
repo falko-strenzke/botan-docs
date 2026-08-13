@@ -317,7 +317,7 @@
 
 .. [TR-03111] BSI Technical Guideline TR-03111:
    "Elliptic Curve Cryptography",
-   Version 2.1.0, 01.06.2018
+   Version 2.10, 01.06.2018
 
 .. [X9.62] ANSI X9.62.
    Public Key Cryptography for the Financial Services Industry:
