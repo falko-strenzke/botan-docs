@@ -196,7 +196,7 @@ Changelog
    | 3.11.0  | JR, FS   | Update to 3.11.0:                           | 2026-05-28 |
    |         |          |                                             |            |
    |         |          | - Support ML-KEM expanded key format.       |            |
-   |         |          | - Update description of ECDSA side-      |            |
+   |         |          | - Update description of ECDSA side-         |            |
    |         |          |   channel countermeasures.                  |            |
    |         |          | - Update blinding size in                   |            |
    |         |          |   "Multiplication of Scalar k and Point P". |            |

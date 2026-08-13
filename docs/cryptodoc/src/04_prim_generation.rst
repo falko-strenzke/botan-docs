@@ -143,7 +143,11 @@ the additional check :math:`\text{GCD}(C, \frac{1-D}{4}) = 1`.
 
    1. Check :math:`C` to be equal to one of the 6 smallest primes, returning ``true`` if a match is found
    2. Ensure that :math:`C` is larger than 1 and odd, and return ``false`` otherwise
-   3. For each :math:`D_i` proceed as follows until either ``false`` is returned or a suitable :math:`D` is found:
+   3. For each :math:`D_i` from the sequence :math:`5, -7, 9, -11, 13, -15, 17, \dots`
+      (i.e., starting with :math:`D_1 = 5`, each subsequent candidate is incremented
+      by 2 in absolute value with alternating sign, as specified in [FIPS-186-4]_,
+      Section C.3.3) proceed as follows until either ``false`` is returned or a
+      suitable :math:`D` is found:
 
       - Calculate the Jacobi symbol :math:`j = (\frac{D_i}{C})`, and
 
