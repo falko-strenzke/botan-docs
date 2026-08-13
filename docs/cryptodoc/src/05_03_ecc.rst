@@ -376,7 +376,7 @@ The signature generation algorithm works as follows (see
 
    6. Compute :math:`u=(d \cdot b_i) \cdot r + e \cdot b_i`. The braces indicate the order of evaluation.
 
-   7. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b_i \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b_i = k^{-1} \cdot (d \cdot r + m)`.
+   7. Compute :math:`s = k'^{-1} \cdot u` which amounts to :math:`(b_i \cdot k )^{-1} \cdot (d \cdot r + e) \cdot b_i = k^{-1} \cdot (d \cdot r + e)`.
 
    8. Square the blinding value :math:`b_i` to
       obtain new a blinding value :math:`b_{i+1}` which replaces :math:`b_i` in
