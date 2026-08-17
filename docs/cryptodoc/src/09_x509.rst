@@ -1058,3 +1058,115 @@ certificate status codes for the certificate chain validated.
             ``i = 0``) OR (``restrictions.ocsp_all_intermediates() = true``
             AND ``i > 0``) then do Append NO_REVOCATION_DATA to
             ``chain_status[i]``
+
+
+Building a PKI-Hierarchy via Botan's CLI Tool
+---------------------------------------------
+
+Botan's command line tool ``botan`` offers the commands ``keygen``,
+``gen_self_signed``, ``gen_pkcs10`` and ``sign_cert`` (implemented in
+:srcref:`src/cli/pubkey.cpp` and :srcref:`src/cli/x509.cpp`), which
+together allow the construction of a complete X.509 PKI hierarchy. In
+the following, the creation of a three-level hierarchy consisting of a
+self-signed root CA, a subordinate CA and an end-entity certificate is
+shown. All commands write their result to the standard output, which is
+redirected to a file in the examples. The private keys are written in
+unencrypted PKCS #8 format unless a passphrase is supplied via the
+``--passphrase`` option of ``keygen``; in that case the passphrase must
+be provided to the subsequent commands via their ``--key-pass``
+(``gen_self_signed``, ``gen_pkcs10``) or ``--ca-key-pass``
+(``sign_cert``) option.
+
+Creating the Root CA Certificate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The root CA is set up by generating a private key and creating a
+self-signed certificate for it. The flag ``--ca`` causes the
+BasicConstraints extension to be set with ``cA = true`` and the
+``pathLenConstraint`` given by ``--path-limit``. Setting
+``--path-limit=1`` permits exactly one further CA level below the root,
+as required for the three-level hierarchy built here.
+
+.. code-block:: none
+
+   botan keygen --algo=ECDSA --params=secp384r1 > root_ca_key.pem
+   botan gen_self_signed root_ca_key.pem "Example Root CA" \
+       --country=DE --organization=Example \
+       --ca --path-limit=1 --hash=SHA-384 --days=3650 > root_ca_cert.pem
+
+Creating the Subordinate CA Certificate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For the subordinate CA, a private key and a PKCS #10 certificate signing
+request are generated. Here, too, the ``--ca`` flag requests a CA
+certificate; ``--path-limit=0`` means that the subordinate CA may only
+issue end-entity certificates. The request is then signed with the root
+CA's key using the ``sign_cert`` command, whose ``--duration`` option
+specifies the certificate validity period in days. The ``--hash`` option
+of ``sign_cert`` selects the hash function for the signature created by
+the issuing CA.
+
+.. code-block:: none
+
+   botan keygen --algo=ECDSA --params=secp384r1 > sub_ca_key.pem
+   botan gen_pkcs10 sub_ca_key.pem "Example Sub CA" \
+       --country=DE --organization=Example \
+       --ca --path-limit=0 --hash=SHA-384 > sub_ca_req.pem
+   botan sign_cert --hash=SHA-384 --duration=1825 \
+       root_ca_cert.pem root_ca_key.pem sub_ca_req.pem > sub_ca_cert.pem
+
+Creating the End-Entity Certificate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The end-entity certificate is created analogously, but without the
+``--ca`` flag. For a TLS server certificate, the host name can be added
+as a ``dNSName`` in the SubjectAlternativeName extension via the
+``--dns`` option; extended key usages can be requested via ``--ext-ku``.
+
+.. code-block:: none
+
+   botan keygen --algo=ECDSA --params=secp256r1 > ee_key.pem
+   botan gen_pkcs10 ee_key.pem "server.example.com" \
+       --country=DE --organization=Example \
+       --dns=server.example.com --hash=SHA-256 > ee_req.pem
+   botan sign_cert --hash=SHA-384 --duration=365 \
+       sub_ca_cert.pem sub_ca_key.pem ee_req.pem > ee_cert.pem
+
+The resulting chain can be checked with the ``cert_verify`` command,
+which performs the path validation described in the previous sections.
+Note that ``cert_verify`` places all certificates passed after the
+subject certificate into the trusted certificate store:
+
+.. code-block:: none
+
+   botan cert_verify ee_cert.pem sub_ca_cert.pem root_ca_cert.pem
+
+Restriction Regarding KEM Keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Certificates for KEM keys (e.g. ML-KEM or FrodoKEM) currently cannot be
+created via the command line tool. The reason is that ``gen_pkcs10``
+creates the PKCS #10 request via ``X509::create_cert_req()``
+(:srcref:`src/lib/x509/x509self.cpp`), which self-signs the request with
+the subject's private key as proof of possession. Since a KEM key does
+not support signature operations, the instantiation of the signing
+object fails, and thus no request can be created for such a key
+(``gen_self_signed`` is equally unavailable, and ``sign_cert`` only
+accepts PKCS #10 requests as input). In the library API, a certificate
+for a KEM key can be created with the static member function
+``X509_CA::make_cert()`` (:srcref:`src/lib/x509/x509_ca.h`), which
+receives the serialized subject public key directly instead of a
+PKCS #10 request.
+
+Creating a Certificate Revocation List
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The command line tool does not offer any command for the creation or
+updating of CRLs: no such command is implemented in
+:srcref:`src/cli/x509.cpp`. CRLs can only be created programmatically
+via the library API, namely with the member functions ``new_crl()``
+(creation of an empty CRL) and ``update_crl()`` (creation of a new CRL
+from an existing one and a list of ``CRL_Entry`` objects, each of which
+references the revoked certificate and a revocation reason) of the class
+``X509_CA`` defined in :srcref:`src/lib/x509/x509_ca.h`.
+
